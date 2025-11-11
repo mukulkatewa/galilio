@@ -251,7 +251,10 @@ process.on('unhandledRejection', (reason, promise) => {
 // Handle uncaught exceptions
 process.on('uncaughtException', (error) => {
   console.error('Uncaught Exception:', error);
-  process.exit(1);
+  // Don't exit in serverless mode
+  if (process.env.VERCEL !== '1') {
+    process.exit(1);
+  }
 });
 
 const PORT = process.env.PORT || 5000;
