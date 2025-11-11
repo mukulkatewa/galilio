@@ -1,0 +1,290 @@
+2025-11-11 04:37:25 [[31MERROR[39M]: unhandledRejection: "[object Object]" is not valid JSON
+SyntaxError: "[object Object]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)
+    at Object.handler (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:801:45)
+    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:939:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:825:5 {
+  "error": {},
+  "stack": "SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at Object.handler (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:801:45)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:939:16\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:825:5",
+  "rejection": true,
+  "date": "Tue Nov 11 2025 04:37:25 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 110803,
+    "uid": 1000,
+    "gid": 1000,
+    "cwd": "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend",
+    "execPath": "/home/katewa/.nvm/versions/node/v23.8.0/bin/node",
+    "version": "v23.8.0",
+    "argv": [
+      "/home/katewa/.nvm/versions/node/v23.8.0/bin/node",
+      "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 111394816,
+      "heapTotal": 28565504,
+      "heapUsed": 25959384,
+      "external": 2517515,
+      "arrayBuffers": 51909
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.69,
+      2.32,
+      2.14
+    ],
+    "uptime": 22116.6
+  },
+  "trace": [
+    {
+      "column": null,
+      "file": null,
+      "function": "JSON.parse",
+      "line": null,
+      "method": "parse",
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js",
+      "function": "res.send",
+      "line": 31,
+      "method": "send",
+      "native": false
+    },
+    {
+      "column": 45,
+      "file": "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs",
+      "function": "Object.handler",
+      "line": 801,
+      "method": "handler",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs",
+      "function": null,
+      "line": 939,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 105,
+      "method": "processTicksAndRejections",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "async /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs",
+      "function": null,
+      "line": 825,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2025-11-11 04:41:51 [[31MERROR[39M]: Error occurred {
+  "requestId": "d9af24a7-e197-4d3f-9b26-79a77733fedb",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:41:51 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:43:37 [[31MERROR[39M]: Error occurred {
+  "requestId": "ee42ac4b-eb8e-46c3-8973-c09518c84662",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:43:37 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:44:14 [[31MERROR[39M]: Error occurred {
+  "requestId": "71031244-124b-4cbc-a4dc-3735f4266df7",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:44:14 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:44:14 [[31MERROR[39M]: Error occurred {
+  "requestId": "9770959e-3d1a-46dd-bca0-2b0a0487edce",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:44:14 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:44:23 [[31MERROR[39M]: Error occurred {
+  "requestId": "fc60517a-e75e-4a6c-8124-d49d69399962",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:44:23 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 05:14:09 [[31MERROR[39M]: unhandledRejection: "[object Object]" is not valid JSON
+SyntaxError: "[object Object]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)
+    at Object.handler (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:801:45)
+    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:939:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:825:5 {
+  "error": {},
+  "stack": "SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at Object.handler (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:801:45)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:939:16\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs:825:5",
+  "rejection": true,
+  "date": "Tue Nov 11 2025 05:14:09 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 150158,
+    "uid": 1000,
+    "gid": 1000,
+    "cwd": "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend",
+    "execPath": "/home/katewa/.nvm/versions/node/v23.8.0/bin/node",
+    "version": "v23.8.0",
+    "argv": [
+      "/home/katewa/.nvm/versions/node/v23.8.0/bin/node",
+      "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/server.js"
+    ],
+    "memoryUsage": {
+      "rss": 111816704,
+      "heapTotal": 30662656,
+      "heapUsed": 27518576,
+      "external": 2512523,
+      "arrayBuffers": 68293
+    }
+  },
+  "os": {
+    "loadavg": [
+      2.48,
+      2.77,
+      2.64
+    ],
+    "uptime": 24320.29
+  },
+  "trace": [
+    {
+      "column": null,
+      "file": null,
+      "function": "JSON.parse",
+      "line": null,
+      "method": "parse",
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js",
+      "function": "res.send",
+      "line": 31,
+      "method": "send",
+      "native": false
+    },
+    {
+      "column": 45,
+      "file": "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs",
+      "function": "Object.handler",
+      "line": 801,
+      "method": "handler",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs",
+      "function": null,
+      "line": 939,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 105,
+      "method": "processTicksAndRejections",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "async /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/express-rate-limit/dist/index.cjs",
+      "function": null,
+      "line": 825,
+      "method": null,
+      "native": false
+    }
+  ]
+}

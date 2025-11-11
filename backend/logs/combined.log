@@ -1,0 +1,3932 @@
+2025-11-11 03:46:29 [[32MINFO[39M]: Request received {
+  "requestId": "3784241a-0e71-4b23-b3ad-e0ca90c2ab33",
+  "method": "GET",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 03:46:29 [[32MINFO[39M]: Response sent {
+  "requestId": "3784241a-0e71-4b23-b3ad-e0ca90c2ab33",
+  "statusCode": 200,
+  "responseTime": "7ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-10T22:16:29.864Z",
+    "environment": "development",
+    "version": "1.0.0"
+  }
+}
+2025-11-11 03:46:35 [[32MINFO[39M]: Request received {
+  "requestId": "a5b20cab-1313-4a9f-8283-eba2ad098567",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"email\":\"testuser@example.com\",\"username\":\"testuser\",\"password\":\"Test@123\"}"
+}
+2025-11-11 03:46:38 [[32MINFO[39M]: Response sent {
+  "requestId": "a5b20cab-1313-4a9f-8283-eba2ad098567",
+  "statusCode": 400,
+  "responseTime": "3607ms",
+  "body": {
+    "success": false,
+    "error": "Email or username already exists"
+  }
+}
+2025-11-11 03:46:46 [[32MINFO[39M]: Request received {
+  "requestId": "c991949a-bcb5-4927-811a-f3fd07b24c51",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"email\":\"testuser2@example.com\",\"username\":\"testuser2\",\"password\":\"Test@123\"}"
+}
+2025-11-11 03:46:46 [[32MINFO[39M]: Response sent {
+  "requestId": "c991949a-bcb5-4927-811a-f3fd07b24c51",
+  "statusCode": 400,
+  "responseTime": "421ms",
+  "body": {
+    "success": false,
+    "error": "Email or username already exists"
+  }
+}
+2025-11-11 03:47:50 [[32MINFO[39M]: Request received {
+  "requestId": "526f7497-4899-4662-a135-65f9ea737e91",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser\",\"password\":\"Test@123\"}"
+}
+2025-11-11 03:47:54 [[32MINFO[39M]: Response sent {
+  "requestId": "526f7497-4899-4662-a135-65f9ea737e91",
+  "statusCode": 401,
+  "responseTime": "3529ms",
+  "body": {
+    "success": false,
+    "error": "Invalid credentials"
+  }
+}
+2025-11-11 03:48:26 [[32MINFO[39M]: Request received {
+  "requestId": "21b9a8e3-149c-4d9f-b272-f0737996629f",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser\",\"password\":\"Test@123\"}"
+}
+2025-11-11 03:48:30 [[32MINFO[39M]: Response sent {
+  "requestId": "21b9a8e3-149c-4d9f-b272-f0737996629f",
+  "statusCode": 200,
+  "responseTime": "3734ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "9d150deb-6281-4625-9b98-87872ccd9205",
+        "email": "test@example.com",
+        "username": "testuser",
+        "balance": "10000",
+        "isAdmin": false
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ZDE1MGRlYi02MjgxLTQ2MjUtOWI5OC04Nzg3MmNjZDkyMDUiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYyODEzMTEwLCJleHAiOjE3NjM0MTc5MTB9.1VxSGtpaaFs5kpMQehnMnFQ7X41EI5y92y9sUdUnDjM"
+    }
+  }
+}
+2025-11-11 03:48:40 [[32MINFO[39M]: Request received {
+  "requestId": "e86c0d52-dc04-4f83-8d1e-87ae88756540",
+  "method": "GET",
+  "url": "/api/auth/me",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 03:48:41 [[32MINFO[39M]: Response sent {
+  "requestId": "e86c0d52-dc04-4f83-8d1e-87ae88756540",
+  "statusCode": 200,
+  "responseTime": "1630ms",
+  "body": {
+    "success": true,
+    "data": {
+      "user": {
+        "id": "9d150deb-6281-4625-9b98-87872ccd9205",
+        "email": "test@example.com",
+        "username": "testuser",
+        "balance": "10000",
+        "isAdmin": false,
+        "createdAt": "2025-11-10T21:51:25.014Z"
+      }
+    }
+  }
+}
+2025-11-11 03:48:50 [[32MINFO[39M]: Request received {
+  "requestId": "96e5af69-97a4-496e-8bc0-19baf3073551",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"pickedNumbers\":[1,2,3,4,5,6,7,8,9,10]}"
+}
+2025-11-11 03:48:56 [[32MINFO[39M]: Response sent {
+  "requestId": "96e5af69-97a4-496e-8bc0-19baf3073551",
+  "statusCode": 200,
+  "responseTime": "6024ms",
+  "body": {
+    "success": true,
+    "game": "keno",
+    "result": {
+      "betAmount": 100,
+      "pickedNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "drawnNumbers": [
+        63,
+        11,
+        51,
+        8,
+        7,
+        66,
+        1,
+        69,
+        20,
+        2,
+        12,
+        61,
+        13,
+        19,
+        73,
+        36,
+        58,
+        3,
+        21,
+        33
+      ],
+      "matches": 5,
+      "multiplier": 2,
+      "payout": 200,
+      "profit": 100,
+      "newBalance": 10100
+    },
+    "provablyFair": {
+      "serverSeed": "af7d539f82acf59a69a0bd8a975e66494cfa650230b312abb98aa312debe2967",
+      "clientSeed": "863937f3afc369842ae7e02be82b0b18",
+      "nonce": 1762813131595
+    }
+  }
+}
+2025-11-11 03:49:04 [[32MINFO[39M]: Request received {
+  "requestId": "23e4beb6-7984-4759-9341-ce612ee19cb8",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"targetMultiplier\":2.5}"
+}
+2025-11-11 03:49:07 [[32MINFO[39M]: Response sent {
+  "requestId": "23e4beb6-7984-4759-9341-ce612ee19cb8",
+  "statusCode": 200,
+  "responseTime": "3636ms",
+  "body": {
+    "success": true,
+    "game": "limbo",
+    "result": {
+      "betAmount": 100,
+      "targetMultiplier": 2.5,
+      "outcomeMultiplier": 2.09,
+      "won": false,
+      "payout": 0,
+      "profit": -100,
+      "newBalance": 10000
+    },
+    "provablyFair": {
+      "serverSeed": "f8a524be16b1ee8fdb87c8aeb4112ea57d9be6c12f84d8525cb931c912cad0b8",
+      "clientSeed": "6bc87f0490d1c6a2074f2f5681115492",
+      "nonce": 1762813144530
+    }
+  }
+}
+2025-11-11 03:49:15 [[32MINFO[39M]: Request received {
+  "requestId": "34684c6e-4a55-443b-9f1e-0ea7de15b7e7",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"autoCashOut\":2.5}"
+}
+2025-11-11 03:49:19 [[32MINFO[39M]: Response sent {
+  "requestId": "34684c6e-4a55-443b-9f1e-0ea7de15b7e7",
+  "statusCode": 200,
+  "responseTime": "4280ms",
+  "body": {
+    "success": true,
+    "game": "crash",
+    "result": {
+      "betAmount": 100,
+      "crashPoint": 5.71,
+      "autoCashOut": 2.5,
+      "cashedOutAt": 2.5,
+      "won": true,
+      "payout": 247.5,
+      "profit": 147.5,
+      "newBalance": 10147.5
+    },
+    "provablyFair": {
+      "serverSeed": "1d6f90d018b9eab1517789aa216391f2abf2b8fc5040853c25ed5c66bfcd0ea9",
+      "clientSeed": "d083fddec20816ab27423e053af7fc23",
+      "nonce": 1762813156491
+    }
+  }
+}
+2025-11-11 03:49:28 [[32MINFO[39M]: Request received {
+  "requestId": "dbba2e83-ea61-4378-a26a-a7cebcf16075",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"target\":50,\"rollOver\":true}"
+}
+2025-11-11 03:49:32 [[32MINFO[39M]: Response sent {
+  "requestId": "dbba2e83-ea61-4378-a26a-a7cebcf16075",
+  "statusCode": 200,
+  "responseTime": "3911ms",
+  "body": {
+    "success": true,
+    "game": "dice",
+    "result": {
+      "betAmount": 100,
+      "target": 50,
+      "rollOver": true,
+      "result": 79.81,
+      "won": true,
+      "winChance": 50,
+      "multiplier": 1.98,
+      "payout": 198,
+      "profit": 98,
+      "newBalance": 10245.5
+    },
+    "provablyFair": {
+      "serverSeed": "475f26979bdfeccf20f1ce8911f6cf4881d105fa547c0cef81b2d490a70d1525",
+      "clientSeed": "b015ed6706d7b10af1ae4a6be11a04c9",
+      "nonce": 1762813168768
+    }
+  }
+}
+2025-11-11 03:49:41 [[32MINFO[39M]: Request received {
+  "requestId": "90cf906d-1149-419a-a235-17ae15ae56de",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"difficulty\":\"medium\"}"
+}
+2025-11-11 03:49:42 [[32MINFO[39M]: Response sent {
+  "requestId": "90cf906d-1149-419a-a235-17ae15ae56de",
+  "statusCode": 500,
+  "responseTime": "1128ms",
+  "body": {
+    "success": false,
+    "error": "Failed to initialize game"
+  }
+}
+2025-11-11 03:50:57 [[32MINFO[39M]: Request received {
+  "requestId": "fc48cc61-a833-4ef9-956e-9a72edf24c2b",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"difficulty\":\"medium\",\"picks\":[1,2,3],\"clientSeed\":\"testseed\"}"
+}
+2025-11-11 03:50:57 [[32MINFO[39M]: Response sent {
+  "requestId": "fc48cc61-a833-4ef9-956e-9a72edf24c2b",
+  "statusCode": 500,
+  "responseTime": "852ms",
+  "body": {
+    "success": false,
+    "error": "Game error. Please try again."
+  }
+}
+2025-11-11 03:51:28 [[32MINFO[39M]: Request received {
+  "requestId": "35bf6c50-491b-41cd-ad08-7fab78be4069",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"difficulty\":\"medium\",\"picks\":[1,2,3],\"clientSeed\":\"testseed\"}"
+}
+2025-11-11 03:51:31 [[32MINFO[39M]: Response sent {
+  "requestId": "35bf6c50-491b-41cd-ad08-7fab78be4069",
+  "statusCode": 500,
+  "responseTime": "3022ms",
+  "body": {
+    "success": false,
+    "error": "Cannot read properties of undefined (reading 'getDifficultyConfig')"
+  }
+}
+2025-11-11 03:52:10 [[32MINFO[39M]: Request received {
+  "requestId": "b2058e3c-fb44-47a2-80f8-2c233ce536d2",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"difficulty\":\"medium\",\"picks\":[1,2,3],\"clientSeed\":\"testseed\"}"
+}
+2025-11-11 03:52:18 [[32MINFO[39M]: Response sent {
+  "requestId": "b2058e3c-fb44-47a2-80f8-2c233ce536d2",
+  "statusCode": 200,
+  "responseTime": "7770ms",
+  "body": {
+    "success": true,
+    "game": "dragonTower",
+    "result": {
+      "betAmount": 100,
+      "difficulty": "medium",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "levels": [
+        {
+          "level": 1,
+          "eggPositions": [
+            0,
+            3
+          ],
+          "playerPick": 1,
+          "success": false,
+          "multiplier": 0
+        }
+      ],
+      "won": false,
+      "lastSuccessfulLevel": 0,
+      "finalMultiplier": 0,
+      "payout": 0,
+      "profit": -100,
+      "newBalance": 10145.5
+    },
+    "provablyFair": {
+      "serverSeed": "cda20d2963bc5fdb8c1eb03a8f16948437737699b4f33457c5a1e6bdde927308",
+      "clientSeed": "testseed",
+      "nonce": 1762813334051
+    }
+  }
+}
+2025-11-11 03:52:27 [[32MINFO[39M]: Request received {
+  "requestId": "6b9276b0-2637-48cb-be2e-11c3a5d6e55d",
+  "method": "GET",
+  "url": "/api/user/profile",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 03:52:28 [[32MINFO[39M]: Response sent {
+  "requestId": "6b9276b0-2637-48cb-be2e-11c3a5d6e55d",
+  "statusCode": 404,
+  "responseTime": "601ms",
+  "body": {
+    "success": false,
+    "error": "Not Found",
+    "message": "Cannot GET /api/user/profile"
+  }
+}
+2025-11-11 03:52:40 [[32MINFO[39M]: Request received {
+  "requestId": "b8a30792-d97c-48b7-90ad-c1dee1d5b73c",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 03:52:41 [[32MINFO[39M]: Response sent {
+  "requestId": "b8a30792-d97c-48b7-90ad-c1dee1d5b73c",
+  "statusCode": 200,
+  "responseTime": "1143ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10145.5
+    }
+  }
+}
+2025-11-11 03:52:53 [[32MINFO[39M]: Request received {
+  "requestId": "6566d204-184a-4868-97aa-7c2a7bd8af22",
+  "method": "GET",
+  "url": "/api/user/history",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 03:52:54 [[32MINFO[39M]: Response sent {
+  "requestId": "6566d204-184a-4868-97aa-7c2a7bd8af22",
+  "statusCode": 200,
+  "responseTime": "1095ms",
+  "body": {
+    "success": true,
+    "data": {
+      "history": [
+        {
+          "id": "2ab0f23a-15a7-4b91-91c7-cf2fb5cde12f",
+          "gameType": "dragonTower",
+          "betAmount": "100",
+          "payout": "0",
+          "profit": "-100",
+          "createdAt": "2025-11-10T22:22:16.534Z"
+        },
+        {
+          "id": "d251cbb7-e3ac-4ee7-9c28-8f9bbd295a8a",
+          "gameType": "dice",
+          "betAmount": "100",
+          "payout": "198",
+          "profit": "98",
+          "createdAt": "2025-11-10T22:19:31.069Z"
+        },
+        {
+          "id": "9a3250fa-1f67-4a40-902f-dafc98215df4",
+          "gameType": "crash",
+          "betAmount": "100",
+          "payout": "247.5",
+          "profit": "147.5",
+          "createdAt": "2025-11-10T22:19:18.585Z"
+        },
+        {
+          "id": "5508e6cc-b655-4bf3-a0c3-bd0852979c7a",
+          "gameType": "limbo",
+          "betAmount": "100",
+          "payout": "0",
+          "profit": "-100",
+          "createdAt": "2025-11-10T22:19:06.493Z"
+        },
+        {
+          "id": "f085bdff-0695-42ff-9408-e440b67a24e9",
+          "gameType": "keno",
+          "betAmount": "100",
+          "payout": "200",
+          "profit": "100",
+          "createdAt": "2025-11-10T22:18:55.087Z"
+        }
+      ]
+    }
+  }
+}
+2025-11-11 03:52:59 [[32MINFO[39M]: Request received {
+  "requestId": "c7a73b68-b858-41bf-8d50-300b9b43184e",
+  "method": "GET",
+  "url": "/metrics",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 03:52:59 [[32MINFO[39M]: Response sent {
+  "requestId": "c7a73b68-b858-41bf-8d50-300b9b43184e",
+  "statusCode": 404,
+  "responseTime": "1ms",
+  "body": {
+    "success": false,
+    "error": "Not Found",
+    "message": "Cannot GET /metrics"
+  }
+}
+2025-11-11 03:54:38 [[32MINFO[39M]: Request received {
+  "requestId": "8bf263de-2033-4716-a7da-c7eec2cba6f0",
+  "method": "GET",
+  "url": "/metrics",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 03:55:19 [[32MINFO[39M]: Request received {
+  "requestId": "c5908266-c609-4db7-a095-b27344a680de",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser\",\"password\":\"Test@123\"}"
+}
+2025-11-11 03:55:22 [[32MINFO[39M]: Response sent {
+  "requestId": "c5908266-c609-4db7-a095-b27344a680de",
+  "statusCode": 200,
+  "responseTime": "2916ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "9d150deb-6281-4625-9b98-87872ccd9205",
+        "email": "test@example.com",
+        "username": "testuser",
+        "balance": "10145.5",
+        "isAdmin": false
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ZDE1MGRlYi02MjgxLTQ2MjUtOWI5OC04Nzg3MmNjZDkyMDUiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzYyODEzNTIyLCJleHAiOjE3NjM0MTgzMjJ9.IL14jCaLJE4PPsVgM8EDrV518WFOvL3gdK9D5R7KmPY"
+    }
+  }
+}
+2025-11-11 03:56:01 [[32MINFO[39M]: Request received {
+  "requestId": "a3b29ec8-fef1-4ccc-a5b1-8e869eea8faf",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"difficulty\":\"medium\",\"picks\":[1,2,3],\"clientSeed\":\"testseed123\"}"
+}
+2025-11-11 03:56:07 [[32MINFO[39M]: Response sent {
+  "requestId": "a3b29ec8-fef1-4ccc-a5b1-8e869eea8faf",
+  "statusCode": 200,
+  "responseTime": "6065ms",
+  "body": {
+    "success": true,
+    "game": "dragonTower",
+    "result": {
+      "betAmount": 100,
+      "difficulty": "medium",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "levels": [
+        {
+          "level": 1,
+          "eggPositions": [
+            3,
+            1
+          ],
+          "playerPick": 1,
+          "success": true,
+          "multiplier": 1.96
+        },
+        {
+          "level": 2,
+          "eggPositions": [
+            3,
+            0
+          ],
+          "playerPick": 2,
+          "success": false,
+          "multiplier": 0
+        }
+      ],
+      "won": false,
+      "lastSuccessfulLevel": 1,
+      "finalMultiplier": 1.96,
+      "payout": 196,
+      "profit": 96,
+      "newBalance": 10241.5
+    },
+    "provablyFair": {
+      "serverSeed": "9a29c8ec51a19bf6ab45171ffaf1155152172448c7cf39d446b2ec72d8156157",
+      "clientSeed": "testseed123",
+      "nonce": 1762813562467
+    }
+  }
+}
+2025-11-11 04:33:46 [[32MINFO[39M]: Request received {
+  "requestId": "8b227c9b-79db-4039-8e38-c0e979fcf3b2",
+  "method": "GET",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:33:46 [[32MINFO[39M]: Response sent {
+  "requestId": "8b227c9b-79db-4039-8e38-c0e979fcf3b2",
+  "statusCode": 200,
+  "responseTime": "7ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-10T23:03:46.695Z",
+    "environment": "development",
+    "version": "1.0.0"
+  }
+}
+2025-11-11 04:34:28 [[32MINFO[39M]: Request received {
+  "requestId": "6708cfa3-e2d9-4f9c-890c-5e57028cd223",
+  "method": "GET",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:34:28 [[32MINFO[39M]: Response sent {
+  "requestId": "6708cfa3-e2d9-4f9c-890c-5e57028cd223",
+  "statusCode": 200,
+  "responseTime": "1ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-10T23:04:28.113Z",
+    "environment": "development",
+    "version": "1.0.0"
+  }
+}
+2025-11-11 04:34:31 [[32MINFO[39M]: Request received {
+  "requestId": "9f19dad9-2cb0-4432-9a94-4cfd07efdd56",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"email\":\"test1@example.com\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 04:34:32 [[32MINFO[39M]: Response sent {
+  "requestId": "9f19dad9-2cb0-4432-9a94-4cfd07efdd56",
+  "statusCode": 201,
+  "responseTime": "120ms",
+  "body": {
+    "success": true,
+    "message": "User registered successfully",
+    "data": {
+      "user": {
+        "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "10000",
+        "createdAt": "2025-11-10T23:04:32.006Z"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NWQ4MTY0ZS1jOTk5LTQxYjMtODVkYS1lNjcyNWVmMGNjZTEiLCJ1c2VybmFtZSI6InRlc3R1c2VyMSIsImlhdCI6MTc2MjgxNTg3MiwiZXhwIjoxNzYzNDIwNjcyfQ.NWufKyxOeBJrpVVF6OZYJA0LAzKDdgr7_Ef_tthgJeQ"
+    }
+  }
+}
+2025-11-11 04:34:35 [[32MINFO[39M]: Request received {
+  "requestId": "345fa7f8-c1ae-42c7-b47a-fc56ae82c784",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"email\":\"test1@example.com\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 04:34:35 [[32MINFO[39M]: Response sent {
+  "requestId": "345fa7f8-c1ae-42c7-b47a-fc56ae82c784",
+  "statusCode": 400,
+  "responseTime": "1ms",
+  "body": {
+    "success": false,
+    "errors": [
+      {
+        "message": "Username is required"
+      }
+    ]
+  }
+}
+2025-11-11 04:34:46 [[32MINFO[39M]: Request received {
+  "requestId": "a6df1d71-c3b8-48e2-8f55-c9ee2e1c388d",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 04:34:46 [[32MINFO[39M]: Response sent {
+  "requestId": "a6df1d71-c3b8-48e2-8f55-c9ee2e1c388d",
+  "statusCode": 200,
+  "responseTime": "65ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "10000",
+        "isAdmin": false
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NWQ4MTY0ZS1jOTk5LTQxYjMtODVkYS1lNjcyNWVmMGNjZTEiLCJ1c2VybmFtZSI6InRlc3R1c2VyMSIsImlhdCI6MTc2MjgxNTg4NiwiZXhwIjoxNzYzNDIwNjg2fQ.4uuuQ41O6SEhDPOrHCGe7SeZ9w2B_YMQGg4dMReKnSo"
+    }
+  }
+}
+2025-11-11 04:34:54 [[32MINFO[39M]: Request received {
+  "requestId": "be17e9a7-6234-49e1-b6aa-f126bd23acfd",
+  "method": "GET",
+  "url": "/api/auth/me",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:34:54 [[32MINFO[39M]: Response sent {
+  "requestId": "be17e9a7-6234-49e1-b6aa-f126bd23acfd",
+  "statusCode": 200,
+  "responseTime": "5ms",
+  "body": {
+    "success": true,
+    "data": {
+      "user": {
+        "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "10000",
+        "isAdmin": false,
+        "createdAt": "2025-11-10T23:04:32.006Z"
+      }
+    }
+  }
+}
+2025-11-11 04:34:57 [[32MINFO[39M]: Request received {
+  "requestId": "9f5a0ff5-3683-440b-9763-8d292a21c1e3",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:34:57 [[32MINFO[39M]: Response sent {
+  "requestId": "9f5a0ff5-3683-440b-9763-8d292a21c1e3",
+  "statusCode": 200,
+  "responseTime": "4ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10000
+    }
+  }
+}
+2025-11-11 04:35:01 [[32MINFO[39M]: Request received {
+  "requestId": "8227798e-4fc4-4e57-8a04-826dbc9b8a74",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":50,\"condition\":\"over\"}"
+}
+2025-11-11 04:35:01 [[32MINFO[39M]: Response sent {
+  "requestId": "8227798e-4fc4-4e57-8a04-826dbc9b8a74",
+  "statusCode": 400,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "error": "Must specify rollOver (true/false)"
+  }
+}
+2025-11-11 04:35:20 [[32MINFO[39M]: Request received {
+  "requestId": "cd9a1362-416f-460e-8bc7-0721d678b40e",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":50,\"rollOver\":true}"
+}
+2025-11-11 04:35:20 [[32MINFO[39M]: Response sent {
+  "requestId": "cd9a1362-416f-460e-8bc7-0721d678b40e",
+  "statusCode": 200,
+  "responseTime": "21ms",
+  "body": {
+    "success": true,
+    "game": "dice",
+    "result": {
+      "betAmount": 10,
+      "target": 50,
+      "rollOver": true,
+      "result": 87.4,
+      "won": true,
+      "winChance": 50,
+      "multiplier": 1.98,
+      "payout": 19.8,
+      "profit": 9.8,
+      "newBalance": 10009.8
+    },
+    "provablyFair": {
+      "serverSeed": "de203e706020aace8f9626dea17c9229b4cee4827a7f96d03eda8e0cbf35f3d6",
+      "clientSeed": "19af5f5abbc8a8d50a6eb18cc75c6b89",
+      "nonce": 1762815920713
+    }
+  }
+}
+2025-11-11 04:35:26 [[32MINFO[39M]: Request received {
+  "requestId": "743e5e37-4261-4ff1-b05f-8799ccdb9e54",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"picks\":[1,2,3,4,5]}"
+}
+2025-11-11 04:35:26 [[32MINFO[39M]: Response sent {
+  "requestId": "743e5e37-4261-4ff1-b05f-8799ccdb9e54",
+  "statusCode": 400,
+  "responseTime": "5ms",
+  "body": {
+    "success": false,
+    "error": "Must pick exactly 10 numbers (1-80)"
+  }
+}
+2025-11-11 04:35:55 [[32MINFO[39M]: Request received {
+  "requestId": "ea402e8b-7af9-4858-b7ed-a6a3c937af7a",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"picks\":[1,2,3,4,5,6,7,8,9,10]}"
+}
+2025-11-11 04:35:55 [[32MINFO[39M]: Response sent {
+  "requestId": "ea402e8b-7af9-4858-b7ed-a6a3c937af7a",
+  "statusCode": 400,
+  "responseTime": "2ms",
+  "body": {
+    "success": false,
+    "error": "Must pick exactly 10 numbers (1-80)"
+  }
+}
+2025-11-11 04:36:03 [[32MINFO[39M]: Request received {
+  "requestId": "e34f2dd9-18d2-4372-ae11-6a3049fddfaa",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"pickedNumbers\":[1,2,3,4,5,6,7,8,9,10]}"
+}
+2025-11-11 04:36:03 [[32MINFO[39M]: Response sent {
+  "requestId": "e34f2dd9-18d2-4372-ae11-6a3049fddfaa",
+  "statusCode": 200,
+  "responseTime": "22ms",
+  "body": {
+    "success": true,
+    "game": "keno",
+    "result": {
+      "betAmount": 10,
+      "pickedNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "drawnNumbers": [
+        42,
+        48,
+        63,
+        31,
+        28,
+        2,
+        47,
+        71,
+        67,
+        10,
+        54,
+        29,
+        18,
+        66,
+        62,
+        4,
+        14,
+        30,
+        26,
+        56
+      ],
+      "matches": 3,
+      "multiplier": 0,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 9999.8
+    },
+    "provablyFair": {
+      "serverSeed": "8abce20a74a7b455505fcec8b0b9c0e49783f67eb1c8b2b475fbfd8930a7924e",
+      "clientSeed": "a0af9b8746104194f8a6664ffcafc8ae",
+      "nonce": 1762815963482
+    }
+  }
+}
+2025-11-11 04:36:08 [[32MINFO[39M]: Request received {
+  "requestId": "fc469281-1c9a-4f0f-aaa1-187731aa50e4",
+  "method": "GET",
+  "url": "/api/user/history?limit=5",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:36:08 [[32MINFO[39M]: Response sent {
+  "requestId": "fc469281-1c9a-4f0f-aaa1-187731aa50e4",
+  "statusCode": 200,
+  "responseTime": "6ms",
+  "body": {
+    "success": true,
+    "data": {
+      "history": [
+        {
+          "id": "e88155b2-a12d-4ee8-a439-22712b7de2f9",
+          "gameType": "keno",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-10T23:06:03.488Z"
+        },
+        {
+          "id": "2de61c3d-69b0-411a-b420-e5c73ffb1b2e",
+          "gameType": "dice",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-10T23:05:20.724Z"
+        }
+      ]
+    }
+  }
+}
+2025-11-11 04:37:20 [[32MINFO[39M]: Request received {
+  "requestId": "2e6b5906-71fb-44fc-8c43-7b026bfc9a64",
+  "method": "GET",
+  "url": "/api/auth/me",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:37:20 [[32MINFO[39M]: Response sent {
+  "requestId": "2e6b5906-71fb-44fc-8c43-7b026bfc9a64",
+  "statusCode": 401,
+  "responseTime": "0ms",
+  "body": {
+    "success": false,
+    "error": "No token provided. Please login."
+  }
+}
+2025-11-11 04:37:25 [[32MINFO[39M]: Request received {
+  "requestId": "96e9ed0c-1b82-484d-bdeb-f0901b4f55c3",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 04:37:38 [[32MINFO[39M]: Request received {
+  "requestId": "c68675cc-428a-4f74-a916-a08c0bc77912",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 04:37:39 [[32MINFO[39M]: Response sent {
+  "requestId": "c68675cc-428a-4f74-a916-a08c0bc77912",
+  "statusCode": 200,
+  "responseTime": "124ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "9999.8",
+        "isAdmin": false
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NWQ4MTY0ZS1jOTk5LTQxYjMtODVkYS1lNjcyNWVmMGNjZTEiLCJ1c2VybmFtZSI6InRlc3R1c2VyMSIsImlhdCI6MTc2MjgxNjA1OSwiZXhwIjoxNzYzNDIwODU5fQ.DK6IOvarm36aO6UWBCmozu-LVgMh3L5sos4Ur2mFJRE"
+    }
+  }
+}
+2025-11-11 04:37:52 [[32MINFO[39M]: Request received {
+  "requestId": "a86b99cd-62dc-4329-8fe0-320a3a9b4551",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":2.5}"
+}
+2025-11-11 04:37:52 [[32MINFO[39M]: Response sent {
+  "requestId": "a86b99cd-62dc-4329-8fe0-320a3a9b4551",
+  "statusCode": 400,
+  "responseTime": "4ms",
+  "body": {
+    "success": false,
+    "error": "Target multiplier must be at least 1.01x"
+  }
+}
+2025-11-11 04:37:55 [[32MINFO[39M]: Request received {
+  "requestId": "7e7db058-47df-4241-95ff-6c7f75b51c39",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2}"
+}
+2025-11-11 04:37:55 [[32MINFO[39M]: Response sent {
+  "requestId": "7e7db058-47df-4241-95ff-6c7f75b51c39",
+  "statusCode": 200,
+  "responseTime": "25ms",
+  "body": {
+    "success": true,
+    "game": "crash",
+    "result": {
+      "betAmount": 10,
+      "crashPoint": 1.31,
+      "autoCashOut": null,
+      "cashedOutAt": 0,
+      "won": false,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 9989.8
+    },
+    "provablyFair": {
+      "serverSeed": "931b550e7ba6ac25806af95e58eaefd12ac5308ca33f3070867841d43569babb",
+      "clientSeed": "9db331ef462665f275b60b2615b2764d",
+      "nonce": 1762816075225
+    }
+  }
+}
+2025-11-11 04:37:58 [[32MINFO[39M]: Request received {
+  "requestId": "ef747ace-86b1-4dbc-b00b-ee8325720b98",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10}"
+}
+2025-11-11 04:37:58 [[32MINFO[39M]: Response sent {
+  "requestId": "ef747ace-86b1-4dbc-b00b-ee8325720b98",
+  "statusCode": 200,
+  "responseTime": "5ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "722c5f8b5348c87171130b2f592c64fbd6e4bfe5183852e01fbd608bd431f345",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "gameId": "dt_1762816078606"
+    }
+  }
+}
+2025-11-11 04:38:08 [[32MINFO[39M]: Request received {
+  "requestId": "3c44c322-f817-4dfd-8a5c-c73992374fb3",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"gameId\":\"dt_1762816078606\",\"level\":1,\"tile\":1}"
+}
+2025-11-11 04:38:08 [[32MINFO[39M]: Response sent {
+  "requestId": "3c44c322-f817-4dfd-8a5c-c73992374fb3",
+  "statusCode": 400,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "error": "Invalid bet amount"
+  }
+}
+2025-11-11 04:38:14 [[32MINFO[39M]: Request received {
+  "requestId": "a78841a9-b2ac-4f04-850d-eb110a046957",
+  "method": "GET",
+  "url": "/api/admin/stats",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:38:14 [[32MINFO[39M]: Response sent {
+  "requestId": "a78841a9-b2ac-4f04-850d-eb110a046957",
+  "statusCode": 403,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "error": "Admin access required"
+  }
+}
+2025-11-11 04:39:21 [[32MINFO[39M]: Request received {
+  "requestId": "1a8be29b-66cc-4164-a078-48c0051db248",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 04:39:22 [[32MINFO[39M]: Response sent {
+  "requestId": "1a8be29b-66cc-4164-a078-48c0051db248",
+  "statusCode": 200,
+  "responseTime": "123ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "9989.8",
+        "isAdmin": true
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NWQ4MTY0ZS1jOTk5LTQxYjMtODVkYS1lNjcyNWVmMGNjZTEiLCJ1c2VybmFtZSI6InRlc3R1c2VyMSIsImlhdCI6MTc2MjgxNjE2MiwiZXhwIjoxNzYzNDIwOTYyfQ.GIDsqE7MdIb9eXhnvhCax6fEBFEYB3gerxUZOPlucn0"
+    }
+  }
+}
+2025-11-11 04:39:31 [[32MINFO[39M]: Request received {
+  "requestId": "5d81faf6-a2fa-445e-8e05-57502b076fea",
+  "method": "GET",
+  "url": "/api/admin/stats",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:39:31 [[32MINFO[39M]: Response sent {
+  "requestId": "5d81faf6-a2fa-445e-8e05-57502b076fea",
+  "statusCode": 200,
+  "responseTime": "18ms",
+  "body": {
+    "success": true,
+    "data": {
+      "byGame": [
+        {
+          "gameType": "keno",
+          "totalGames": 1,
+          "totalWagered": 10,
+          "totalPayout": 0,
+          "houseProfit": 10,
+          "actualEdge": "100.00"
+        },
+        {
+          "gameType": "dice",
+          "totalGames": 1,
+          "totalWagered": 10,
+          "totalPayout": 19.8,
+          "houseProfit": -9.8,
+          "actualEdge": "-98.00"
+        },
+        {
+          "gameType": "crash",
+          "totalGames": 1,
+          "totalWagered": 10,
+          "totalPayout": 0,
+          "houseProfit": 10,
+          "actualEdge": "100.00"
+        }
+      ],
+      "overall": {
+        "totalGames": 3,
+        "totalWagered": 30,
+        "totalPayout": 19.8,
+        "houseProfit": 10.2,
+        "actualEdge": "34.00"
+      },
+      "users": {
+        "total": 1,
+        "totalBalance": 9989.8
+      },
+      "bigWins": [],
+      "profitOverTime": [
+        {
+          "date": "2025-11-10",
+          "profit": -9.8
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        }
+      ]
+    }
+  }
+}
+2025-11-11 04:39:35 [[32MINFO[39M]: Request received {
+  "requestId": "a6791a17-f9bc-447c-9951-9cdf3f2e73c1",
+  "method": "GET",
+  "url": "/api/admin/house-stats",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:39:35 [[32MINFO[39M]: Response sent {
+  "requestId": "a6791a17-f9bc-447c-9951-9cdf3f2e73c1",
+  "statusCode": 200,
+  "responseTime": "6ms",
+  "body": {
+    "success": true,
+    "data": {
+      "stats": [
+        {
+          "date": "2025-11-10T00:00:00.000Z",
+          "gameType": "keno",
+          "totalGames": 1,
+          "totalWagered": 10,
+          "totalPayout": 0,
+          "houseProfit": 10
+        },
+        {
+          "date": "2025-11-10T00:00:00.000Z",
+          "gameType": "dice",
+          "totalGames": 1,
+          "totalWagered": 10,
+          "totalPayout": 19.8,
+          "houseProfit": -9.8
+        },
+        {
+          "date": "2025-11-10T00:00:00.000Z",
+          "gameType": "crash",
+          "totalGames": 1,
+          "totalWagered": 10,
+          "totalPayout": 0,
+          "houseProfit": 10
+        }
+      ]
+    }
+  }
+}
+2025-11-11 04:41:51 [[32MINFO[39M]: Request received {
+  "requestId": "cb45fac4-2816-4da5-b83e-5b19360c3c7c",
+  "method": "GET",
+  "url": "/api-docs",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:41:51 [[32MINFO[39M]: Request received {
+  "requestId": "d9af24a7-e197-4d3f-9b26-79a77733fedb",
+  "method": "GET",
+  "url": "/api-docs/",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:41:51 [[31MERROR[39M]: Error occurred {
+  "requestId": "d9af24a7-e197-4d3f-9b26-79a77733fedb",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:41:51 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:41:51 [[32MINFO[39M]: Response sent {
+  "requestId": "d9af24a7-e197-4d3f-9b26-79a77733fedb",
+  "statusCode": 500,
+  "responseTime": "4ms",
+  "body": {
+    "success": false,
+    "error": "Internal Server Error",
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON"
+  }
+}
+2025-11-11 04:41:51 [[32MINFO[39M]: Request received {
+  "requestId": "26156b46-97f8-4a92-a38b-e0148cbc300e",
+  "method": "GET",
+  "url": "/favicon.ico",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:41:51 [[32MINFO[39M]: Response sent {
+  "requestId": "26156b46-97f8-4a92-a38b-e0148cbc300e",
+  "statusCode": 404,
+  "responseTime": "0ms",
+  "body": {
+    "success": false,
+    "error": "Not Found",
+    "message": "Cannot GET /favicon.ico"
+  }
+}
+2025-11-11 04:43:37 [[32MINFO[39M]: Request received {
+  "requestId": "ee42ac4b-eb8e-46c3-8973-c09518c84662",
+  "method": "GET",
+  "url": "/api-docs/",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:43:37 [[31MERROR[39M]: Error occurred {
+  "requestId": "ee42ac4b-eb8e-46c3-8973-c09518c84662",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:43:37 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:43:37 [[32MINFO[39M]: Response sent {
+  "requestId": "ee42ac4b-eb8e-46c3-8973-c09518c84662",
+  "statusCode": 500,
+  "responseTime": "2ms",
+  "body": {
+    "success": false,
+    "error": "Internal Server Error",
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON"
+  }
+}
+2025-11-11 04:44:14 [[32MINFO[39M]: Request received {
+  "requestId": "71031244-124b-4cbc-a4dc-3735f4266df7",
+  "method": "GET",
+  "url": "/api-docs/",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:44:14 [[31MERROR[39M]: Error occurred {
+  "requestId": "71031244-124b-4cbc-a4dc-3735f4266df7",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:44:14 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:44:14 [[32MINFO[39M]: Response sent {
+  "requestId": "71031244-124b-4cbc-a4dc-3735f4266df7",
+  "statusCode": 500,
+  "responseTime": "8ms",
+  "body": {
+    "success": false,
+    "error": "Internal Server Error",
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON"
+  }
+}
+2025-11-11 04:44:14 [[32MINFO[39M]: Request received {
+  "requestId": "9770959e-3d1a-46dd-bca0-2b0a0487edce",
+  "method": "GET",
+  "url": "/api-docs/",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:44:14 [[31MERROR[39M]: Error occurred {
+  "requestId": "9770959e-3d1a-46dd-bca0-2b0a0487edce",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:44:14 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:44:14 [[32MINFO[39M]: Response sent {
+  "requestId": "9770959e-3d1a-46dd-bca0-2b0a0487edce",
+  "statusCode": 500,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "error": "Internal Server Error",
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON"
+  }
+}
+2025-11-11 04:44:23 [[32MINFO[39M]: Request received {
+  "requestId": "fc60517a-e75e-4a6c-8124-d49d69399962",
+  "method": "GET",
+  "url": "/api-docs/",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:44:23 [[31MERROR[39M]: Error occurred {
+  "requestId": "fc60517a-e75e-4a6c-8124-d49d69399962",
+  "error": {
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON",
+    "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+    "name": "SyntaxError"
+  },
+  "request": {
+    "method": "GET",
+    "url": "/api-docs/",
+    "params": {},
+    "query": {}
+  }
+}
+2025-11-11 04:44:23 [[31MERROR[39M]: Unhandled error Unexpected token '<', "
+<!-- HTML "... is not valid JSON {
+  "errorId": "unknown",
+  "stack": "SyntaxError: Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at res.send (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/src/middleware/logging.js:31:25)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/swagger-ui-express/index.js:234:11\n    at Layer.handleRequest (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:342:13)\n    at /home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:297:9\n    at processParams (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:582:12)\n    at next (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/router/index.js:291:5)\n    at SendStream.error (/home/katewa/Documents/Web_Dev/Projects/Galilio/backend/node_modules/serve-static/index.js:120:7)\n    at SendStream.emit (node:events:507:28)",
+  "path": "/api-docs/",
+  "method": "GET",
+  "statusCode": 500
+}
+2025-11-11 04:44:23 [[32MINFO[39M]: Response sent {
+  "requestId": "fc60517a-e75e-4a6c-8124-d49d69399962",
+  "statusCode": 500,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "error": "Internal Server Error",
+    "message": "Unexpected token '<', \"\n<!-- HTML \"... is not valid JSON"
+  }
+}
+2025-11-11 04:45:44 [[32MINFO[39M]: Request received {
+  "requestId": "558c61a3-cf2a-4d2f-b9a2-a497f0a0f3d9",
+  "method": "GET",
+  "url": "/api-docs/",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:45:44 [[32MINFO[39M]: Request received {
+  "requestId": "c215ec21-83ba-433f-b8b9-f591fdde0399",
+  "method": "GET",
+  "url": "/api-docs/index.html",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:45:44 [[32MINFO[39M]: Request received {
+  "requestId": "fe32a243-d257-42da-a83e-0e3d23ffff31",
+  "method": "GET",
+  "url": "/api-docs/swagger-ui.css",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:45:44 [[32MINFO[39M]: Request received {
+  "requestId": "adddce21-1179-4ecf-98ee-265ad4ed0707",
+  "method": "GET",
+  "url": "/api-docs/index.css",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:45:45 [[32MINFO[39M]: Request received {
+  "requestId": "c8da1c9b-ac7a-4c73-b520-431766f7b810",
+  "method": "GET",
+  "url": "/api-docs/swagger-ui-bundle.js",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:45:45 [[32MINFO[39M]: Request received {
+  "requestId": "8959684c-2cb6-4876-96fd-742310b013ba",
+  "method": "GET",
+  "url": "/api-docs/swagger-ui-standalone-preset.js",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:45:45 [[32MINFO[39M]: Request received {
+  "requestId": "9198dc1d-14ba-4fcd-87ab-3e6e978c9df3",
+  "method": "GET",
+  "url": "/api-docs/swagger-initializer.js",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:45:45 [[32MINFO[39M]: Request received {
+  "requestId": "7ad1003d-9deb-4141-ac2d-4a90b3cb8f48",
+  "method": "GET",
+  "url": "/api-docs/favicon-32x32.png",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-11 04:48:09 [[32MINFO[39M]: Request received {
+  "requestId": "28a4c785-3ea4-41c3-9eec-c6e6ca7a871b",
+  "method": "GET",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:48:09 [[32MINFO[39M]: Response sent {
+  "requestId": "28a4c785-3ea4-41c3-9eec-c6e6ca7a871b",
+  "statusCode": 200,
+  "responseTime": "6ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-10T23:18:09.744Z",
+    "environment": "development"
+  }
+}
+2025-11-11 04:48:50 [[32MINFO[39M]: Request received {
+  "requestId": "cc92b34c-27c1-40c4-95c5-8253098ee3fc",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser2\",\"email\":\"test2@example.com\",\"password\":\"Test@12345\"}"
+}
+2025-11-11 04:48:50 [[32MINFO[39M]: Response sent {
+  "requestId": "cc92b34c-27c1-40c4-95c5-8253098ee3fc",
+  "statusCode": 201,
+  "responseTime": "134ms",
+  "body": {
+    "success": true,
+    "message": "User registered successfully",
+    "data": {
+      "user": {
+        "id": "83b89809-b7cf-4e46-ba9a-95cdad821a29",
+        "email": "test2@example.com",
+        "username": "testuser2",
+        "balance": "10000",
+        "createdAt": "2025-11-10T23:18:50.399Z"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4M2I4OTgwOS1iN2NmLTRlNDYtYmE5YS05NWNkYWQ4MjFhMjkiLCJ1c2VybmFtZSI6InRlc3R1c2VyMiIsImlhdCI6MTc2MjgxNjczMCwiZXhwIjoxNzYzNDIxNTMwfQ.9kwLNaYQ_sFZ-LQ2x2X2YtgkxZnqCjnUFXM7Ko8Apbs"
+    }
+  }
+}
+2025-11-11 04:48:55 [[32MINFO[39M]: Request received {
+  "requestId": "f2b16dd2-62be-4498-9213-0de78f636bf1",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser2\",\"password\":\"Test@12345\"}"
+}
+2025-11-11 04:48:55 [[32MINFO[39M]: Response sent {
+  "requestId": "f2b16dd2-62be-4498-9213-0de78f636bf1",
+  "statusCode": 200,
+  "responseTime": "65ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "83b89809-b7cf-4e46-ba9a-95cdad821a29",
+        "email": "test2@example.com",
+        "username": "testuser2",
+        "balance": "10000",
+        "isAdmin": false
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4M2I4OTgwOS1iN2NmLTRlNDYtYmE5YS05NWNkYWQ4MjFhMjkiLCJ1c2VybmFtZSI6InRlc3R1c2VyMiIsImlhdCI6MTc2MjgxNjczNSwiZXhwIjoxNzYzNDIxNTM1fQ.vKiyLDcx1bDFoSa1OcTBmR2SwiQ1V42VwCtIxhGQoME"
+    }
+  }
+}
+2025-11-11 04:50:23 [[32MINFO[39M]: Request received {
+  "requestId": "4c1c6292-c4cd-4859-bccc-d95dc24e96a2",
+  "method": "GET",
+  "url": "/api/auth/me",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:50:23 [[32MINFO[39M]: Response sent {
+  "requestId": "4c1c6292-c4cd-4859-bccc-d95dc24e96a2",
+  "statusCode": 200,
+  "responseTime": "6ms",
+  "body": {
+    "success": true,
+    "data": {
+      "user": {
+        "id": "83b89809-b7cf-4e46-ba9a-95cdad821a29",
+        "email": "test2@example.com",
+        "username": "testuser2",
+        "balance": "10000",
+        "isAdmin": false,
+        "createdAt": "2025-11-10T23:18:50.399Z"
+      }
+    }
+  }
+}
+2025-11-11 04:50:27 [[32MINFO[39M]: Request received {
+  "requestId": "9ae603cf-edc3-4d18-b3ca-6d1727e8ff42",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":50,\"rollOver\":true}"
+}
+2025-11-11 04:50:27 [[32MINFO[39M]: Response sent {
+  "requestId": "9ae603cf-edc3-4d18-b3ca-6d1727e8ff42",
+  "statusCode": 200,
+  "responseTime": "23ms",
+  "body": {
+    "success": true,
+    "game": "dice",
+    "result": {
+      "betAmount": 10,
+      "target": 50,
+      "rollOver": true,
+      "result": 31.47,
+      "won": false,
+      "winChance": 50,
+      "multiplier": 1.98,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 9990
+    },
+    "provablyFair": {
+      "serverSeed": "f62197f244818db87cf52e8576d68d4852fb5ce30011f6e9c9eea535810aeeb7",
+      "clientSeed": "135388299aefea65af54c7ee2ba93ff2",
+      "nonce": 1762816827952
+    }
+  }
+}
+2025-11-11 04:50:32 [[32MINFO[39M]: Request received {
+  "requestId": "e0103f0e-dc6b-435c-bd87-10d76d62de2c",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"pickedNumbers\":[1,2,3,4,5,6,7,8,9,10]}"
+}
+2025-11-11 04:50:32 [[32MINFO[39M]: Response sent {
+  "requestId": "e0103f0e-dc6b-435c-bd87-10d76d62de2c",
+  "statusCode": 200,
+  "responseTime": "18ms",
+  "body": {
+    "success": true,
+    "game": "keno",
+    "result": {
+      "betAmount": 10,
+      "pickedNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "drawnNumbers": [
+        54,
+        56,
+        60,
+        7,
+        14,
+        53,
+        63,
+        17,
+        44,
+        2,
+        47,
+        12,
+        50,
+        65,
+        67,
+        73,
+        76,
+        20,
+        40,
+        27
+      ],
+      "matches": 2,
+      "multiplier": 0,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 9980
+    },
+    "provablyFair": {
+      "serverSeed": "8b740f8a7fdc13646409cb9607538e3bbe143129930b12814219b219ad674742",
+      "clientSeed": "68005db6030832a23a9cecf8ce1a81f1",
+      "nonce": 1762816832468
+    }
+  }
+}
+2025-11-11 04:50:37 [[32MINFO[39M]: Request received {
+  "requestId": "5a0cc685-3611-4fd0-b393-dbe796d337c4",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 04:50:37 [[32MINFO[39M]: Response sent {
+  "requestId": "5a0cc685-3611-4fd0-b393-dbe796d337c4",
+  "statusCode": 200,
+  "responseTime": "16ms",
+  "body": {
+    "success": true,
+    "game": "crash",
+    "result": {
+      "betAmount": 10,
+      "crashPoint": 90.94,
+      "autoCashOut": null,
+      "cashedOutAt": 0,
+      "won": false,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 9970
+    },
+    "provablyFair": {
+      "serverSeed": "18053ee6c94e9a5de4ad6c05bedab78ca4faa23655d458550a3cd8fe04fdd142",
+      "clientSeed": "2c20f8a6f6dba4bd483e8504a07522a0",
+      "nonce": 1762816837038
+    }
+  }
+}
+2025-11-11 04:50:48 [[32MINFO[39M]: Request received {
+  "requestId": "1a876293-05a4-43c0-adc8-35219747c56d",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":2.5}"
+}
+2025-11-11 04:50:48 [[32MINFO[39M]: Response sent {
+  "requestId": "1a876293-05a4-43c0-adc8-35219747c56d",
+  "statusCode": 400,
+  "responseTime": "4ms",
+  "body": {
+    "success": false,
+    "error": "Target multiplier must be at least 1.01x"
+  }
+}
+2025-11-11 04:50:54 [[32MINFO[39M]: Request received {
+  "requestId": "3d1865db-a13d-4b0a-8114-91023a2813a6",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":1.5}"
+}
+2025-11-11 04:50:54 [[32MINFO[39M]: Response sent {
+  "requestId": "3d1865db-a13d-4b0a-8114-91023a2813a6",
+  "statusCode": 400,
+  "responseTime": "2ms",
+  "body": {
+    "success": false,
+    "error": "Target multiplier must be at least 1.01x"
+  }
+}
+2025-11-11 04:51:38 [[32MINFO[39M]: Request received {
+  "requestId": "4ca7749c-f761-4917-bc34-4fb704c7c7eb",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10}"
+}
+2025-11-11 04:51:38 [[32MINFO[39M]: Response sent {
+  "requestId": "4ca7749c-f761-4917-bc34-4fb704c7c7eb",
+  "statusCode": 200,
+  "responseTime": "3ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "d5db76cc748e4d7cc0109351d8894c46dd6a34569e03860ed1c0cd56299acfeb",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "gameId": "dt_1762816898986"
+    }
+  }
+}
+2025-11-11 04:51:44 [[32MINFO[39M]: Request received {
+  "requestId": "948f7a90-94ca-4059-afc6-e2f92a4a33a4",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"gameId\":\"dt_1762816898986\",\"tile\":1}"
+}
+2025-11-11 04:51:44 [[32MINFO[39M]: Response sent {
+  "requestId": "948f7a90-94ca-4059-afc6-e2f92a4a33a4",
+  "statusCode": 400,
+  "responseTime": "2ms",
+  "body": {
+    "success": false,
+    "error": "Invalid bet amount"
+  }
+}
+2025-11-11 04:51:49 [[32MINFO[39M]: Request received {
+  "requestId": "f730690b-c8eb-4e71-8967-361d2427cd27",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:51:49 [[32MINFO[39M]: Response sent {
+  "requestId": "f730690b-c8eb-4e71-8967-361d2427cd27",
+  "statusCode": 200,
+  "responseTime": "4ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 9970
+    }
+  }
+}
+2025-11-11 04:51:54 [[32MINFO[39M]: Request received {
+  "requestId": "a3788505-f3dd-4a9a-9e20-1420c4be9338",
+  "method": "GET",
+  "url": "/api/user/history",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 04:51:54 [[32MINFO[39M]: Response sent {
+  "requestId": "a3788505-f3dd-4a9a-9e20-1420c4be9338",
+  "statusCode": 200,
+  "responseTime": "6ms",
+  "body": {
+    "success": true,
+    "data": {
+      "history": [
+        {
+          "id": "7884074c-c80d-4c70-8c91-ae98d075c6d4",
+          "gameType": "crash",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-10T23:20:37.042Z"
+        },
+        {
+          "id": "a3a05f9b-327f-478e-8a02-9b613c3411a6",
+          "gameType": "keno",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-10T23:20:32.473Z"
+        },
+        {
+          "id": "d9b960a0-eb6d-4f05-b67d-77ba840697d1",
+          "gameType": "dice",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-10T23:20:27.968Z"
+        }
+      ]
+    }
+  }
+}
+2025-11-11 04:53:27 [[32MINFO[39M]: Request received {
+  "requestId": "b8613c5b-aa6e-453a-aba7-da95e7c8a1c3",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser3\",\"email\":\"test3@example.com\",\"password\":\"Test@12345\"}"
+}
+2025-11-11 04:53:27 [[32MINFO[39M]: Response sent {
+  "requestId": "b8613c5b-aa6e-453a-aba7-da95e7c8a1c3",
+  "statusCode": 201,
+  "responseTime": "124ms",
+  "body": {
+    "success": true,
+    "message": "User registered successfully",
+    "data": {
+      "user": {
+        "id": "796dac47-37f7-4feb-8dc0-4f20a0e8eb61",
+        "email": "test3@example.com",
+        "username": "testuser3",
+        "balance": "10000",
+        "createdAt": "2025-11-10T23:23:27.329Z"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3OTZkYWM0Ny0zN2Y3LTRmZWItOGRjMC00ZjIwYTBlOGViNjEiLCJ1c2VybmFtZSI6InRlc3R1c2VyMyIsImlhdCI6MTc2MjgxNzAwNywiZXhwIjoxNzYzNDIxODA3fQ.kyGM9Bw7hmQT_KyHcscQXxaVHZFVpa8GOhMefeD5pSE"
+    }
+  }
+}
+2025-11-11 04:54:54 [[32MINFO[39M]: Request received {
+  "requestId": "36399b0a-3f23-4187-a6a1-ca82b7034ec7",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser3\",\"password\":\"Test@12345\"}"
+}
+2025-11-11 04:54:54 [[32MINFO[39M]: Response sent {
+  "requestId": "36399b0a-3f23-4187-a6a1-ca82b7034ec7",
+  "statusCode": 200,
+  "responseTime": "65ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "796dac47-37f7-4feb-8dc0-4f20a0e8eb61",
+        "email": "test3@example.com",
+        "username": "testuser3",
+        "balance": "10000",
+        "isAdmin": false
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3OTZkYWM0Ny0zN2Y3LTRmZWItOGRjMC00ZjIwYTBlOGViNjEiLCJ1c2VybmFtZSI6InRlc3R1c2VyMyIsImlhdCI6MTc2MjgxNzA5NCwiZXhwIjoxNzYzNDIxODk0fQ.Fu4nu5n_HrBpsMX2yRUiocfMiPbkPAntnEVPiHo2Nok"
+    }
+  }
+}
+2025-11-11 04:54:59 [[32MINFO[39M]: Request received {
+  "requestId": "b188e53f-bc9e-40c3-8edf-f1fc36e87ba0",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":50,\"rollOver\":true}"
+}
+2025-11-11 04:54:59 [[32MINFO[39M]: Response sent {
+  "requestId": "b188e53f-bc9e-40c3-8edf-f1fc36e87ba0",
+  "statusCode": 200,
+  "responseTime": "26ms",
+  "body": {
+    "success": true,
+    "game": "dice",
+    "result": {
+      "betAmount": 10,
+      "target": 50,
+      "rollOver": true,
+      "result": 84.33,
+      "won": true,
+      "winChance": 50,
+      "multiplier": 1.98,
+      "payout": 19.8,
+      "profit": 9.8,
+      "newBalance": 10009.8
+    },
+    "provablyFair": {
+      "serverSeed": "974cf8bcf66b5840a1917283fc3db7ddceb4db379ba24aaf45eef0d54425049b",
+      "clientSeed": "19b6bcb55d06df53f520c8f64dcd321c",
+      "nonce": 1762817099135
+    }
+  }
+}
+2025-11-11 04:55:13 [[32MINFO[39M]: Request received {
+  "requestId": "41f7f70a-be77-49b9-a368-0dc356154488",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":1.5}"
+}
+2025-11-11 04:55:13 [[32MINFO[39M]: Response sent {
+  "requestId": "41f7f70a-be77-49b9-a368-0dc356154488",
+  "statusCode": 400,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "error": "Target multiplier must be at least 1.01x"
+  }
+}
+2025-11-11 04:55:21 [[32MINFO[39M]: Request received {
+  "requestId": "7c5f33cf-79de-4532-94ae-1efdc97f8032",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":1.5}"
+}
+2025-11-11 04:55:21 [[32MINFO[39M]: Response sent {
+  "requestId": "7c5f33cf-79de-4532-94ae-1efdc97f8032",
+  "statusCode": 400,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "errors": [
+      {
+        "message": "Target multiplier must be at least 1.01x"
+      }
+    ]
+  }
+}
+2025-11-11 04:56:55 [[32MINFO[39M]: Request received {
+  "requestId": "a589d001-9a7f-4e8b-93e5-a1cc72b502ad",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":1.5}"
+}
+2025-11-11 04:56:55 [[32MINFO[39M]: Response sent {
+  "requestId": "a589d001-9a7f-4e8b-93e5-a1cc72b502ad",
+  "statusCode": 200,
+  "responseTime": "85ms",
+  "body": {
+    "success": true,
+    "game": "limbo",
+    "result": {
+      "betAmount": 10,
+      "targetMultiplier": 1.5,
+      "outcomeMultiplier": 1.38,
+      "won": false,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 9999.8
+    },
+    "provablyFair": {
+      "serverSeed": "64287317d330925edff5320f8a50c0092c0b5fdbdca9000abff29100547e0a1a",
+      "clientSeed": "65adeb3a9be0b6c241a5836952ec19ec",
+      "nonce": 1762817215480
+    }
+  }
+}
+2025-11-11 04:57:02 [[32MINFO[39M]: Request received {
+  "requestId": "50f57a69-9000-435c-a413-9573b531a197",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 04:57:02 [[32MINFO[39M]: Response sent {
+  "requestId": "50f57a69-9000-435c-a413-9573b531a197",
+  "statusCode": 500,
+  "responseTime": "4ms",
+  "body": {
+    "success": false,
+    "error": "Game error. Please try again."
+  }
+}
+2025-11-11 04:57:48 [[32MINFO[39M]: Request received {
+  "requestId": "2d9675aa-7dd4-4328-afe4-081fb1dd1fb0",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 04:57:48 [[32MINFO[39M]: Response sent {
+  "requestId": "2d9675aa-7dd4-4328-afe4-081fb1dd1fb0",
+  "statusCode": 500,
+  "responseTime": "77ms",
+  "body": {
+    "success": false,
+    "error": "Game error. Please try again."
+  }
+}
+2025-11-11 04:58:37 [[32MINFO[39M]: Request received {
+  "requestId": "99e9ddd2-cb2a-41ce-8eaa-aac471766b8f",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 04:58:37 [[32MINFO[39M]: Response sent {
+  "requestId": "99e9ddd2-cb2a-41ce-8eaa-aac471766b8f",
+  "statusCode": 500,
+  "responseTime": "74ms",
+  "body": {
+    "success": false,
+    "error": "Game error. Please try again."
+  }
+}
+2025-11-11 05:02:14 [[32MINFO[39M]: Request received {
+  "requestId": "65714ec5-fdbc-445e-9f17-d86cd5e443c9",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 05:02:14 [[32MINFO[39M]: Response sent {
+  "requestId": "65714ec5-fdbc-445e-9f17-d86cd5e443c9",
+  "statusCode": 500,
+  "responseTime": "77ms",
+  "body": {
+    "success": false,
+    "error": "Game error. Please try again."
+  }
+}
+2025-11-11 05:03:19 [[32MINFO[39M]: Request received {
+  "requestId": "a59c81a4-f969-4dbe-880b-4c6620076310",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 05:03:20 [[32MINFO[39M]: Response sent {
+  "requestId": "a59c81a4-f969-4dbe-880b-4c6620076310",
+  "statusCode": 500,
+  "responseTime": "79ms",
+  "body": {
+    "success": false,
+    "error": "Game error. Please try again."
+  }
+}
+2025-11-11 05:03:46 [[32MINFO[39M]: Request received {
+  "requestId": "cd15eb3e-cd88-468d-b999-5b57ef314f4f",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 05:03:46 [[32MINFO[39M]: Response sent {
+  "requestId": "cd15eb3e-cd88-468d-b999-5b57ef314f4f",
+  "statusCode": 200,
+  "responseTime": "67ms",
+  "body": {
+    "success": true,
+    "game": "crash",
+    "result": {
+      "betAmount": 10,
+      "crashPoint": 1.18,
+      "cashOutAt": 2.5,
+      "cashedOutAt": 2.5,
+      "won": false,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 9974.8
+    },
+    "provablyFair": {
+      "serverSeed": "4782db8ecfab6100db577b42966a98092707af618fe37bed6cf72c78f057ac75",
+      "clientSeed": "62bd3c6a1d23c2e37183a82b8a8c3b8e",
+      "nonce": 1762817626418
+    }
+  }
+}
+2025-11-11 05:03:52 [[32MINFO[39M]: Request received {
+  "requestId": "38301ad2-8590-4481-8bf2-7741dea1cf90",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":50,\"rollOver\":true}"
+}
+2025-11-11 05:03:52 [[32MINFO[39M]: Response sent {
+  "requestId": "38301ad2-8590-4481-8bf2-7741dea1cf90",
+  "statusCode": 200,
+  "responseTime": "20ms",
+  "body": {
+    "success": true,
+    "game": "dice",
+    "result": {
+      "betAmount": 10,
+      "target": 50,
+      "rollOver": true,
+      "result": 73.31,
+      "won": true,
+      "winChance": 50,
+      "multiplier": 1.98,
+      "payout": 19.8,
+      "profit": 9.8,
+      "newBalance": 9984.599999999999
+    },
+    "provablyFair": {
+      "serverSeed": "31294a7ffb91f12e06b65e897122e1b4a4a16bbc4804ec8ce5aaf236413807f1",
+      "clientSeed": "d7985f0c336e3fc6077f002ea33d267b",
+      "nonce": 1762817632625
+    }
+  }
+}
+2025-11-11 05:03:57 [[32MINFO[39M]: Request received {
+  "requestId": "769ffe69-91a8-4098-891b-983ce608d358",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":2}"
+}
+2025-11-11 05:03:57 [[32MINFO[39M]: Response sent {
+  "requestId": "769ffe69-91a8-4098-891b-983ce608d358",
+  "statusCode": 200,
+  "responseTime": "20ms",
+  "body": {
+    "success": true,
+    "game": "limbo",
+    "result": {
+      "betAmount": 10,
+      "targetMultiplier": 2,
+      "outcomeMultiplier": 2.03,
+      "won": true,
+      "payout": 19.8,
+      "profit": 9.8,
+      "newBalance": 9994.4
+    },
+    "provablyFair": {
+      "serverSeed": "6c6d08e1d92da3ccc31ce947b282b8b729755d54bb3547d7929d3f3c87cc7b10",
+      "clientSeed": "9d3cffca2847bf43b78cded4b8e432b6",
+      "nonce": 1762817637768
+    }
+  }
+}
+2025-11-11 05:04:02 [[32MINFO[39M]: Request received {
+  "requestId": "faeb1a24-5499-422a-ae80-df5bcdaf244a",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"difficulty\":\"medium\"}"
+}
+2025-11-11 05:04:02 [[32MINFO[39M]: Response sent {
+  "requestId": "faeb1a24-5499-422a-ae80-df5bcdaf244a",
+  "statusCode": 200,
+  "responseTime": "4ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "4c1b16b1f8cce6fa66dadbe4d73b62b1c4b8123efd4fba6fc68fa68e2c78f688",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "gameId": "dt_1762817642892"
+    }
+  }
+}
+2025-11-11 05:04:09 [[32MINFO[39M]: Request received {
+  "requestId": "c807607a-e4d6-4e76-93b4-32fe0f27e6ff",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"gameId\":\"dt_1762817642892\",\"tile\":0}"
+}
+2025-11-11 05:04:09 [[32MINFO[39M]: Response sent {
+  "requestId": "c807607a-e4d6-4e76-93b4-32fe0f27e6ff",
+  "statusCode": 400,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "errors": [
+      {
+        "message": "Tile must be a number between 1 and 4"
+      }
+    ]
+  }
+}
+2025-11-11 05:04:16 [[32MINFO[39M]: Request received {
+  "requestId": "feb1b993-a033-4101-8b3b-625d46dab5d4",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"gameId\":\"dt_1762817642892\",\"tile\":1}"
+}
+2025-11-11 05:04:16 [[32MINFO[39M]: Response sent {
+  "requestId": "feb1b993-a033-4101-8b3b-625d46dab5d4",
+  "statusCode": 500,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "error": "betAmount is not defined"
+  }
+}
+2025-11-11 05:04:51 [[32MINFO[39M]: Request received {
+  "requestId": "e04e47d1-284c-43dc-ab56-1988a2daf1c5",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"difficulty\":\"medium\"}"
+}
+2025-11-11 05:04:52 [[32MINFO[39M]: Response sent {
+  "requestId": "e04e47d1-284c-43dc-ab56-1988a2daf1c5",
+  "statusCode": 200,
+  "responseTime": "58ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "69026d3ab33abcec7767fc118cd0702e72e991175b6f25fe0e637f996486a602",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "gameId": "dt_1762817692015"
+    }
+  }
+}
+2025-11-11 05:04:59 [[32MINFO[39M]: Request received {
+  "requestId": "cba43cd3-e2bc-492b-a99e-856fdc01544d",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"gameId\":\"dt_1762817692015\",\"tile\":2,\"betAmount\":10}"
+}
+2025-11-11 05:04:59 [[32MINFO[39M]: Response sent {
+  "requestId": "cba43cd3-e2bc-492b-a99e-856fdc01544d",
+  "statusCode": 500,
+  "responseTime": "5ms",
+  "body": {
+    "success": false,
+    "error": "picks is not defined"
+  }
+}
+2025-11-11 05:07:40 [[32MINFO[39M]: Request received {
+  "requestId": "477c352f-572b-4a9b-839a-d3b76a4096d5",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 05:07:40 [[32MINFO[39M]: Response sent {
+  "requestId": "477c352f-572b-4a9b-839a-d3b76a4096d5",
+  "statusCode": 200,
+  "responseTime": "82ms",
+  "body": {
+    "success": true,
+    "game": "crash",
+    "result": {
+      "betAmount": 10,
+      "crashPoint": 2.71,
+      "cashOutAt": 2.5,
+      "cashedOutAt": 2.5,
+      "won": true,
+      "payout": 25,
+      "profit": 15,
+      "newBalance": 10009.4
+    },
+    "provablyFair": {
+      "serverSeed": "310b0baf0f347c47355e953314a2d5fe19d1b498b59e06821455f7f824a0f0de",
+      "clientSeed": "bdd62b53abd5d85631c6917cb3348310",
+      "nonce": 1762817860969
+    }
+  }
+}
+2025-11-11 05:07:47 [[32MINFO[39M]: Request received {
+  "requestId": "2821b3d5-65d1-412e-b8c1-7e7e9d25004c",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":50,\"rollOver\":true}"
+}
+2025-11-11 05:07:47 [[32MINFO[39M]: Response sent {
+  "requestId": "2821b3d5-65d1-412e-b8c1-7e7e9d25004c",
+  "statusCode": 200,
+  "responseTime": "23ms",
+  "body": {
+    "success": true,
+    "game": "dice",
+    "result": {
+      "betAmount": 10,
+      "target": 50,
+      "rollOver": true,
+      "result": 59.62,
+      "won": true,
+      "winChance": 50,
+      "multiplier": 1.98,
+      "payout": 19.8,
+      "profit": 9.8,
+      "newBalance": 10019.199999999999
+    },
+    "provablyFair": {
+      "serverSeed": "c120f39bef3b5285480ee36c34e5cdde131fafdee492a5fb322deae8caab1911",
+      "clientSeed": "cdf3de785c0766f6c9a87d305f90e1ea",
+      "nonce": 1762817867709
+    }
+  }
+}
+2025-11-11 05:07:53 [[32MINFO[39M]: Request received {
+  "requestId": "2e474aa4-7b7e-4e28-a0f3-e98ed82f39a0",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":2}"
+}
+2025-11-11 05:07:53 [[32MINFO[39M]: Response sent {
+  "requestId": "2e474aa4-7b7e-4e28-a0f3-e98ed82f39a0",
+  "statusCode": 200,
+  "responseTime": "18ms",
+  "body": {
+    "success": true,
+    "game": "limbo",
+    "result": {
+      "betAmount": 10,
+      "targetMultiplier": 2,
+      "outcomeMultiplier": 2.59,
+      "won": true,
+      "payout": 19.8,
+      "profit": 9.8,
+      "newBalance": 10029
+    },
+    "provablyFair": {
+      "serverSeed": "0874e613c7e29f98dd10d6487307b3630ed1041f360f11b92900756d3ca371ee",
+      "clientSeed": "6d64e245dd08830d339f3180b41b97da",
+      "nonce": 1762817873926
+    }
+  }
+}
+2025-11-11 05:08:01 [[32MINFO[39M]: Request received {
+  "requestId": "9fb8f807-ebec-4eb1-8aca-517027da7eda",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"difficulty\":\"medium\"}"
+}
+2025-11-11 05:08:01 [[32MINFO[39M]: Response sent {
+  "requestId": "9fb8f807-ebec-4eb1-8aca-517027da7eda",
+  "statusCode": 200,
+  "responseTime": "3ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "eb22a5f15ae8b409ac298b98d589374d50f1c4b90eeb3b88c4a0393456a86ca2",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "gameId": "dt_1762817881371"
+    }
+  }
+}
+2025-11-11 05:08:09 [[32MINFO[39M]: Request received {
+  "requestId": "58f101a7-860a-402d-bb2f-f8b17f3a276e",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"gameId\":\"dt_1762817881371\",\"tile\":2,\"betAmount\":10}"
+}
+2025-11-11 05:08:09 [[32MINFO[39M]: Response sent {
+  "requestId": "58f101a7-860a-402d-bb2f-f8b17f3a276e",
+  "statusCode": 200,
+  "responseTime": "19ms",
+  "body": {
+    "success": true,
+    "game": "dragon-tower",
+    "result": {
+      "betAmount": 10,
+      "tile": 2,
+      "hasEgg": false,
+      "multiplier": 1.96,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 10019
+    },
+    "provablyFair": {
+      "serverSeed": "da3021a7f8cb82b5a6fc99815b67f2e326c7e993163dfc08dd447f0466f392c4",
+      "clientSeed": "6d8a8e11555a3158989593269d447a81",
+      "nonce": 1762817889147
+    }
+  }
+}
+2025-11-11 05:09:33 [[32MINFO[39M]: Request received {
+  "requestId": "4cd8b28a-7b46-4cc7-ab30-b54202a0adc3",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"email\":\"test1@example.com\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 05:09:33 [[32MINFO[39M]: Response sent {
+  "requestId": "4cd8b28a-7b46-4cc7-ab30-b54202a0adc3",
+  "statusCode": 400,
+  "responseTime": "1ms",
+  "body": {
+    "success": false,
+    "errors": [
+      {
+        "message": "Username is required"
+      }
+    ]
+  }
+}
+2025-11-11 05:09:39 [[32MINFO[39M]: Request received {
+  "requestId": "e174b5a1-5d11-435e-9971-1d121bc7dbb1",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 05:09:39 [[32MINFO[39M]: Response sent {
+  "requestId": "e174b5a1-5d11-435e-9971-1d121bc7dbb1",
+  "statusCode": 200,
+  "responseTime": "69ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "9989.8",
+        "isAdmin": true
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NWQ4MTY0ZS1jOTk5LTQxYjMtODVkYS1lNjcyNWVmMGNjZTEiLCJ1c2VybmFtZSI6InRlc3R1c2VyMSIsImlhdCI6MTc2MjgxNzk3OSwiZXhwIjoxNzYzNDIyNzc5fQ.JFzCDn9vq8Cv_yc9aNO2IElvu_7vg4XgHUHG95QNPgM"
+    }
+  }
+}
+2025-11-11 05:10:11 [[32MINFO[39M]: Request received {
+  "requestId": "bc38c9e1-513c-4233-93ef-8fe6da9005c2",
+  "method": "GET",
+  "url": "/api/admin/stats",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:10:11 [[32MINFO[39M]: Response sent {
+  "requestId": "bc38c9e1-513c-4233-93ef-8fe6da9005c2",
+  "statusCode": 401,
+  "responseTime": "0ms",
+  "body": {
+    "success": false,
+    "error": "No token provided. Please login."
+  }
+}
+2025-11-11 05:10:17 [[32MINFO[39M]: Request received {
+  "requestId": "8b39b75b-c908-4435-a34d-6a915cb46114",
+  "method": "GET",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:10:17 [[32MINFO[39M]: Response sent {
+  "requestId": "8b39b75b-c908-4435-a34d-6a915cb46114",
+  "statusCode": 200,
+  "responseTime": "1ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-10T23:40:17.618Z",
+    "environment": "development"
+  }
+}
+2025-11-11 05:10:24 [[32MINFO[39M]: Request received {
+  "requestId": "894538d3-1b7a-460e-a191-72c881bcba7c",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 05:10:24 [[32MINFO[39M]: Response sent {
+  "requestId": "894538d3-1b7a-460e-a191-72c881bcba7c",
+  "statusCode": 200,
+  "responseTime": "65ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "9989.8",
+        "isAdmin": true
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NWQ4MTY0ZS1jOTk5LTQxYjMtODVkYS1lNjcyNWVmMGNjZTEiLCJ1c2VybmFtZSI6InRlc3R1c2VyMSIsImlhdCI6MTc2MjgxODAyNCwiZXhwIjoxNzYzNDIyODI0fQ.zJf3n6ZaKiGSju5il2V5f_e1T7qcUFRkPy50oeTaCaQ"
+    }
+  }
+}
+2025-11-11 05:10:33 [[32MINFO[39M]: Request received {
+  "requestId": "1daf85df-e283-447c-84bf-31066542a288",
+  "method": "GET",
+  "url": "/api/admin/stats",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:10:33 [[32MINFO[39M]: Response sent {
+  "requestId": "1daf85df-e283-447c-84bf-31066542a288",
+  "statusCode": 401,
+  "responseTime": "1ms",
+  "body": {
+    "success": false,
+    "error": "No token provided. Please login."
+  }
+}
+2025-11-11 05:10:41 [[32MINFO[39M]: Request received {
+  "requestId": "bbd10dc0-f7af-4057-b043-fd234f1eca4a",
+  "method": "GET",
+  "url": "/api/admin/stats",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:10:41 [[32MINFO[39M]: Response sent {
+  "requestId": "bbd10dc0-f7af-4057-b043-fd234f1eca4a",
+  "statusCode": 200,
+  "responseTime": "11ms",
+  "body": {
+    "success": true,
+    "data": {
+      "byGame": [
+        {
+          "gameType": "keno",
+          "totalGames": 2,
+          "totalWagered": 20,
+          "totalPayout": 0,
+          "houseProfit": 20,
+          "actualEdge": "100.00"
+        },
+        {
+          "gameType": "dice",
+          "totalGames": 5,
+          "totalWagered": 50,
+          "totalPayout": 79.2,
+          "houseProfit": -29.200000000000003,
+          "actualEdge": "-58.40"
+        },
+        {
+          "gameType": "limbo",
+          "totalGames": 3,
+          "totalWagered": 30,
+          "totalPayout": 39.6,
+          "houseProfit": -9.600000000000001,
+          "actualEdge": "-32.00"
+        },
+        {
+          "gameType": "dragon-tower",
+          "totalGames": 1,
+          "totalWagered": 10,
+          "totalPayout": 0,
+          "houseProfit": 10,
+          "actualEdge": "100.00"
+        },
+        {
+          "gameType": "crash",
+          "totalGames": 8,
+          "totalWagered": 80,
+          "totalPayout": 50,
+          "houseProfit": 30,
+          "actualEdge": "37.50"
+        }
+      ],
+      "overall": {
+        "totalGames": 19,
+        "totalWagered": 190,
+        "totalPayout": 168.8,
+        "houseProfit": 21.19999999999999,
+        "actualEdge": "11.16"
+      },
+      "users": {
+        "total": 3,
+        "totalBalance": 29978.8
+      },
+      "bigWins": [],
+      "profitOverTime": [
+        {
+          "date": "2025-11-10",
+          "profit": -9.8
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -9.8
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -15
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -9.8
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -9.8
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -15
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -9.8
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -9.8
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 10
+        }
+      ]
+    }
+  }
+}
+2025-11-11 05:10:47 [[32MINFO[39M]: Request received {
+  "requestId": "9f1c6d7c-66eb-4bce-a781-bdc7851336de",
+  "method": "GET",
+  "url": "/api/admin/users",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:10:47 [[32MINFO[39M]: Response sent {
+  "requestId": "9f1c6d7c-66eb-4bce-a781-bdc7851336de",
+  "statusCode": 200,
+  "responseTime": "6ms",
+  "body": {
+    "success": true,
+    "data": {
+      "users": [
+        {
+          "id": "796dac47-37f7-4feb-8dc0-4f20a0e8eb61",
+          "username": "testuser3",
+          "email": "test3@example.com",
+          "balance": 10019,
+          "isAdmin": false,
+          "createdAt": "2025-11-10T23:23:27.329Z",
+          "_count": {
+            "games": 13
+          },
+          "totalGames": 13
+        },
+        {
+          "id": "83b89809-b7cf-4e46-ba9a-95cdad821a29",
+          "username": "testuser2",
+          "email": "test2@example.com",
+          "balance": 9970,
+          "isAdmin": false,
+          "createdAt": "2025-11-10T23:18:50.399Z",
+          "_count": {
+            "games": 3
+          },
+          "totalGames": 3
+        },
+        {
+          "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+          "username": "testuser1",
+          "email": "test1@example.com",
+          "balance": 9989.8,
+          "isAdmin": true,
+          "createdAt": "2025-11-10T23:04:32.006Z",
+          "_count": {
+            "games": 3
+          },
+          "totalGames": 3
+        }
+      ],
+      "pagination": {
+        "total": 3,
+        "page": 1,
+        "limit": 20,
+        "pages": 1
+      }
+    }
+  }
+}
+2025-11-11 05:10:57 [[32MINFO[39M]: Request received {
+  "requestId": "c08e2d51-3f57-4cba-9c03-318c688e8b11",
+  "method": "POST",
+  "url": "/api/admin/adjust-balance",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"userId\":\"95d8164e-c999-41b3-85da-e6725ef0cce1\",\"amount\":100,\"reason\":\"Admin adjustment\"}"
+}
+2025-11-11 05:10:57 [[32MINFO[39M]: Response sent {
+  "requestId": "c08e2d51-3f57-4cba-9c03-318c688e8b11",
+  "statusCode": 200,
+  "responseTime": "19ms",
+  "body": {
+    "success": true,
+    "message": "Balance adjusted successfully",
+    "data": {
+      "userId": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+      "balanceBefore": 9989.8,
+      "balanceAfter": 10089.8,
+      "adjustment": 100
+    }
+  }
+}
+2025-11-11 05:11:10 [[32MINFO[39M]: Request received {
+  "requestId": "38ac8f15-b66a-4705-b959-81b023e46f5e",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"cashOutAt\":2.5}"
+}
+2025-11-11 05:11:10 [[32MINFO[39M]: Response sent {
+  "requestId": "38ac8f15-b66a-4705-b959-81b023e46f5e",
+  "statusCode": 200,
+  "responseTime": "21ms",
+  "body": {
+    "success": true,
+    "game": "crash",
+    "result": {
+      "betAmount": 10,
+      "crashPoint": 1.41,
+      "cashOutAt": 2.5,
+      "cashedOutAt": 2.5,
+      "won": false,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 10079.8
+    },
+    "provablyFair": {
+      "serverSeed": "1642f2fff9118d8c7cf27744ff0f01bec9173951ae9892c1929849bccbd0684f",
+      "clientSeed": "ef1328770f51bdb10df12ce9ae2500a4",
+      "nonce": 1762818070627
+    }
+  }
+}
+2025-11-11 05:11:20 [[32MINFO[39M]: Request received {
+  "requestId": "a09cbef7-545d-48b2-8e30-182881444edd",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"target\":50,\"rollOver\":true}"
+}
+2025-11-11 05:11:20 [[32MINFO[39M]: Response sent {
+  "requestId": "a09cbef7-545d-48b2-8e30-182881444edd",
+  "statusCode": 200,
+  "responseTime": "16ms",
+  "body": {
+    "success": true,
+    "game": "dice",
+    "result": {
+      "betAmount": 10,
+      "target": 50,
+      "rollOver": true,
+      "result": 41.84,
+      "won": false,
+      "winChance": 50,
+      "multiplier": 1.98,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 10069.8
+    },
+    "provablyFair": {
+      "serverSeed": "5abbe9e3cb20ecc6a895150d1329f8fbee1fa72f902fd177598d56c3e19f835a",
+      "clientSeed": "1169548ab0c336fa73ffcda255130a41",
+      "nonce": 1762818080864
+    }
+  }
+}
+2025-11-11 05:11:28 [[32MINFO[39M]: Request received {
+  "requestId": "5e9e76c8-e7c7-4be2-88d7-4e28b3f74b2a",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":2}"
+}
+2025-11-11 05:11:29 [[32MINFO[39M]: Response sent {
+  "requestId": "5e9e76c8-e7c7-4be2-88d7-4e28b3f74b2a",
+  "statusCode": 200,
+  "responseTime": "19ms",
+  "body": {
+    "success": true,
+    "game": "limbo",
+    "result": {
+      "betAmount": 10,
+      "targetMultiplier": 2,
+      "outcomeMultiplier": 8.27,
+      "won": true,
+      "payout": 19.8,
+      "profit": 9.8,
+      "newBalance": 10079.599999999999
+    },
+    "provablyFair": {
+      "serverSeed": "e3dc3a4edcfc0f2fd97ee32362c780f57fa604cf5d11e9cff147266575809bac",
+      "clientSeed": "aeeb44cbbb79adc7071dfd62eea98943",
+      "nonce": 1762818088995
+    }
+  }
+}
+2025-11-11 05:11:38 [[32MINFO[39M]: Request received {
+  "requestId": "7c08104a-4648-45b3-84c3-b6b05ee4d7ea",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":10,\"difficulty\":\"medium\"}"
+}
+2025-11-11 05:11:38 [[32MINFO[39M]: Response sent {
+  "requestId": "7c08104a-4648-45b3-84c3-b6b05ee4d7ea",
+  "statusCode": 200,
+  "responseTime": "2ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "43c065e93d89ebfb9cc3dcf444896d4f40dfeaa050c3deb46150ac466be6eca5",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "gameId": "dt_1762818098480"
+    }
+  }
+}
+2025-11-11 05:11:47 [[32MINFO[39M]: Request received {
+  "requestId": "0cc93048-fae4-46dc-a36e-05bffa5c7700",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"gameId\":\"dt_1762818098480\",\"tile\":2,\"betAmount\":10}"
+}
+2025-11-11 05:11:47 [[32MINFO[39M]: Response sent {
+  "requestId": "0cc93048-fae4-46dc-a36e-05bffa5c7700",
+  "statusCode": 200,
+  "responseTime": "16ms",
+  "body": {
+    "success": true,
+    "game": "dragon-tower",
+    "result": {
+      "betAmount": 10,
+      "tile": 2,
+      "hasEgg": false,
+      "multiplier": 1.96,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 10069.6
+    },
+    "provablyFair": {
+      "serverSeed": "8d13f021c50cb699009dc2ae8b82bfa7f6d5ea5663011d3e8053fffac56c6130",
+      "clientSeed": "0ea316e454f6131aef3278a134a9a7ff",
+      "nonce": 1762818107688
+    }
+  }
+}
+2025-11-11 05:11:56 [[32MINFO[39M]: Request received {
+  "requestId": "7cabca91-e397-4df7-b0fb-82bd1480350c",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:11:56 [[32MINFO[39M]: Response sent {
+  "requestId": "7cabca91-e397-4df7-b0fb-82bd1480350c",
+  "statusCode": 200,
+  "responseTime": "3ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10069.6
+    }
+  }
+}
+2025-11-11 05:12:05 [[32MINFO[39M]: Request received {
+  "requestId": "19caa3eb-2455-40f8-aa12-3854da9e60cf",
+  "method": "GET",
+  "url": "/api/user/history?limit=5",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:12:05 [[32MINFO[39M]: Response sent {
+  "requestId": "19caa3eb-2455-40f8-aa12-3854da9e60cf",
+  "statusCode": 200,
+  "responseTime": "3ms",
+  "body": {
+    "success": true,
+    "data": {
+      "history": [
+        {
+          "id": "e8ea5457-d3be-45fe-8e84-42b0066d6338",
+          "gameType": "dragon-tower",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-10T23:41:47.692Z"
+        },
+        {
+          "id": "1ec0feca-1fc4-42c6-9f40-8a2e7b6a1910",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-10T23:41:29.000Z"
+        },
+        {
+          "id": "14f7e605-1f40-4ae6-bae2-94cffd2c907a",
+          "gameType": "dice",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-10T23:41:20.869Z"
+        },
+        {
+          "id": "13cc2e34-a54a-4516-8c67-e9a12356985b",
+          "gameType": "crash",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-10T23:41:10.632Z"
+        },
+        {
+          "id": "5ede788e-148c-4c05-9d0b-14c331f2322e",
+          "gameType": "crash",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-10T23:07:55.233Z"
+        }
+      ]
+    }
+  }
+}
+2025-11-11 05:12:14 [[32MINFO[39M]: Request received {
+  "requestId": "69903d02-49dc-4119-8a01-692dc6103fd3",
+  "method": "GET",
+  "url": "/api/auth/me",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:12:14 [[32MINFO[39M]: Response sent {
+  "requestId": "69903d02-49dc-4119-8a01-692dc6103fd3",
+  "statusCode": 200,
+  "responseTime": "3ms",
+  "body": {
+    "success": true,
+    "data": {
+      "user": {
+        "id": "95d8164e-c999-41b3-85da-e6725ef0cce1",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "10069.6",
+        "isAdmin": true,
+        "createdAt": "2025-11-10T23:04:32.006Z"
+      }
+    }
+  }
+}
+2025-11-11 05:12:22 [[32MINFO[39M]: Request received {
+  "requestId": "5e9a7011-45ef-4c20-b750-1695c53ee9f6",
+  "method": "POST",
+  "url": "/api/auth/logout",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:12:22 [[32MINFO[39M]: Response sent {
+  "requestId": "5e9a7011-45ef-4c20-b750-1695c53ee9f6",
+  "statusCode": 404,
+  "responseTime": "0ms",
+  "body": {
+    "success": false,
+    "error": "Not Found",
+    "message": "Cannot POST /api/auth/logout"
+  }
+}
+2025-11-11 05:12:27 [[32MINFO[39M]: Request received {
+  "requestId": "b292b3d4-007e-4fda-9715-664f121ea287",
+  "method": "GET",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 05:12:27 [[32MINFO[39M]: Response sent {
+  "requestId": "b292b3d4-007e-4fda-9715-664f121ea287",
+  "statusCode": 200,
+  "responseTime": "1ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-10T23:42:27.050Z",
+    "environment": "development"
+  }
+}
+2025-11-11 05:14:09 [[32MINFO[39M]: Request received {
+  "requestId": "5ea74b7c-15e9-4017-a95d-e7b0794d4e62",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 14:16:45 [[32MINFO[39M]: Request received {
+  "requestId": "e44fad48-9f85-44dc-ada9-cca41e2d76eb",
+  "method": "HEAD",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:16:45 [[32MINFO[39M]: Response sent {
+  "requestId": "e44fad48-9f85-44dc-ada9-cca41e2d76eb",
+  "statusCode": 200,
+  "responseTime": "8ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-11T08:46:45.089Z",
+    "environment": "development",
+    "version": "1.0.0"
+  }
+}
+2025-11-11 14:17:21 [[32MINFO[39M]: Request received {
+  "requestId": "631244c0-2cc1-4d45-ab4e-015e87a48760",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser\",\"email\":\"test@example.com\",\"password\":\"testpass\"}"
+}
+2025-11-11 14:17:22 [[32MINFO[39M]: Response sent {
+  "requestId": "631244c0-2cc1-4d45-ab4e-015e87a48760",
+  "statusCode": 500,
+  "responseTime": "64ms",
+  "body": {
+    "success": false,
+    "error": "Registration failed"
+  }
+}
+2025-11-11 14:17:29 [[32MINFO[39M]: Request received {
+  "requestId": "134c1049-cf69-4d86-b5e1-0e38b43a0bca",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser123\",\"email\":\"test123@example.com\",\"password\":\"Testpass123!\"}"
+}
+2025-11-11 14:17:29 [[32MINFO[39M]: Response sent {
+  "requestId": "134c1049-cf69-4d86-b5e1-0e38b43a0bca",
+  "statusCode": 500,
+  "responseTime": "42ms",
+  "body": {
+    "success": false,
+    "error": "Registration failed"
+  }
+}
+2025-11-11 14:17:37 [[32MINFO[39M]: Request received {
+  "requestId": "97d15bef-2b8f-41ed-b615-374dc47d9889",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"admin\",\"password\":\"admin123\"}"
+}
+2025-11-11 14:17:37 [[32MINFO[39M]: Response sent {
+  "requestId": "97d15bef-2b8f-41ed-b615-374dc47d9889",
+  "statusCode": 500,
+  "responseTime": "38ms",
+  "body": {
+    "success": false,
+    "error": "Login failed"
+  }
+}
+2025-11-11 14:17:50 [[32MINFO[39M]: Request received {
+  "requestId": "66693fb2-db18-4c5b-99af-75f36428cb62",
+  "method": "GET",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:17:50 [[32MINFO[39M]: Response sent {
+  "requestId": "66693fb2-db18-4c5b-99af-75f36428cb62",
+  "statusCode": 200,
+  "responseTime": "1ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-11T08:47:50.584Z",
+    "environment": "development",
+    "version": "1.0.0"
+  }
+}
+2025-11-11 14:18:05 [[32MINFO[39M]: Request received {
+  "requestId": "0a6b3fba-d455-4651-a972-050f631dda9a",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"admin\",\"password\":\"admin\"}"
+}
+2025-11-11 14:18:05 [[32MINFO[39M]: Response sent {
+  "requestId": "0a6b3fba-d455-4651-a972-050f631dda9a",
+  "statusCode": 500,
+  "responseTime": "36ms",
+  "body": {
+    "success": false,
+    "error": "Login failed"
+  }
+}
+2025-11-11 14:22:12 [[32MINFO[39M]: Request received {
+  "requestId": "a1e92b0d-20e2-422c-88be-0b867b244513",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser123\",\"email\":\"test123@example.com\",\"password\":\"Test@123\"}"
+}
+2025-11-11 14:22:12 [[32MINFO[39M]: Response sent {
+  "requestId": "a1e92b0d-20e2-422c-88be-0b867b244513",
+  "statusCode": 500,
+  "responseTime": "57ms",
+  "body": {
+    "success": false,
+    "error": "Registration failed"
+  }
+}
+2025-11-11 14:30:25 [[32MINFO[39M]: Request received {
+  "requestId": "e952a66a-7ba8-4df2-af71-5c7b53fc02cb",
+  "method": "GET",
+  "url": "/api/health",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:30:25 [[32MINFO[39M]: Response sent {
+  "requestId": "e952a66a-7ba8-4df2-af71-5c7b53fc02cb",
+  "statusCode": 200,
+  "responseTime": "7ms",
+  "body": {
+    "success": true,
+    "message": "Casino API is running",
+    "timestamp": "2025-11-11T09:00:25.044Z",
+    "environment": "development",
+    "version": "1.0.0"
+  }
+}
+2025-11-11 14:30:31 [[32MINFO[39M]: Request received {
+  "requestId": "07a4ee0d-96d1-49c6-8acc-1c13c823da7b",
+  "method": "GET",
+  "url": "/api-docs",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:30:31 [[32MINFO[39M]: Response sent {
+  "requestId": "07a4ee0d-96d1-49c6-8acc-1c13c823da7b",
+  "statusCode": 200,
+  "responseTime": "1ms",
+  "body": {
+    "message": "API Documentation has been removed. Please refer to the project documentation.",
+    "endpoints": {
+      "auth": {
+        "register": "POST /api/auth/register",
+        "login": "POST /api/auth/login",
+        "me": "GET /api/auth/me"
+      },
+      "games": {
+        "dice": "POST /api/games/dice",
+        "keno": "POST /api/games/keno",
+        "crash": "POST /api/games/crash",
+        "limbo": "POST /api/games/limbo",
+        "dragonTower": {
+          "init": "POST /api/games/dragon-tower/init",
+          "play": "POST /api/games/dragon-tower"
+        }
+      },
+      "user": {
+        "balance": "GET /api/user/balance",
+        "history": "GET /api/user/history"
+      },
+      "admin": {
+        "stats": "GET /api/admin/stats",
+        "users": "GET /api/admin/users",
+        "adjustBalance": "POST /api/admin/adjust-balance"
+      }
+    }
+  }
+}
+2025-11-11 14:31:09 [[32MINFO[39M]: Request received {
+  "requestId": "2dd509cd-c6c0-4508-88c3-e7599ba84eff",
+  "method": "POST",
+  "url": "/api/auth/register",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"email\":\"test1@example.com\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 14:31:14 [[32MINFO[39M]: Response sent {
+  "requestId": "2dd509cd-c6c0-4508-88c3-e7599ba84eff",
+  "statusCode": 201,
+  "responseTime": "4340ms",
+  "body": {
+    "success": true,
+    "message": "User registered successfully",
+    "data": {
+      "user": {
+        "id": "4ab7f031-689e-4da5-8ace-857a4952e84d",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "10000",
+        "createdAt": "2025-11-11T09:01:13.427Z"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0YWI3ZjAzMS02ODllLTRkYTUtOGFjZS04NTdhNDk1MmU4NGQiLCJ1c2VybmFtZSI6InRlc3R1c2VyMSIsImlhdCI6MTc2Mjg1MTY3NCwiZXhwIjoxNzYzNDU2NDc0fQ.u3LQ5AOFeMZAMyJWoXS45uD_Z7FR3EL0ofJN04VCkck"
+    }
+  }
+}
+2025-11-11 14:31:20 [[32MINFO[39M]: Request received {
+  "requestId": "04add034-871f-4671-a84c-aea5baedaf29",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"email\":\"test1@example.com\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 14:31:20 [[32MINFO[39M]: Response sent {
+  "requestId": "04add034-871f-4671-a84c-aea5baedaf29",
+  "statusCode": 400,
+  "responseTime": "3ms",
+  "body": {
+    "success": false,
+    "errors": [
+      {
+        "message": "Username is required"
+      }
+    ]
+  }
+}
+2025-11-11 14:32:03 [[32MINFO[39M]: Request received {
+  "requestId": "21725f2a-0238-45d7-8f1e-d858867e1464",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"username\":\"testuser1\",\"password\":\"Test@1234\"}"
+}
+2025-11-11 14:32:04 [[32MINFO[39M]: Response sent {
+  "requestId": "21725f2a-0238-45d7-8f1e-d858867e1464",
+  "statusCode": 200,
+  "responseTime": "968ms",
+  "body": {
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "user": {
+        "id": "4ab7f031-689e-4da5-8ace-857a4952e84d",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "10000",
+        "isAdmin": false
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0YWI3ZjAzMS02ODllLTRkYTUtOGFjZS04NTdhNDk1MmU4NGQiLCJ1c2VybmFtZSI6InRlc3R1c2VyMSIsImlhdCI6MTc2Mjg1MTcyNCwiZXhwIjoxNzYzNDU2NTI0fQ.8S8G9AN8p9RjIULOfXAovnjgOpI5uB9p21i8dxWd7nI"
+    }
+  }
+}
+2025-11-11 14:32:18 [[32MINFO[39M]: Request received {
+  "requestId": "8f2abf3b-f5df-427a-80fc-38b6a0e366b2",
+  "method": "GET",
+  "url": "/api/auth/me",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:32:21 [[32MINFO[39M]: Response sent {
+  "requestId": "8f2abf3b-f5df-427a-80fc-38b6a0e366b2",
+  "statusCode": 200,
+  "responseTime": "3098ms",
+  "body": {
+    "success": true,
+    "data": {
+      "user": {
+        "id": "4ab7f031-689e-4da5-8ace-857a4952e84d",
+        "email": "test1@example.com",
+        "username": "testuser1",
+        "balance": "10000",
+        "isAdmin": false,
+        "createdAt": "2025-11-11T09:01:13.427Z"
+      }
+    }
+  }
+}
+2025-11-11 14:32:30 [[32MINFO[39M]: Request received {
+  "requestId": "404dc900-5fef-484e-afdc-0518f12b8174",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:32:32 [[32MINFO[39M]: Response sent {
+  "requestId": "404dc900-5fef-484e-afdc-0518f12b8174",
+  "statusCode": 200,
+  "responseTime": "1723ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10000
+    }
+  }
+}
+2025-11-11 14:32:41 [[32MINFO[39M]: Request received {
+  "requestId": "de3e1eb4-5a69-4cc1-876a-3f18652f5bc5",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"targetNumber\":50,\"guess\":\"over\"}"
+}
+2025-11-11 14:32:42 [[32MINFO[39M]: Response sent {
+  "requestId": "de3e1eb4-5a69-4cc1-876a-3f18652f5bc5",
+  "statusCode": 400,
+  "responseTime": "1315ms",
+  "body": {
+    "success": false,
+    "errors": [
+      {
+        "message": "Target must be between 1.01 and 99.99"
+      },
+      {
+        "message": "rollOver must be a boolean"
+      }
+    ]
+  }
+}
+2025-11-11 14:32:54 [[32MINFO[39M]: Request received {
+  "requestId": "95e11ea8-3e46-43d1-8198-9a69af7d95a8",
+  "method": "POST",
+  "url": "/api/games/dice",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"target\":50,\"rollOver\":true}"
+}
+2025-11-11 14:33:00 [[32MINFO[39M]: Response sent {
+  "requestId": "95e11ea8-3e46-43d1-8198-9a69af7d95a8",
+  "statusCode": 200,
+  "responseTime": "6368ms",
+  "body": {
+    "success": true,
+    "game": "dice",
+    "result": {
+      "betAmount": 100,
+      "target": 50,
+      "rollOver": true,
+      "result": 67.2,
+      "won": true,
+      "winChance": 50,
+      "multiplier": 1.98,
+      "payout": 198,
+      "profit": 98,
+      "newBalance": 10098
+    },
+    "provablyFair": {
+      "serverSeed": "3bfac968dee59434b59eb925a4fa3dd46f7399e029ae2660c9448d0d906be412",
+      "clientSeed": "2bf6fc31fb2afaad7ee17365c8ed29df",
+      "nonce": 1762851775479
+    }
+  }
+}
+2025-11-11 14:33:10 [[32MINFO[39M]: Request received {
+  "requestId": "1457fd58-3512-4114-b38c-f10be9d5ca5e",
+  "method": "GET",
+  "url": "/api/user/history",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:33:13 [[32MINFO[39M]: Response sent {
+  "requestId": "1457fd58-3512-4114-b38c-f10be9d5ca5e",
+  "statusCode": 200,
+  "responseTime": "3039ms",
+  "body": {
+    "success": true,
+    "data": {
+      "history": [
+        {
+          "id": "5d346a4f-b183-4d5c-842f-96e832d22dfb",
+          "gameType": "dice",
+          "betAmount": "100",
+          "payout": "198",
+          "profit": "98",
+          "createdAt": "2025-11-11T09:02:58.863Z"
+        }
+      ]
+    }
+  }
+}
+2025-11-11 14:33:43 [[32MINFO[39M]: Request received {
+  "requestId": "fa732224-6645-4e81-b3c6-621cf59d4851",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":50,\"pickedNumbers\":[1,5,10,15,20]}"
+}
+2025-11-11 14:33:45 [[32MINFO[39M]: Response sent {
+  "requestId": "fa732224-6645-4e81-b3c6-621cf59d4851",
+  "statusCode": 400,
+  "responseTime": "1374ms",
+  "body": {
+    "success": false,
+    "error": "Must pick exactly 10 numbers (1-80)"
+  }
+}
+2025-11-11 14:33:57 [[32MINFO[39M]: Request received {
+  "requestId": "c126beee-d20d-45e1-81bb-1de23b846452",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":50,\"pickedNumbers\":[1,5,10,15,20,25,30,35,40,45]}"
+}
+2025-11-11 14:34:00 [[32MINFO[39M]: Response sent {
+  "requestId": "c126beee-d20d-45e1-81bb-1de23b846452",
+  "statusCode": 200,
+  "responseTime": "3361ms",
+  "body": {
+    "success": true,
+    "game": "keno",
+    "result": {
+      "betAmount": 50,
+      "pickedNumbers": [
+        1,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45
+      ],
+      "drawnNumbers": [
+        2,
+        35,
+        16,
+        61,
+        58,
+        59,
+        4,
+        41,
+        40,
+        63,
+        73,
+        74,
+        69,
+        34,
+        46,
+        44,
+        12,
+        42,
+        29,
+        28
+      ],
+      "matches": 2,
+      "multiplier": 0,
+      "payout": 0,
+      "profit": -50,
+      "newBalance": 10048
+    },
+    "provablyFair": {
+      "serverSeed": "b419bb83c7dfedca35f31e4e63fc949ddc88d2bb833c7ea304a35806f8282237",
+      "clientSeed": "7e30bf5efa9e78cbe7a0d544e7d4b2e7",
+      "nonce": 1762851837949
+    }
+  }
+}
+2025-11-11 14:34:02 [[32MINFO[39M]: Request received {
+  "requestId": "7dad63c6-2b00-44d8-ac6f-668989a7000d",
+  "method": "POST",
+  "url": "/api/games/crash",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100,\"autoCashout\":2}"
+}
+2025-11-11 14:34:07 [[32MINFO[39M]: Response sent {
+  "requestId": "7dad63c6-2b00-44d8-ac6f-668989a7000d",
+  "statusCode": 200,
+  "responseTime": "4898ms",
+  "body": {
+    "success": true,
+    "game": "crash",
+    "result": {
+      "betAmount": 100,
+      "crashPoint": 1.23,
+      "cashOutAt": null,
+      "cashedOutAt": 1.2311754069378495,
+      "won": true,
+      "payout": 123.12,
+      "profit": 23.12,
+      "newBalance": 10071.117540693785
+    },
+    "provablyFair": {
+      "serverSeed": "caaeae8e2316386ef24bfb85dbaef8b2a3e6760bb5935814401d1c0a668cf6c8",
+      "clientSeed": "a833e1eeab0c30a8e4ee4f4f8188d605",
+      "nonce": 1762851843586
+    }
+  }
+}
+2025-11-11 14:34:12 [[32MINFO[39M]: Request received {
+  "requestId": "e0f6cb89-05fc-4f97-a31e-b55648aca85e",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":50,\"targetMultiplier\":2}"
+}
+2025-11-11 14:34:17 [[32MINFO[39M]: Response sent {
+  "requestId": "e0f6cb89-05fc-4f97-a31e-b55648aca85e",
+  "statusCode": 200,
+  "responseTime": "4065ms",
+  "body": {
+    "success": true,
+    "game": "limbo",
+    "result": {
+      "betAmount": 50,
+      "targetMultiplier": 2,
+      "outcomeMultiplier": 14.69,
+      "won": true,
+      "payout": 99,
+      "profit": 49,
+      "newBalance": 10120.12
+    },
+    "provablyFair": {
+      "serverSeed": "c0857ae39650dc1b998a18fada0e496b96b1d22e967207a5a1d7a614793f4707",
+      "clientSeed": "16a5ba05c897800b0c054c29b2bda845",
+      "nonce": 1762851853809
+    }
+  }
+}
+2025-11-11 14:34:23 [[32MINFO[39M]: Request received {
+  "requestId": "321e8610-2084-450f-bd02-95839527b13e",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{\"betAmount\":100}"
+}
+2025-11-11 14:34:25 [[32MINFO[39M]: Response sent {
+  "requestId": "321e8610-2084-450f-bd02-95839527b13e",
+  "statusCode": 200,
+  "responseTime": "1449ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "57961e6baffe111e04c7cf49a5b76869befd8926eb8cbdca152475c45ca3ab0a",
+      "config": {
+        "eggs": 2,
+        "tiles": 4,
+        "levels": 10
+      },
+      "gameId": "dt_1762851865224"
+    }
+  }
+}
+2025-11-11 14:34:50 [[32MINFO[39M]: Request received {
+  "requestId": "80b60626-aae4-4dd1-aa3f-57388235bd9d",
+  "method": "GET",
+  "url": "/api/admin/stats",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:34:58 [[32MINFO[39M]: Response sent {
+  "requestId": "80b60626-aae4-4dd1-aa3f-57388235bd9d",
+  "statusCode": 200,
+  "responseTime": "8505ms",
+  "body": {
+    "success": true,
+    "data": {
+      "byGame": [
+        {
+          "gameType": "keno",
+          "totalGames": 3,
+          "totalWagered": 250,
+          "totalPayout": 200,
+          "houseProfit": 50,
+          "actualEdge": "20.00"
+        },
+        {
+          "gameType": "dice",
+          "totalGames": 3,
+          "totalWagered": 300,
+          "totalPayout": 396,
+          "houseProfit": -96,
+          "actualEdge": "-32.00"
+        },
+        {
+          "gameType": "limbo",
+          "totalGames": 3,
+          "totalWagered": 250,
+          "totalPayout": 99,
+          "houseProfit": 151,
+          "actualEdge": "60.40"
+        },
+        {
+          "gameType": "dragonTower",
+          "totalGames": 2,
+          "totalWagered": 200,
+          "totalPayout": 196,
+          "houseProfit": 4,
+          "actualEdge": "2.00"
+        },
+        {
+          "gameType": "crash",
+          "totalGames": 3,
+          "totalWagered": 300,
+          "totalPayout": 618.12,
+          "houseProfit": -318.12,
+          "actualEdge": "-106.04"
+        }
+      ],
+      "overall": {
+        "totalGames": 14,
+        "totalWagered": 1300,
+        "totalPayout": 1509.12,
+        "houseProfit": -209.1199999999999,
+        "actualEdge": "-16.09"
+      },
+      "users": {
+        "total": 3,
+        "totalBalance": 30209.12
+      },
+      "bigWins": [
+        {
+          "username": "testuser2",
+          "gameType": "crash",
+          "betAmount": 100,
+          "payout": 247.5,
+          "profit": 147.5,
+          "createdAt": "2025-11-10T22:10:03.538Z"
+        },
+        {
+          "username": "testuser",
+          "gameType": "crash",
+          "betAmount": 100,
+          "payout": 247.5,
+          "profit": 147.5,
+          "createdAt": "2025-11-10T22:19:18.585Z"
+        }
+      ],
+      "profitOverTime": [
+        {
+          "date": "2025-11-10",
+          "profit": 100
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 100
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 100
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -147.5
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -100
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 100
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -147.5
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -98
+        },
+        {
+          "date": "2025-11-10",
+          "profit": 100
+        },
+        {
+          "date": "2025-11-10",
+          "profit": -96
+        },
+        {
+          "date": "2025-11-11",
+          "profit": -98
+        },
+        {
+          "date": "2025-11-11",
+          "profit": 50
+        },
+        {
+          "date": "2025-11-11",
+          "profit": -23.12
+        },
+        {
+          "date": "2025-11-11",
+          "profit": -49
+        }
+      ]
+    }
+  }
+}
+2025-11-11 14:35:07 [[32MINFO[39M]: Request received {
+  "requestId": "6c5cfe90-8255-444a-bd63-165d740c9e50",
+  "method": "GET",
+  "url": "/api/admin/users",
+  "ip": "::1",
+  "userAgent": "curl/8.5.0",
+  "body": "{}"
+}
+2025-11-11 14:35:09 [[32MINFO[39M]: Response sent {
+  "requestId": "6c5cfe90-8255-444a-bd63-165d740c9e50",
+  "statusCode": 200,
+  "responseTime": "2873ms",
+  "body": {
+    "success": true,
+    "data": {
+      "users": [
+        {
+          "id": "4ab7f031-689e-4da5-8ace-857a4952e84d",
+          "username": "testuser1",
+          "email": "test1@example.com",
+          "balance": 10120.12,
+          "isAdmin": true,
+          "createdAt": "2025-11-11T09:01:13.427Z",
+          "_count": {
+            "games": 4
+          },
+          "totalGames": 4
+        },
+        {
+          "id": "11aa96cd-6185-4841-b5c1-48f6b239ce19",
+          "username": "testuser2",
+          "email": "test2@example.com",
+          "balance": 9847.5,
+          "isAdmin": false,
+          "createdAt": "2025-11-10T22:07:32.425Z",
+          "_count": {
+            "games": 4
+          },
+          "totalGames": 4
+        },
+        {
+          "id": "9d150deb-6281-4625-9b98-87872ccd9205",
+          "username": "testuser",
+          "email": "test@example.com",
+          "balance": 10241.5,
+          "isAdmin": false,
+          "createdAt": "2025-11-10T21:51:25.014Z",
+          "_count": {
+            "games": 6
+          },
+          "totalGames": 6
+        }
+      ],
+      "pagination": {
+        "total": 3,
+        "page": 1,
+        "limit": 20,
+        "pages": 1
+      }
+    }
+  }
+}

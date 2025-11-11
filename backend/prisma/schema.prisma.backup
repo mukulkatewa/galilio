@@ -1,0 +1,79 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  username      String    @unique
+  password      String
+  balance       Decimal   @default(10000) @db.Decimal(10, 2)
+  isAdmin       Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  games         Game[]
+  transactions  Transaction[]
+  
+  @@index([email])
+  @@index([username])
+}
+
+model Game {
+  id              String    @id @default(uuid())
+  userId          String
+  gameType        String    // 'keno', 'limbo', 'crash', 'dice', 'dragonTower'
+  betAmount       Decimal   @db.Decimal(10, 2)
+  payout          Decimal   @db.Decimal(10, 2)
+  profit          Decimal   @db.Decimal(10, 2)
+  
+  // Game-specific data (stored as JSON)
+  gameData        Json
+  
+  // Provably fair data
+  serverSeed      String
+  clientSeed      String
+  nonce           BigInt
+  
+  createdAt       DateTime  @default(now())
+  
+  user            User      @relation(fields: [userId], references: [id])
+  
+  @@index([userId])
+  @@index([gameType])
+  @@index([createdAt])
+}
+
+model Transaction {
+  id              String    @id @default(uuid())
+  userId          String
+  type            String    // 'bet', 'win', 'admin_adjustment'
+  amount          Decimal   @db.Decimal(10, 2)
+  balanceBefore   Decimal   @db.Decimal(10, 2)
+  balanceAfter    Decimal   @db.Decimal(10, 2)
+  reference       String?   // Game ID or other reference
+  createdAt       DateTime  @default(now())
+  
+  user            User      @relation(fields: [userId], references: [id])
+  
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model HouseStats {
+  id              String    @id @default(uuid())
+  date            DateTime  @default(now()) @db.Date
+  gameType        String
+  totalGames      Int       @default(0)
+  totalWagered    Decimal   @default(0) @db.Decimal(12, 2)
+  totalPayout     Decimal   @default(0) @db.Decimal(12, 2)
+  houseProfit     Decimal   @default(0) @db.Decimal(12, 2)
+  
+  @@unique([date, gameType])
+  @@index([date])
+}
