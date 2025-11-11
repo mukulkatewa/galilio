@@ -32284,3 +32284,3090 @@
     }
   }
 }
+2025-11-12 03:20:42 [[32MINFO[39M]: Request received {
+  "requestId": "09fb487a-810e-44e3-894a-685d54444048",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:20:47 [[32MINFO[39M]: Response sent {
+  "requestId": "09fb487a-810e-44e3-894a-685d54444048",
+  "statusCode": 200,
+  "responseTime": "4992ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:01 [[32MINFO[39M]: Request received {
+  "requestId": "1dfbf4ab-a80d-4a6d-b6b4-ec565d169f71",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:02 [[32MINFO[39M]: Response sent {
+  "requestId": "1dfbf4ab-a80d-4a6d-b6b4-ec565d169f71",
+  "statusCode": 200,
+  "responseTime": "1623ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:02 [[32MINFO[39M]: Request received {
+  "requestId": "235a5465-41b4-4d44-bcbd-f74d6aab82e0",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:04 [[32MINFO[39M]: Response sent {
+  "requestId": "235a5465-41b4-4d44-bcbd-f74d6aab82e0",
+  "statusCode": 200,
+  "responseTime": "1269ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:04 [[32MINFO[39M]: Request received {
+  "requestId": "05fc685b-5fa6-496c-a0a9-972b30cd9ec2",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:04 [[32MINFO[39M]: Request received {
+  "requestId": "3c3f6263-2860-494c-9658-d9cf1b151bb2",
+  "method": "GET",
+  "url": "/api/user/history",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:05 [[32MINFO[39M]: Response sent {
+  "requestId": "05fc685b-5fa6-496c-a0a9-972b30cd9ec2",
+  "statusCode": 200,
+  "responseTime": "1114ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:05 [[32MINFO[39M]: Request received {
+  "requestId": "3c8d0c8b-bf21-41a2-ab35-a04608f4a1ad",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:06 [[32MINFO[39M]: Response sent {
+  "requestId": "3c8d0c8b-bf21-41a2-ab35-a04608f4a1ad",
+  "statusCode": 200,
+  "responseTime": "1387ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:06 [[32MINFO[39M]: Request received {
+  "requestId": "5647029f-689f-42bd-a0d2-46113a296222",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:08 [[32MINFO[39M]: Response sent {
+  "requestId": "5647029f-689f-42bd-a0d2-46113a296222",
+  "statusCode": 200,
+  "responseTime": "1158ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:08 [[32MINFO[39M]: Request received {
+  "requestId": "eefb9031-1d54-4cbc-b88e-cca7f5873396",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:09 [[32MINFO[39M]: Response sent {
+  "requestId": "eefb9031-1d54-4cbc-b88e-cca7f5873396",
+  "statusCode": 200,
+  "responseTime": "1169ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:09 [[32MINFO[39M]: Response sent {
+  "requestId": "3c3f6263-2860-494c-9658-d9cf1b151bb2",
+  "statusCode": 200,
+  "responseTime": "5408ms",
+  "body": {
+    "success": true,
+    "data": {
+      "history": [
+        {
+          "id": "18a9d460-cd2b-48e8-88be-1b77aea26b33",
+          "gameType": "dice",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:43:35.686Z"
+        },
+        {
+          "id": "f9368158-4ef2-4971-91c6-5a371f5c8dc6",
+          "gameType": "dice",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:43:29.029Z"
+        },
+        {
+          "id": "a88ae643-cd90-4205-a188-6d3b4682a7b1",
+          "gameType": "dragon-tower",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:43:16.207Z"
+        },
+        {
+          "id": "633c41b2-ae0b-458d-987a-fa2805dbca9a",
+          "gameType": "crash",
+          "betAmount": "10",
+          "payout": "32.2",
+          "profit": "22.2",
+          "createdAt": "2025-11-11T21:43:00.194Z"
+        },
+        {
+          "id": "4a5d775f-5ab9-461b-a7c3-8e77b6ca2a1e",
+          "gameType": "crash",
+          "betAmount": "100",
+          "payout": "125",
+          "profit": "25",
+          "createdAt": "2025-11-11T21:37:51.406Z"
+        },
+        {
+          "id": "57765e56-9f3a-43e0-aea0-306a893021bb",
+          "gameType": "crash",
+          "betAmount": "100",
+          "payout": "514",
+          "profit": "414",
+          "createdAt": "2025-11-11T21:37:19.244Z"
+        },
+        {
+          "id": "778469c1-4e7f-47f9-8ad3-2480e8d45396",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:04:40.184Z"
+        },
+        {
+          "id": "35d3b5c2-5979-4549-9469-66c214210b71",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:04:31.582Z"
+        },
+        {
+          "id": "305b324f-efa2-40da-a4a0-d23b7d7ec282",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:04:25.753Z"
+        },
+        {
+          "id": "d059d323-a0fc-4f23-9f79-71151266cd91",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:04:19.707Z"
+        },
+        {
+          "id": "4b29b3d9-72e6-4993-8ca7-7ee5d5e9105f",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:04:09.084Z"
+        },
+        {
+          "id": "cc4db2ab-b876-4b51-b113-dd326d314749",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:04:03.014Z"
+        },
+        {
+          "id": "ca46e35a-4bff-4a63-a204-3887eeab2ed0",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:03:51.747Z"
+        },
+        {
+          "id": "ca50c81d-b343-461a-bd4a-d7417a349d74",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:59:31.960Z"
+        },
+        {
+          "id": "16b41383-c6ef-4096-b980-802e51985f56",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:59:24.883Z"
+        },
+        {
+          "id": "f59182d5-fa6b-4cfd-b975-1d9201ad7193",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:59:19.107Z"
+        },
+        {
+          "id": "c8337b35-a291-43af-a726-2ce0e70fa9f1",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:59:13.122Z"
+        },
+        {
+          "id": "15fcfe9e-0ff4-4ab0-bb29-cfd7c1f4c2e2",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:58:56.425Z"
+        },
+        {
+          "id": "d0a686c6-2c36-48c8-a778-ec5c1cc368d8",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "39.6",
+          "profit": "29.6",
+          "createdAt": "2025-11-11T20:58:51.206Z"
+        },
+        {
+          "id": "1a7aff39-9734-4e9c-82b0-8ae74b4dc5f2",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:58:46.289Z"
+        }
+      ]
+    }
+  }
+}
+2025-11-12 03:21:09 [[32MINFO[39M]: Request received {
+  "requestId": "3c922132-3a59-4623-a426-28302c8a4f3f",
+  "method": "GET",
+  "url": "/api/user/history",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:11 [[32MINFO[39M]: Response sent {
+  "requestId": "3c922132-3a59-4623-a426-28302c8a4f3f",
+  "statusCode": 200,
+  "responseTime": "1666ms",
+  "body": {
+    "success": true,
+    "data": {
+      "history": [
+        {
+          "id": "18a9d460-cd2b-48e8-88be-1b77aea26b33",
+          "gameType": "dice",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:43:35.686Z"
+        },
+        {
+          "id": "f9368158-4ef2-4971-91c6-5a371f5c8dc6",
+          "gameType": "dice",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:43:29.029Z"
+        },
+        {
+          "id": "a88ae643-cd90-4205-a188-6d3b4682a7b1",
+          "gameType": "dragon-tower",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:43:16.207Z"
+        },
+        {
+          "id": "633c41b2-ae0b-458d-987a-fa2805dbca9a",
+          "gameType": "crash",
+          "betAmount": "10",
+          "payout": "32.2",
+          "profit": "22.2",
+          "createdAt": "2025-11-11T21:43:00.194Z"
+        },
+        {
+          "id": "4a5d775f-5ab9-461b-a7c3-8e77b6ca2a1e",
+          "gameType": "crash",
+          "betAmount": "100",
+          "payout": "125",
+          "profit": "25",
+          "createdAt": "2025-11-11T21:37:51.406Z"
+        },
+        {
+          "id": "57765e56-9f3a-43e0-aea0-306a893021bb",
+          "gameType": "crash",
+          "betAmount": "100",
+          "payout": "514",
+          "profit": "414",
+          "createdAt": "2025-11-11T21:37:19.244Z"
+        },
+        {
+          "id": "778469c1-4e7f-47f9-8ad3-2480e8d45396",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:04:40.184Z"
+        },
+        {
+          "id": "35d3b5c2-5979-4549-9469-66c214210b71",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:04:31.582Z"
+        },
+        {
+          "id": "305b324f-efa2-40da-a4a0-d23b7d7ec282",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:04:25.753Z"
+        },
+        {
+          "id": "d059d323-a0fc-4f23-9f79-71151266cd91",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:04:19.707Z"
+        },
+        {
+          "id": "4b29b3d9-72e6-4993-8ca7-7ee5d5e9105f",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "19.8",
+          "profit": "9.8",
+          "createdAt": "2025-11-11T21:04:09.084Z"
+        },
+        {
+          "id": "cc4db2ab-b876-4b51-b113-dd326d314749",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:04:03.014Z"
+        },
+        {
+          "id": "ca46e35a-4bff-4a63-a204-3887eeab2ed0",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T21:03:51.747Z"
+        },
+        {
+          "id": "ca50c81d-b343-461a-bd4a-d7417a349d74",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:59:31.960Z"
+        },
+        {
+          "id": "16b41383-c6ef-4096-b980-802e51985f56",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:59:24.883Z"
+        },
+        {
+          "id": "f59182d5-fa6b-4cfd-b975-1d9201ad7193",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:59:19.107Z"
+        },
+        {
+          "id": "c8337b35-a291-43af-a726-2ce0e70fa9f1",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:59:13.122Z"
+        },
+        {
+          "id": "15fcfe9e-0ff4-4ab0-bb29-cfd7c1f4c2e2",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:58:56.425Z"
+        },
+        {
+          "id": "d0a686c6-2c36-48c8-a778-ec5c1cc368d8",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "39.6",
+          "profit": "29.6",
+          "createdAt": "2025-11-11T20:58:51.206Z"
+        },
+        {
+          "id": "1a7aff39-9734-4e9c-82b0-8ae74b4dc5f2",
+          "gameType": "limbo",
+          "betAmount": "10",
+          "payout": "0",
+          "profit": "-10",
+          "createdAt": "2025-11-11T20:58:46.289Z"
+        }
+      ]
+    }
+  }
+}
+2025-11-12 03:21:11 [[32MINFO[39M]: Request received {
+  "requestId": "d99a011f-5419-460c-bfbd-7dc736dd88cc",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:13 [[32MINFO[39M]: Response sent {
+  "requestId": "d99a011f-5419-460c-bfbd-7dc736dd88cc",
+  "statusCode": 200,
+  "responseTime": "1475ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:16 [[32MINFO[39M]: Request received {
+  "requestId": "cd66f928-44ab-4d18-b855-0dc0b21a2b4d",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:18 [[32MINFO[39M]: Response sent {
+  "requestId": "cd66f928-44ab-4d18-b855-0dc0b21a2b4d",
+  "statusCode": 200,
+  "responseTime": "1177ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:21 [[32MINFO[39M]: Request received {
+  "requestId": "20faa615-ff19-4179-8536-505152e3ae22",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:23 [[32MINFO[39M]: Response sent {
+  "requestId": "20faa615-ff19-4179-8536-505152e3ae22",
+  "statusCode": 200,
+  "responseTime": "1958ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:24 [[32MINFO[39M]: Request received {
+  "requestId": "1710c04c-8e8c-41f0-86a1-9a1d696ea156",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10,\"pickedNumbers\":[16,72,75,11,71,3,78,55,54,10]}"
+}
+2025-11-12 03:21:26 [[32MINFO[39M]: Request received {
+  "requestId": "4b3eed29-afc5-4fa9-b8df-99e4055d0519",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:28 [[32MINFO[39M]: Response sent {
+  "requestId": "4b3eed29-afc5-4fa9-b8df-99e4055d0519",
+  "statusCode": 200,
+  "responseTime": "1782ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10223.02
+    }
+  }
+}
+2025-11-12 03:21:30 [[32MINFO[39M]: Response sent {
+  "requestId": "1710c04c-8e8c-41f0-86a1-9a1d696ea156",
+  "statusCode": 200,
+  "responseTime": "6367ms",
+  "body": {
+    "success": true,
+    "game": "keno",
+    "result": {
+      "betAmount": 10,
+      "pickedNumbers": [
+        16,
+        72,
+        75,
+        11,
+        71,
+        3,
+        78,
+        55,
+        54,
+        10
+      ],
+      "drawnNumbers": [
+        35,
+        1,
+        67,
+        33,
+        74,
+        11,
+        14,
+        61,
+        45,
+        78,
+        13,
+        10,
+        29,
+        54,
+        34,
+        63,
+        47,
+        5,
+        26,
+        75
+      ],
+      "matches": 5,
+      "multiplier": 2,
+      "payout": 20,
+      "profit": 10,
+      "newBalance": 10233.02
+    },
+    "provablyFair": {
+      "serverSeed": "4305b08e6c3cd6e1f4d9367554ae312a7c0033f5959b0e889bf24be836c18a9f",
+      "clientSeed": "4285f632e5fcfcb62d6e8668d0d21ef4",
+      "nonce": 1762898582155
+    }
+  }
+}
+2025-11-12 03:21:31 [[32MINFO[39M]: Request received {
+  "requestId": "9e514d03-384f-42ef-9435-96be0c0f876b",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:33 [[32MINFO[39M]: Response sent {
+  "requestId": "9e514d03-384f-42ef-9435-96be0c0f876b",
+  "statusCode": 200,
+  "responseTime": "1062ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:21:36 [[32MINFO[39M]: Request received {
+  "requestId": "b74d756d-600e-4d26-a6db-c8941278bf14",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:38 [[32MINFO[39M]: Response sent {
+  "requestId": "b74d756d-600e-4d26-a6db-c8941278bf14",
+  "statusCode": 200,
+  "responseTime": "1117ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:21:42 [[32MINFO[39M]: Request received {
+  "requestId": "4edffd90-ce67-4207-8525-6a1864d4e084",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:44 [[32MINFO[39M]: Response sent {
+  "requestId": "4edffd90-ce67-4207-8525-6a1864d4e084",
+  "statusCode": 200,
+  "responseTime": "1429ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:21:47 [[32MINFO[39M]: Request received {
+  "requestId": "238bd635-faf9-4286-9ab7-b6297f24a991",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:48 [[32MINFO[39M]: Response sent {
+  "requestId": "238bd635-faf9-4286-9ab7-b6297f24a991",
+  "statusCode": 200,
+  "responseTime": "1152ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:21:52 [[32MINFO[39M]: Request received {
+  "requestId": "a6f42a65-9d1f-472a-94e1-cca90aafd754",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:53 [[32MINFO[39M]: Response sent {
+  "requestId": "a6f42a65-9d1f-472a-94e1-cca90aafd754",
+  "statusCode": 200,
+  "responseTime": "1194ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:21:57 [[32MINFO[39M]: Request received {
+  "requestId": "128c7e9b-f331-4ad3-bc0b-9f4d21b1505d",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:21:59 [[32MINFO[39M]: Response sent {
+  "requestId": "128c7e9b-f331-4ad3-bc0b-9f4d21b1505d",
+  "statusCode": 200,
+  "responseTime": "1628ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:02 [[32MINFO[39M]: Request received {
+  "requestId": "fc2e0a87-9daa-4843-be32-7eda9ac18863",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:03 [[32MINFO[39M]: Response sent {
+  "requestId": "fc2e0a87-9daa-4843-be32-7eda9ac18863",
+  "statusCode": 200,
+  "responseTime": "1197ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:07 [[32MINFO[39M]: Request received {
+  "requestId": "0abd16c8-9d0c-40ff-9faa-bbf5fb06fe9a",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:08 [[32MINFO[39M]: Response sent {
+  "requestId": "0abd16c8-9d0c-40ff-9faa-bbf5fb06fe9a",
+  "statusCode": 200,
+  "responseTime": "1076ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:12 [[32MINFO[39M]: Request received {
+  "requestId": "19443928-c3d4-4696-83b2-3065074da01d",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:13 [[32MINFO[39M]: Response sent {
+  "requestId": "19443928-c3d4-4696-83b2-3065074da01d",
+  "statusCode": 200,
+  "responseTime": "1146ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:17 [[32MINFO[39M]: Request received {
+  "requestId": "5e90acee-1794-470c-a5d6-a6bd49e2f873",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:19 [[32MINFO[39M]: Response sent {
+  "requestId": "5e90acee-1794-470c-a5d6-a6bd49e2f873",
+  "statusCode": 200,
+  "responseTime": "1618ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:21 [[32MINFO[39M]: Request received {
+  "requestId": "8fde137b-9c78-4656-a4fc-a54f3c4498ec",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:23 [[32MINFO[39M]: Response sent {
+  "requestId": "8fde137b-9c78-4656-a4fc-a54f3c4498ec",
+  "statusCode": 200,
+  "responseTime": "1153ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:27 [[32MINFO[39M]: Request received {
+  "requestId": "5995c86e-2fe2-41fd-b3ac-deb1f2feef35",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:28 [[32MINFO[39M]: Response sent {
+  "requestId": "5995c86e-2fe2-41fd-b3ac-deb1f2feef35",
+  "statusCode": 200,
+  "responseTime": "1198ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:32 [[32MINFO[39M]: Request received {
+  "requestId": "5fb7abb9-303c-4f50-980b-c9db4eb1d345",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:34 [[32MINFO[39M]: Response sent {
+  "requestId": "5fb7abb9-303c-4f50-980b-c9db4eb1d345",
+  "statusCode": 200,
+  "responseTime": "1644ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:36 [[32MINFO[39M]: Request received {
+  "requestId": "c72d5d7b-bd6d-47da-a73e-1fd92c744eb0",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:38 [[32MINFO[39M]: Response sent {
+  "requestId": "c72d5d7b-bd6d-47da-a73e-1fd92c744eb0",
+  "statusCode": 200,
+  "responseTime": "1224ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:42 [[32MINFO[39M]: Request received {
+  "requestId": "c3c04969-fb6c-49ef-a1f9-cd06d198e562",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:43 [[32MINFO[39M]: Response sent {
+  "requestId": "c3c04969-fb6c-49ef-a1f9-cd06d198e562",
+  "statusCode": 200,
+  "responseTime": "1179ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:47 [[32MINFO[39M]: Request received {
+  "requestId": "23bedb8c-421f-4f1f-b0f4-1686b466b73a",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:48 [[32MINFO[39M]: Response sent {
+  "requestId": "23bedb8c-421f-4f1f-b0f4-1686b466b73a",
+  "statusCode": 200,
+  "responseTime": "1089ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:52 [[32MINFO[39M]: Request received {
+  "requestId": "8431b643-86f9-4764-a65b-19303cf6a29c",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:54 [[32MINFO[39M]: Response sent {
+  "requestId": "8431b643-86f9-4764-a65b-19303cf6a29c",
+  "statusCode": 200,
+  "responseTime": "1543ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:22:57 [[32MINFO[39M]: Request received {
+  "requestId": "9f6316fe-f1bc-4693-9aec-40090b3c5672",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:22:58 [[32MINFO[39M]: Response sent {
+  "requestId": "9f6316fe-f1bc-4693-9aec-40090b3c5672",
+  "statusCode": 200,
+  "responseTime": "1134ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:02 [[32MINFO[39M]: Request received {
+  "requestId": "51f9d397-b127-4d63-8baa-e2cb87e698a5",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:07 [[32MINFO[39M]: Response sent {
+  "requestId": "51f9d397-b127-4d63-8baa-e2cb87e698a5",
+  "statusCode": 200,
+  "responseTime": "5111ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:07 [[32MINFO[39M]: Request received {
+  "requestId": "c3d2a878-18d7-4d59-a722-6efec96ddd9f",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:09 [[32MINFO[39M]: Response sent {
+  "requestId": "c3d2a878-18d7-4d59-a722-6efec96ddd9f",
+  "statusCode": 200,
+  "responseTime": "1629ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:12 [[32MINFO[39M]: Request received {
+  "requestId": "37c04773-0ffd-4137-bd65-7e82a2f005c9",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:13 [[32MINFO[39M]: Response sent {
+  "requestId": "37c04773-0ffd-4137-bd65-7e82a2f005c9",
+  "statusCode": 200,
+  "responseTime": "1107ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:17 [[32MINFO[39M]: Request received {
+  "requestId": "a0074ad0-3550-4274-94d2-057848c62b6e",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:18 [[32MINFO[39M]: Response sent {
+  "requestId": "a0074ad0-3550-4274-94d2-057848c62b6e",
+  "statusCode": 200,
+  "responseTime": "1031ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:22 [[32MINFO[39M]: Request received {
+  "requestId": "f5a9d769-b643-4881-9517-c2e07d73ef19",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:23 [[32MINFO[39M]: Response sent {
+  "requestId": "f5a9d769-b643-4881-9517-c2e07d73ef19",
+  "statusCode": 200,
+  "responseTime": "1074ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:27 [[32MINFO[39M]: Request received {
+  "requestId": "cddcc879-bbc6-4f82-80d5-becf8ff191fe",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:29 [[32MINFO[39M]: Response sent {
+  "requestId": "cddcc879-bbc6-4f82-80d5-becf8ff191fe",
+  "statusCode": 200,
+  "responseTime": "1412ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:32 [[32MINFO[39M]: Request received {
+  "requestId": "51ab6fa1-7d47-4f4a-b3d4-464dae9d1771",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:33 [[32MINFO[39M]: Response sent {
+  "requestId": "51ab6fa1-7d47-4f4a-b3d4-464dae9d1771",
+  "statusCode": 200,
+  "responseTime": "1059ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:37 [[32MINFO[39M]: Request received {
+  "requestId": "c64fa22a-9075-4c5d-bbc3-afbc06afe26b",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:38 [[32MINFO[39M]: Response sent {
+  "requestId": "c64fa22a-9075-4c5d-bbc3-afbc06afe26b",
+  "statusCode": 200,
+  "responseTime": "1150ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:23:42 [[32MINFO[39M]: Request received {
+  "requestId": "d885286f-29a2-451c-bc10-e7eb3f188a58",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:23:44 [[32MINFO[39M]: Response sent {
+  "requestId": "d885286f-29a2-451c-bc10-e7eb3f188a58",
+  "statusCode": 200,
+  "responseTime": "1389ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:24:42 [[32MINFO[39M]: Request received {
+  "requestId": "aed76fc8-0722-4b8b-aa6b-e88435bb8a71",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:24:44 [[32MINFO[39M]: Response sent {
+  "requestId": "aed76fc8-0722-4b8b-aa6b-e88435bb8a71",
+  "statusCode": 200,
+  "responseTime": "1551ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:25:42 [[32MINFO[39M]: Request received {
+  "requestId": "a086243a-672c-4cc5-8307-e7573f6e0f40",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:25:44 [[32MINFO[39M]: Response sent {
+  "requestId": "a086243a-672c-4cc5-8307-e7573f6e0f40",
+  "statusCode": 200,
+  "responseTime": "2218ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:25:56 [[32MINFO[39M]: Request received {
+  "requestId": "ea7178a1-c098-45ca-b39c-64eeef0f7142",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:00 [[32MINFO[39M]: Request received {
+  "requestId": "4aeb9ced-19cd-4773-b8a8-0262adbe0a8c",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":2}"
+}
+2025-11-12 03:26:05 [[32MINFO[39M]: Response sent {
+  "requestId": "4aeb9ced-19cd-4773-b8a8-0262adbe0a8c",
+  "statusCode": 500,
+  "responseTime": "5010ms",
+  "body": {
+    "success": false,
+    "error": "Authentication error"
+  }
+}
+2025-11-12 03:26:05 [[32MINFO[39M]: Response sent {
+  "requestId": "ea7178a1-c098-45ca-b39c-64eeef0f7142",
+  "statusCode": 200,
+  "responseTime": "9239ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:05 [[32MINFO[39M]: Request received {
+  "requestId": "b1032b33-5923-4c00-a217-7033ff547f90",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:08 [[32MINFO[39M]: Request received {
+  "requestId": "73a744e9-dc78-451a-9f54-3334ad60414f",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:09 [[32MINFO[39M]: Request received {
+  "requestId": "cc5d3e6d-1a20-4802-adb8-89dfad5c3fbc",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:12 [[32MINFO[39M]: Response sent {
+  "requestId": "b1032b33-5923-4c00-a217-7033ff547f90",
+  "statusCode": 500,
+  "responseTime": "6793ms",
+  "body": {
+    "success": false,
+    "error": "Authentication error"
+  }
+}
+2025-11-12 03:26:13 [[32MINFO[39M]: Request received {
+  "requestId": "b6246340-2e4a-4249-84df-34d43f24808a",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":2}"
+}
+2025-11-12 03:26:13 [[32MINFO[39M]: Response sent {
+  "requestId": "73a744e9-dc78-451a-9f54-3334ad60414f",
+  "statusCode": 500,
+  "responseTime": "5011ms",
+  "body": {
+    "success": false,
+    "error": "Authentication error"
+  }
+}
+2025-11-12 03:26:14 [[32MINFO[39M]: Response sent {
+  "requestId": "cc5d3e6d-1a20-4802-adb8-89dfad5c3fbc",
+  "statusCode": 500,
+  "responseTime": "5018ms",
+  "body": {
+    "success": false,
+    "error": "Authentication error"
+  }
+}
+2025-11-12 03:26:14 [[32MINFO[39M]: Request received {
+  "requestId": "aee2fe3a-308a-4fa4-854a-699b6704eef7",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:18 [[32MINFO[39M]: Response sent {
+  "requestId": "b6246340-2e4a-4249-84df-34d43f24808a",
+  "statusCode": 500,
+  "responseTime": "5015ms",
+  "body": {
+    "success": false,
+    "error": "Authentication error"
+  }
+}
+2025-11-12 03:26:21 [[32MINFO[39M]: Response sent {
+  "requestId": "aee2fe3a-308a-4fa4-854a-699b6704eef7",
+  "statusCode": 200,
+  "responseTime": "6905ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:21 [[32MINFO[39M]: Request received {
+  "requestId": "2950ca03-f9c8-4e1e-b410-435b8f81d695",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:22 [[32MINFO[39M]: Response sent {
+  "requestId": "2950ca03-f9c8-4e1e-b410-435b8f81d695",
+  "statusCode": 200,
+  "responseTime": "1254ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:22 [[32MINFO[39M]: Request received {
+  "requestId": "3d381070-a302-4771-9392-cb396f21c054",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:23 [[32MINFO[39M]: Response sent {
+  "requestId": "3d381070-a302-4771-9392-cb396f21c054",
+  "statusCode": 200,
+  "responseTime": "1307ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:24 [[32MINFO[39M]: Request received {
+  "requestId": "8f811803-ee0c-462e-a86c-895840d8970b",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:25 [[32MINFO[39M]: Response sent {
+  "requestId": "8f811803-ee0c-462e-a86c-895840d8970b",
+  "statusCode": 200,
+  "responseTime": "1111ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:29 [[32MINFO[39M]: Request received {
+  "requestId": "46560ead-6c3c-45fa-b74e-fa364b47f69f",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:30 [[32MINFO[39M]: Response sent {
+  "requestId": "46560ead-6c3c-45fa-b74e-fa364b47f69f",
+  "statusCode": 200,
+  "responseTime": "1256ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:34 [[32MINFO[39M]: Request received {
+  "requestId": "4840f1b9-b1d5-4626-9a52-07905eb7dc25",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:36 [[32MINFO[39M]: Response sent {
+  "requestId": "4840f1b9-b1d5-4626-9a52-07905eb7dc25",
+  "statusCode": 200,
+  "responseTime": "1816ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:39 [[32MINFO[39M]: Request received {
+  "requestId": "892167da-9ad3-4667-a6ff-9f9b2ac9a33c",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:40 [[32MINFO[39M]: Response sent {
+  "requestId": "892167da-9ad3-4667-a6ff-9f9b2ac9a33c",
+  "statusCode": 200,
+  "responseTime": "1015ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:44 [[32MINFO[39M]: Request received {
+  "requestId": "942d86ab-39d4-4cb1-a271-e35aef1653cf",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:50 [[32MINFO[39M]: Response sent {
+  "requestId": "942d86ab-39d4-4cb1-a271-e35aef1653cf",
+  "statusCode": 200,
+  "responseTime": "5748ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:50 [[32MINFO[39M]: Request received {
+  "requestId": "9fd70e11-ce5a-4811-8631-26afd37eb00a",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:26:57 [[32MINFO[39M]: Response sent {
+  "requestId": "9fd70e11-ce5a-4811-8631-26afd37eb00a",
+  "statusCode": 200,
+  "responseTime": "7224ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:26:57 [[32MINFO[39M]: Request received {
+  "requestId": "bfb7f00a-bca1-4be8-9713-854a9ca0dbc8",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:01 [[32MINFO[39M]: Request received {
+  "requestId": "d51df3ff-c37d-442d-b285-868b87805e02",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":2}"
+}
+2025-11-12 03:27:02 [[32MINFO[39M]: Response sent {
+  "requestId": "bfb7f00a-bca1-4be8-9713-854a9ca0dbc8",
+  "statusCode": 200,
+  "responseTime": "4807ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:02 [[32MINFO[39M]: Request received {
+  "requestId": "d1705931-543b-4d89-a689-f419f7aebb8e",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:04 [[32MINFO[39M]: Response sent {
+  "requestId": "d1705931-543b-4d89-a689-f419f7aebb8e",
+  "statusCode": 200,
+  "responseTime": "1497ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:04 [[32MINFO[39M]: Request received {
+  "requestId": "b048b6aa-30d6-4129-bc13-b46d7460cb85",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:08 [[32MINFO[39M]: Response sent {
+  "requestId": "b048b6aa-30d6-4129-bc13-b46d7460cb85",
+  "statusCode": 200,
+  "responseTime": "3776ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:09 [[32MINFO[39M]: Request received {
+  "requestId": "d65d47fe-7759-48e5-ab88-190c22fe3677",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:10 [[32MINFO[39M]: Request received {
+  "requestId": "d2a98bbe-031c-43ec-bde5-1fbc5a262523",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:15 [[32MINFO[39M]: Response sent {
+  "requestId": "d2a98bbe-031c-43ec-bde5-1fbc5a262523",
+  "statusCode": 500,
+  "responseTime": "5005ms",
+  "body": {
+    "success": false,
+    "error": "Authentication error"
+  }
+}
+2025-11-12 03:27:15 [[32MINFO[39M]: Request received {
+  "requestId": "5f031e0c-0a2c-4d0c-805d-0391ba531f3e",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:16 [[32MINFO[39M]: Response sent {
+  "requestId": "d65d47fe-7759-48e5-ab88-190c22fe3677",
+  "statusCode": 200,
+  "responseTime": "6687ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:16 [[32MINFO[39M]: Request received {
+  "requestId": "9c53b95c-5aa8-43bc-a3eb-dacb3fe3d91e",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:19 [[32MINFO[39M]: Request received {
+  "requestId": "0d4fd5ea-38fb-49a8-ac8f-38d92c80802b",
+  "method": "POST",
+  "url": "/api/games/crash/bet",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10}"
+}
+2025-11-12 03:27:20 [[32MINFO[39M]: Response sent {
+  "requestId": "5f031e0c-0a2c-4d0c-805d-0391ba531f3e",
+  "statusCode": 500,
+  "responseTime": "5012ms",
+  "body": {
+    "success": false,
+    "error": "Authentication error"
+  }
+}
+2025-11-12 03:27:20 [[32MINFO[39M]: Response sent {
+  "requestId": "9c53b95c-5aa8-43bc-a3eb-dacb3fe3d91e",
+  "statusCode": 200,
+  "responseTime": "4493ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:20 [[32MINFO[39M]: Request received {
+  "requestId": "2f2610d3-7008-4825-a348-e4c9dd9e9100",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:24 [[32MINFO[39M]: Response sent {
+  "requestId": "0d4fd5ea-38fb-49a8-ac8f-38d92c80802b",
+  "statusCode": 500,
+  "responseTime": "5005ms",
+  "body": {
+    "success": false,
+    "error": "Authentication error"
+  }
+}
+2025-11-12 03:27:25 [[32MINFO[39M]: Response sent {
+  "requestId": "2f2610d3-7008-4825-a348-e4c9dd9e9100",
+  "statusCode": 200,
+  "responseTime": "5240ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:25 [[32MINFO[39M]: Request received {
+  "requestId": "0ede468a-2c79-48f8-ac40-0ecafb0471f2",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:26 [[32MINFO[39M]: Response sent {
+  "requestId": "d51df3ff-c37d-442d-b285-868b87805e02",
+  "statusCode": 500,
+  "responseTime": "25466ms",
+  "body": {
+    "success": false,
+    "error": "Game error. Please try again."
+  }
+}
+2025-11-12 03:27:28 [[32MINFO[39M]: Response sent {
+  "requestId": "0ede468a-2c79-48f8-ac40-0ecafb0471f2",
+  "statusCode": 200,
+  "responseTime": "2352ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:28 [[32MINFO[39M]: Request received {
+  "requestId": "d6d2767e-324b-4615-8851-5084fbeaa83c",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:29 [[32MINFO[39M]: Response sent {
+  "requestId": "d6d2767e-324b-4615-8851-5084fbeaa83c",
+  "statusCode": 200,
+  "responseTime": "949ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:29 [[32MINFO[39M]: Request received {
+  "requestId": "ea6e1e36-7073-4f83-8902-c4acfd3bb04c",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:29 [[32MINFO[39M]: Request received {
+  "requestId": "40f69af1-05bf-4faf-92f7-dd90640f236b",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:30 [[32MINFO[39M]: Response sent {
+  "requestId": "ea6e1e36-7073-4f83-8902-c4acfd3bb04c",
+  "statusCode": 200,
+  "responseTime": "983ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:30 [[32MINFO[39M]: Response sent {
+  "requestId": "40f69af1-05bf-4faf-92f7-dd90640f236b",
+  "statusCode": 200,
+  "responseTime": "1315ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:30 [[32MINFO[39M]: Request received {
+  "requestId": "64dded3b-5697-4092-a609-2e1ca157a0ad",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:32 [[32MINFO[39M]: Response sent {
+  "requestId": "64dded3b-5697-4092-a609-2e1ca157a0ad",
+  "statusCode": 200,
+  "responseTime": "1116ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:33 [[32MINFO[39M]: Request received {
+  "requestId": "89addb60-1496-46e8-a332-388631d0499e",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:33 [[32MINFO[39M]: Request received {
+  "requestId": "e152dc94-8172-4e64-9de7-e612ae9ff351",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:34 [[32MINFO[39M]: Response sent {
+  "requestId": "e152dc94-8172-4e64-9de7-e612ae9ff351",
+  "statusCode": 200,
+  "responseTime": "679ms",
+  "body": {
+    "success": true,
+    "game": {
+      "crashPoint": 6.79,
+      "startTime": 1762898254213,
+      "status": "active",
+      "currentMultiplier": 1
+    }
+  }
+}
+2025-11-12 03:27:34 [[32MINFO[39M]: Request received {
+  "requestId": "65f0e366-e1ed-44bd-a1b2-c8f1a48f44a4",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:34 [[32MINFO[39M]: Response sent {
+  "requestId": "89addb60-1496-46e8-a332-388631d0499e",
+  "statusCode": 200,
+  "responseTime": "1091ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:34 [[32MINFO[39M]: Request received {
+  "requestId": "5efc45b5-e941-4a80-b291-0da14e597200",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:34 [[32MINFO[39M]: Response sent {
+  "requestId": "65f0e366-e1ed-44bd-a1b2-c8f1a48f44a4",
+  "statusCode": 200,
+  "responseTime": "718ms",
+  "body": {
+    "success": true,
+    "game": {
+      "crashPoint": 6.79,
+      "startTime": 1762898254213,
+      "status": "active",
+      "currentMultiplier": 1
+    }
+  }
+}
+2025-11-12 03:27:35 [[32MINFO[39M]: Response sent {
+  "requestId": "5efc45b5-e941-4a80-b291-0da14e597200",
+  "statusCode": 200,
+  "responseTime": "1287ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:38 [[32MINFO[39M]: Request received {
+  "requestId": "a2a286bc-29d5-47b2-bcdc-7ea765ee66f9",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:39 [[32MINFO[39M]: Response sent {
+  "requestId": "a2a286bc-29d5-47b2-bcdc-7ea765ee66f9",
+  "statusCode": 200,
+  "responseTime": "1222ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:39 [[32MINFO[39M]: Request received {
+  "requestId": "80b5088c-bae4-47d9-9b04-cf272ac3924d",
+  "method": "POST",
+  "url": "/api/games/crash/bet",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10}"
+}
+2025-11-12 03:27:40 [[32MINFO[39M]: Response sent {
+  "requestId": "80b5088c-bae4-47d9-9b04-cf272ac3924d",
+  "statusCode": 200,
+  "responseTime": "751ms",
+  "body": {
+    "success": true,
+    "message": "Bet placed successfully",
+    "gameStartTime": 1762898254213
+  }
+}
+2025-11-12 03:27:43 [[32MINFO[39M]: Request received {
+  "requestId": "d433bbad-a2d4-4c43-af70-cefb99df06b1",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:44 [[32MINFO[39M]: Response sent {
+  "requestId": "d433bbad-a2d4-4c43-af70-cefb99df06b1",
+  "statusCode": 200,
+  "responseTime": "1021ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:48 [[32MINFO[39M]: Request received {
+  "requestId": "ead050ae-7d5a-497c-a2bf-c9527e528f25",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:49 [[32MINFO[39M]: Request received {
+  "requestId": "0b0d3e18-5a26-4e53-a47c-1602a3df5a2d",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:49 [[32MINFO[39M]: Response sent {
+  "requestId": "ead050ae-7d5a-497c-a2bf-c9527e528f25",
+  "statusCode": 200,
+  "responseTime": "1386ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:50 [[32MINFO[39M]: Response sent {
+  "requestId": "0b0d3e18-5a26-4e53-a47c-1602a3df5a2d",
+  "statusCode": 200,
+  "responseTime": "1007ms",
+  "body": {
+    "success": true,
+    "game": {
+      "crashPoint": 2.98,
+      "startTime": 1762898270313,
+      "status": "active",
+      "currentMultiplier": 1
+    }
+  }
+}
+2025-11-12 03:27:51 [[32MINFO[39M]: Request received {
+  "requestId": "3d9b44ef-f3c3-470e-93a0-1ca9aa229b5b",
+  "method": "POST",
+  "url": "/api/games/crash/bet",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10}"
+}
+2025-11-12 03:27:52 [[32MINFO[39M]: Response sent {
+  "requestId": "3d9b44ef-f3c3-470e-93a0-1ca9aa229b5b",
+  "statusCode": 200,
+  "responseTime": "820ms",
+  "body": {
+    "success": true,
+    "message": "Bet placed successfully",
+    "gameStartTime": 1762898270313
+  }
+}
+2025-11-12 03:27:53 [[32MINFO[39M]: Request received {
+  "requestId": "6db27125-aa01-4a67-b45d-c59274dad9a1",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:54 [[32MINFO[39M]: Response sent {
+  "requestId": "6db27125-aa01-4a67-b45d-c59274dad9a1",
+  "statusCode": 200,
+  "responseTime": "1018ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:27:58 [[32MINFO[39M]: Request received {
+  "requestId": "bdb0e922-8ac6-4927-9206-60684ad7e0df",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:27:59 [[32MINFO[39M]: Response sent {
+  "requestId": "bdb0e922-8ac6-4927-9206-60684ad7e0df",
+  "statusCode": 200,
+  "responseTime": "958ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:28:01 [[32MINFO[39M]: Request received {
+  "requestId": "bfb2e813-936a-450f-ade4-9051bdf2662b",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:02 [[32MINFO[39M]: Response sent {
+  "requestId": "bfb2e813-936a-450f-ade4-9051bdf2662b",
+  "statusCode": 200,
+  "responseTime": "761ms",
+  "body": {
+    "success": true,
+    "game": {
+      "crashPoint": 1.57,
+      "startTime": 1762898282149,
+      "status": "active",
+      "currentMultiplier": 1
+    }
+  }
+}
+2025-11-12 03:28:03 [[32MINFO[39M]: Request received {
+  "requestId": "4e0c86b3-ab26-41c2-9153-27f601046672",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:04 [[32MINFO[39M]: Response sent {
+  "requestId": "4e0c86b3-ab26-41c2-9153-27f601046672",
+  "statusCode": 200,
+  "responseTime": "1175ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:28:04 [[32MINFO[39M]: Request received {
+  "requestId": "1dc55b62-d627-4016-9db8-3f0287380dd3",
+  "method": "POST",
+  "url": "/api/games/crash/bet",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10}"
+}
+2025-11-12 03:28:05 [[32MINFO[39M]: Response sent {
+  "requestId": "1dc55b62-d627-4016-9db8-3f0287380dd3",
+  "statusCode": 200,
+  "responseTime": "1203ms",
+  "body": {
+    "success": true,
+    "message": "Bet placed successfully",
+    "gameStartTime": 1762898282149
+  }
+}
+2025-11-12 03:28:08 [[32MINFO[39M]: Request received {
+  "requestId": "6b391aea-e9de-4543-82dd-0247d68b7eb3",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:09 [[32MINFO[39M]: Response sent {
+  "requestId": "6b391aea-e9de-4543-82dd-0247d68b7eb3",
+  "statusCode": 200,
+  "responseTime": "982ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:28:12 [[32MINFO[39M]: Request received {
+  "requestId": "ab99cb11-a44d-4980-97d3-753b057aa0ff",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:12 [[32MINFO[39M]: Response sent {
+  "requestId": "ab99cb11-a44d-4980-97d3-753b057aa0ff",
+  "statusCode": 200,
+  "responseTime": "645ms",
+  "body": {
+    "success": true,
+    "game": {
+      "crashPoint": 9.69,
+      "startTime": 1762898292665,
+      "status": "active",
+      "currentMultiplier": 1
+    }
+  }
+}
+2025-11-12 03:28:13 [[32MINFO[39M]: Request received {
+  "requestId": "b4a8f3f9-70e6-433b-8d08-06b37de7bdb8",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:14 [[32MINFO[39M]: Response sent {
+  "requestId": "b4a8f3f9-70e6-433b-8d08-06b37de7bdb8",
+  "statusCode": 200,
+  "responseTime": "1032ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:28:18 [[32MINFO[39M]: Request received {
+  "requestId": "75d90ef4-0478-4aac-ba6e-f2d40307eeae",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:19 [[32MINFO[39M]: Request received {
+  "requestId": "06f114b4-32b2-4d7e-a104-e79420b6ae62",
+  "method": "POST",
+  "url": "/api/games/crash/bet",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":100}"
+}
+2025-11-12 03:28:19 [[32MINFO[39M]: Response sent {
+  "requestId": "75d90ef4-0478-4aac-ba6e-f2d40307eeae",
+  "statusCode": 200,
+  "responseTime": "1279ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:28:20 [[32MINFO[39M]: Response sent {
+  "requestId": "06f114b4-32b2-4d7e-a104-e79420b6ae62",
+  "statusCode": 200,
+  "responseTime": "1067ms",
+  "body": {
+    "success": true,
+    "message": "Bet placed successfully",
+    "gameStartTime": 1762898292665
+  }
+}
+2025-11-12 03:28:23 [[32MINFO[39M]: Request received {
+  "requestId": "94a37129-eb49-4eab-933c-3ca830e18aae",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:24 [[32MINFO[39M]: Response sent {
+  "requestId": "94a37129-eb49-4eab-933c-3ca830e18aae",
+  "statusCode": 200,
+  "responseTime": "1359ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:28:28 [[32MINFO[39M]: Request received {
+  "requestId": "722ef003-60bb-4e1e-aa13-8e6fd7b6a40f",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:29 [[32MINFO[39M]: Response sent {
+  "requestId": "722ef003-60bb-4e1e-aa13-8e6fd7b6a40f",
+  "statusCode": 200,
+  "responseTime": "1190ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:28:30 [[32MINFO[39M]: Request received {
+  "requestId": "8d44d861-7195-40ef-b4d5-d1378246047f",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:30 [[32MINFO[39M]: Response sent {
+  "requestId": "8d44d861-7195-40ef-b4d5-d1378246047f",
+  "statusCode": 200,
+  "responseTime": "736ms",
+  "body": {
+    "success": true,
+    "game": {
+      "crashPoint": 4.18,
+      "startTime": 1762898310930,
+      "status": "active",
+      "currentMultiplier": 1
+    }
+  }
+}
+2025-11-12 03:28:33 [[32MINFO[39M]: Request received {
+  "requestId": "cbe18dc2-2df0-4ac2-9e10-213224f8f1eb",
+  "method": "POST",
+  "url": "/api/games/crash/bet",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":100}"
+}
+2025-11-12 03:28:33 [[32MINFO[39M]: Request received {
+  "requestId": "4c818d81-4b29-4c15-b81f-e890f68d86db",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:34 [[32MINFO[39M]: Response sent {
+  "requestId": "cbe18dc2-2df0-4ac2-9e10-213224f8f1eb",
+  "statusCode": 200,
+  "responseTime": "891ms",
+  "body": {
+    "success": true,
+    "message": "Bet placed successfully",
+    "gameStartTime": 1762898310930
+  }
+}
+2025-11-12 03:28:34 [[32MINFO[39M]: Request received {
+  "requestId": "fa4370c4-533d-4ad7-8be0-f41365479b59",
+  "method": "POST",
+  "url": "/api/games/crash/cashout",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"multiplier\":3.16}"
+}
+2025-11-12 03:28:35 [[32MINFO[39M]: Response sent {
+  "requestId": "4c818d81-4b29-4c15-b81f-e890f68d86db",
+  "statusCode": 200,
+  "responseTime": "2005ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10233.02
+    }
+  }
+}
+2025-11-12 03:28:38 [[32MINFO[39M]: Request received {
+  "requestId": "8ed207e3-c0bf-4aab-8f9f-a3dbfc9bcf90",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:38 [[32MINFO[39M]: Response sent {
+  "requestId": "fa4370c4-533d-4ad7-8be0-f41365479b59",
+  "statusCode": 200,
+  "responseTime": "3878ms",
+  "body": {
+    "success": true,
+    "result": {
+      "betAmount": 100,
+      "cashOutMultiplier": 3.16,
+      "payout": 316,
+      "profit": 216,
+      "newBalance": 10449.02
+    }
+  }
+}
+2025-11-12 03:28:39 [[32MINFO[39M]: Response sent {
+  "requestId": "8ed207e3-c0bf-4aab-8f9f-a3dbfc9bcf90",
+  "statusCode": 200,
+  "responseTime": "1068ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10449.02
+    }
+  }
+}
+2025-11-12 03:28:40 [[32MINFO[39M]: Request received {
+  "requestId": "a6fc43f3-b522-448b-b8bc-478e8c66a6b4",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:42 [[32MINFO[39M]: Response sent {
+  "requestId": "a6fc43f3-b522-448b-b8bc-478e8c66a6b4",
+  "statusCode": 200,
+  "responseTime": "1343ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10449.02
+    }
+  }
+}
+2025-11-12 03:28:42 [[32MINFO[39M]: Request received {
+  "requestId": "5aa5e5f1-d50c-4a4f-b6fe-1618b9f049c3",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:42 [[32MINFO[39M]: Request received {
+  "requestId": "29cd5d00-0ccf-4762-bee0-b02f6d611662",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10,\"difficulty\":\"medium\"}"
+}
+2025-11-12 03:28:42 [[32MINFO[39M]: Request received {
+  "requestId": "59fc7062-b6c5-4e83-b05e-a5c1c4feb244",
+  "method": "GET",
+  "url": "/api/games/crash/current",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:43 [[32MINFO[39M]: Response sent {
+  "requestId": "5aa5e5f1-d50c-4a4f-b6fe-1618b9f049c3",
+  "statusCode": 200,
+  "responseTime": "956ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10449.02
+    }
+  }
+}
+2025-11-12 03:28:43 [[32MINFO[39M]: Response sent {
+  "requestId": "29cd5d00-0ccf-4762-bee0-b02f6d611662",
+  "statusCode": 200,
+  "responseTime": "730ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "fefad9c9fa2fea0e657a45b07d4fd176dc2e462db4d7e2998528318becde0974",
+      "config": {
+        "eggs": 2,
+        "tiles": 3,
+        "levels": 6
+      },
+      "gameId": "dt_1762898323104"
+    }
+  }
+}
+2025-11-12 03:28:44 [[32MINFO[39M]: Request received {
+  "requestId": "8681618f-852e-4a10-81a5-fa050fa8b0b5",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"gameId\":\"dt_1762898323104\",\"level\":0,\"tileIndex\":1,\"action\":\"continue\"}"
+}
+2025-11-12 03:28:45 [[32MINFO[39M]: Request received {
+  "requestId": "070600a0-09bd-4147-aed6-c915beab5f4c",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:46 [[32MINFO[39M]: Response sent {
+  "requestId": "59fc7062-b6c5-4e83-b05e-a5c1c4feb244",
+  "statusCode": 200,
+  "responseTime": "3569ms",
+  "body": {
+    "success": true,
+    "game": {
+      "crashPoint": 6.09,
+      "startTime": 1762898326371,
+      "status": "active",
+      "currentMultiplier": 1
+    }
+  }
+}
+2025-11-12 03:28:47 [[32MINFO[39M]: Response sent {
+  "requestId": "070600a0-09bd-4147-aed6-c915beab5f4c",
+  "statusCode": 200,
+  "responseTime": "1404ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10449.02
+    }
+  }
+}
+2025-11-12 03:28:47 [[32MINFO[39M]: Response sent {
+  "requestId": "8681618f-852e-4a10-81a5-fa050fa8b0b5",
+  "statusCode": 200,
+  "responseTime": "3711ms",
+  "body": {
+    "success": true,
+    "result": {
+      "isEgg": false,
+      "currentLevel": 0,
+      "multiplier": 0,
+      "payout": 0,
+      "newBalance": 10439.02,
+      "gameOver": true
+    }
+  }
+}
+2025-11-12 03:28:50 [[32MINFO[39M]: Request received {
+  "requestId": "9dfedf64-fbc6-488a-aedc-a142a85cd72d",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:52 [[32MINFO[39M]: Response sent {
+  "requestId": "9dfedf64-fbc6-488a-aedc-a142a85cd72d",
+  "statusCode": 200,
+  "responseTime": "1618ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10439.02
+    }
+  }
+}
+2025-11-12 03:28:55 [[32MINFO[39M]: Request received {
+  "requestId": "b01d3aa0-e3ec-43b0-907e-de647fc5b381",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:28:56 [[32MINFO[39M]: Response sent {
+  "requestId": "b01d3aa0-e3ec-43b0-907e-de647fc5b381",
+  "statusCode": 200,
+  "responseTime": "1007ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10439.02
+    }
+  }
+}
+2025-11-12 03:28:59 [[32MINFO[39M]: Request received {
+  "requestId": "a9189e54-dc43-4920-a12e-098884e4083f",
+  "method": "POST",
+  "url": "/api/games/dragon-tower/init",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10,\"difficulty\":\"medium\"}"
+}
+2025-11-12 03:29:00 [[32MINFO[39M]: Response sent {
+  "requestId": "a9189e54-dc43-4920-a12e-098884e4083f",
+  "statusCode": 200,
+  "responseTime": "714ms",
+  "body": {
+    "success": true,
+    "data": {
+      "serverSeedHash": "76fd6fbcd17c8a78e4efda1d7cb08870a6bf208b8e5ff1b98d942404110524f9",
+      "config": {
+        "eggs": 2,
+        "tiles": 3,
+        "levels": 6
+      },
+      "gameId": "dt_1762898340081"
+    }
+  }
+}
+2025-11-12 03:29:00 [[32MINFO[39M]: Request received {
+  "requestId": "a21f2e3b-8d9a-460a-ba5a-5098c6e71a85",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:01 [[32MINFO[39M]: Request received {
+  "requestId": "fe7044f7-3d08-45d3-8d1b-e1706c9f58e4",
+  "method": "POST",
+  "url": "/api/games/dragon-tower",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"gameId\":\"dt_1762898340081\",\"level\":0,\"tileIndex\":2,\"action\":\"continue\"}"
+}
+2025-11-12 03:29:01 [[32MINFO[39M]: Response sent {
+  "requestId": "a21f2e3b-8d9a-460a-ba5a-5098c6e71a85",
+  "statusCode": 200,
+  "responseTime": "986ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10439.02
+    }
+  }
+}
+2025-11-12 03:29:02 [[32MINFO[39M]: Response sent {
+  "requestId": "fe7044f7-3d08-45d3-8d1b-e1706c9f58e4",
+  "statusCode": 200,
+  "responseTime": "942ms",
+  "body": {
+    "success": true,
+    "result": {
+      "isEgg": true,
+      "currentLevel": 1,
+      "multiplier": 1.48,
+      "completed": false
+    }
+  }
+}
+2025-11-12 03:29:04 [[32MINFO[39M]: Request received {
+  "requestId": "64100930-3c2b-4b81-b096-73a68a3ce932",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:05 [[32MINFO[39M]: Response sent {
+  "requestId": "64100930-3c2b-4b81-b096-73a68a3ce932",
+  "statusCode": 200,
+  "responseTime": "1136ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10439.02
+    }
+  }
+}
+2025-11-12 03:29:05 [[32MINFO[39M]: Request received {
+  "requestId": "0fc3a50e-8c0b-4449-87dc-30614f2c501d",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:06 [[32MINFO[39M]: Response sent {
+  "requestId": "0fc3a50e-8c0b-4449-87dc-30614f2c501d",
+  "statusCode": 200,
+  "responseTime": "1255ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10439.02
+    }
+  }
+}
+2025-11-12 03:29:06 [[32MINFO[39M]: Request received {
+  "requestId": "1bd43ecc-da41-428c-8930-2de26a29b561",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:07 [[32MINFO[39M]: Response sent {
+  "requestId": "1bd43ecc-da41-428c-8930-2de26a29b561",
+  "statusCode": 200,
+  "responseTime": "972ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10439.02
+    }
+  }
+}
+2025-11-12 03:29:07 [[32MINFO[39M]: Request received {
+  "requestId": "762789b9-4d76-4640-abbb-0a5af8102ae0",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:08 [[32MINFO[39M]: Response sent {
+  "requestId": "762789b9-4d76-4640-abbb-0a5af8102ae0",
+  "statusCode": 200,
+  "responseTime": "1221ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10439.02
+    }
+  }
+}
+2025-11-12 03:29:09 [[32MINFO[39M]: Request received {
+  "requestId": "a4668634-2c8d-4028-9a1c-3fd86e8e171a",
+  "method": "POST",
+  "url": "/api/games/keno",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10,\"pickedNumbers\":[54,76,20,44,64,4,32,52,48,11]}"
+}
+2025-11-12 03:29:10 [[32MINFO[39M]: Request received {
+  "requestId": "0f02db70-658c-4480-b068-d72c9ebee0ca",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:11 [[32MINFO[39M]: Response sent {
+  "requestId": "0f02db70-658c-4480-b068-d72c9ebee0ca",
+  "statusCode": 200,
+  "responseTime": "1420ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10439.02
+    }
+  }
+}
+2025-11-12 03:29:14 [[32MINFO[39M]: Response sent {
+  "requestId": "a4668634-2c8d-4028-9a1c-3fd86e8e171a",
+  "statusCode": 200,
+  "responseTime": "5021ms",
+  "body": {
+    "success": true,
+    "game": "keno",
+    "result": {
+      "betAmount": 10,
+      "pickedNumbers": [
+        54,
+        76,
+        20,
+        44,
+        64,
+        4,
+        32,
+        52,
+        48,
+        11
+      ],
+      "drawnNumbers": [
+        70,
+        43,
+        29,
+        10,
+        54,
+        61,
+        5,
+        12,
+        45,
+        1,
+        2,
+        39,
+        57,
+        63,
+        69,
+        53,
+        62,
+        71,
+        38,
+        40
+      ],
+      "matches": 1,
+      "multiplier": 0,
+      "payout": 0,
+      "profit": -10,
+      "newBalance": 10429.02
+    },
+    "provablyFair": {
+      "serverSeed": "77b489ca8232bff2a54ac688a178f170bf1f338f1cdb6a84819bf07f1bf47b89",
+      "clientSeed": "538b7100a7e224cea679d35d45acbd6d",
+      "nonce": 1762899019606
+    }
+  }
+}
+2025-11-12 03:29:15 [[32MINFO[39M]: Request received {
+  "requestId": "159e9484-5016-420a-8137-e6e68bf2cd68",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:16 [[32MINFO[39M]: Response sent {
+  "requestId": "159e9484-5016-420a-8137-e6e68bf2cd68",
+  "statusCode": 200,
+  "responseTime": "1212ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10429.02
+    }
+  }
+}
+2025-11-12 03:29:20 [[32MINFO[39M]: Request received {
+  "requestId": "d7dfe37e-0b39-4009-a201-d4a53617e759",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:21 [[32MINFO[39M]: Response sent {
+  "requestId": "d7dfe37e-0b39-4009-a201-d4a53617e759",
+  "statusCode": 200,
+  "responseTime": "1316ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10429.02
+    }
+  }
+}
+2025-11-12 03:29:23 [[32MINFO[39M]: Request received {
+  "requestId": "500063f0-3904-406b-9dd1-510e9ac392ab",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:25 [[32MINFO[39M]: Response sent {
+  "requestId": "500063f0-3904-406b-9dd1-510e9ac392ab",
+  "statusCode": 200,
+  "responseTime": "1166ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10429.02
+    }
+  }
+}
+2025-11-12 03:29:25 [[32MINFO[39M]: Request received {
+  "requestId": "f336eaa1-fda6-4715-b07f-57e615c1ad2b",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:25 [[32MINFO[39M]: Request received {
+  "requestId": "99018f24-ce2d-4c39-8fdc-9c6ebb359c44",
+  "method": "POST",
+  "url": "/api/games/limbo",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{\"betAmount\":10,\"targetMultiplier\":2}"
+}
+2025-11-12 03:29:25 [[32MINFO[39M]: Response sent {
+  "requestId": "f336eaa1-fda6-4715-b07f-57e615c1ad2b",
+  "statusCode": 200,
+  "responseTime": "967ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10429.02
+    }
+  }
+}
+2025-11-12 03:29:28 [[32MINFO[39M]: Request received {
+  "requestId": "1d7a063d-8760-4616-9292-ee3451cdad86",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:29 [[32MINFO[39M]: Response sent {
+  "requestId": "1d7a063d-8760-4616-9292-ee3451cdad86",
+  "statusCode": 200,
+  "responseTime": "1011ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10429.02
+    }
+  }
+}
+2025-11-12 03:29:29 [[32MINFO[39M]: Response sent {
+  "requestId": "99018f24-ce2d-4c39-8fdc-9c6ebb359c44",
+  "statusCode": 200,
+  "responseTime": "4070ms",
+  "body": {
+    "success": true,
+    "game": "limbo",
+    "result": {
+      "betAmount": 10,
+      "targetMultiplier": 2,
+      "outcomeMultiplier": 2.38,
+      "won": true,
+      "payout": 19.8,
+      "profit": 9.8,
+      "newBalance": 10438.82
+    },
+    "provablyFair": {
+      "serverSeed": "bd84114f8bbcee80443aace184703ace73cfbdfd5fa54047f3eafb38e325bdf2",
+      "clientSeed": "ecbf8a9c15b69dd723f8f57f86fdbf5c",
+      "nonce": 1762898366966
+    }
+  }
+}
+2025-11-12 03:29:33 [[32MINFO[39M]: Request received {
+  "requestId": "4240a20e-df26-48d6-acf8-fced149ba435",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:35 [[32MINFO[39M]: Response sent {
+  "requestId": "4240a20e-df26-48d6-acf8-fced149ba435",
+  "statusCode": 200,
+  "responseTime": "1168ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:29:39 [[32MINFO[39M]: Request received {
+  "requestId": "fc48c577-9a30-462b-b9e5-36ea90fbd917",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:40 [[32MINFO[39M]: Response sent {
+  "requestId": "fc48c577-9a30-462b-b9e5-36ea90fbd917",
+  "statusCode": 200,
+  "responseTime": "979ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:29:44 [[32MINFO[39M]: Request received {
+  "requestId": "07cee20c-6a26-4efe-b6df-a2a98ac0a379",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:46 [[32MINFO[39M]: Response sent {
+  "requestId": "07cee20c-6a26-4efe-b6df-a2a98ac0a379",
+  "statusCode": 200,
+  "responseTime": "1504ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:29:49 [[32MINFO[39M]: Request received {
+  "requestId": "de4a62b2-9b60-44db-b17d-284157d0e5ad",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:50 [[32MINFO[39M]: Response sent {
+  "requestId": "de4a62b2-9b60-44db-b17d-284157d0e5ad",
+  "statusCode": 200,
+  "responseTime": "1025ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:29:54 [[32MINFO[39M]: Request received {
+  "requestId": "51dcd37e-c8f6-452a-9def-0acd586bcdab",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:29:56 [[32MINFO[39M]: Response sent {
+  "requestId": "51dcd37e-c8f6-452a-9def-0acd586bcdab",
+  "statusCode": 200,
+  "responseTime": "1895ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:29:59 [[32MINFO[39M]: Request received {
+  "requestId": "7e78f215-607a-4a13-a347-bda56c80cf64",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:30:02 [[32MINFO[39M]: Response sent {
+  "requestId": "7e78f215-607a-4a13-a347-bda56c80cf64",
+  "statusCode": 200,
+  "responseTime": "2714ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:30:04 [[32MINFO[39M]: Request received {
+  "requestId": "37d31b84-c368-4212-93ce-a9d112e8e3dc",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:30:06 [[32MINFO[39M]: Response sent {
+  "requestId": "37d31b84-c368-4212-93ce-a9d112e8e3dc",
+  "statusCode": 200,
+  "responseTime": "1359ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:30:09 [[32MINFO[39M]: Request received {
+  "requestId": "98178fda-9b38-4eca-999a-769bb28407ca",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:30:10 [[32MINFO[39M]: Response sent {
+  "requestId": "98178fda-9b38-4eca-999a-769bb28407ca",
+  "statusCode": 200,
+  "responseTime": "1071ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:30:14 [[32MINFO[39M]: Request received {
+  "requestId": "315c174c-b4b6-410e-b6f5-e03dcad73275",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:30:16 [[32MINFO[39M]: Response sent {
+  "requestId": "315c174c-b4b6-410e-b6f5-e03dcad73275",
+  "statusCode": 200,
+  "responseTime": "1793ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:30:19 [[32MINFO[39M]: Request received {
+  "requestId": "ada2f692-1180-4de6-af09-15ed758b0ea1",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:30:21 [[32MINFO[39M]: Response sent {
+  "requestId": "ada2f692-1180-4de6-af09-15ed758b0ea1",
+  "statusCode": 200,
+  "responseTime": "1303ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:30:24 [[32MINFO[39M]: Request received {
+  "requestId": "1fc36e97-057c-448b-a9a5-73c438b2e60e",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:30:26 [[32MINFO[39M]: Response sent {
+  "requestId": "1fc36e97-057c-448b-a9a5-73c438b2e60e",
+  "statusCode": 200,
+  "responseTime": "1397ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:30:29 [[32MINFO[39M]: Request received {
+  "requestId": "d86959f7-0971-45f7-9f38-b6b99a4acde0",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:30:30 [[32MINFO[39M]: Response sent {
+  "requestId": "d86959f7-0971-45f7-9f38-b6b99a4acde0",
+  "statusCode": 200,
+  "responseTime": "1223ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:30:42 [[32MINFO[39M]: Request received {
+  "requestId": "f9da40b6-a1bd-4c99-8a46-c5e4e825458f",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:30:44 [[32MINFO[39M]: Response sent {
+  "requestId": "f9da40b6-a1bd-4c99-8a46-c5e4e825458f",
+  "statusCode": 200,
+  "responseTime": "1891ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:31:42 [[32MINFO[39M]: Request received {
+  "requestId": "e77868e1-7803-4481-8399-ae2b24d14d41",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:31:47 [[32MINFO[39M]: Response sent {
+  "requestId": "e77868e1-7803-4481-8399-ae2b24d14d41",
+  "statusCode": 200,
+  "responseTime": "4525ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:32:42 [[32MINFO[39M]: Request received {
+  "requestId": "1a97fe0a-d228-449c-a5ca-c86454dc286a",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:32:49 [[32MINFO[39M]: Response sent {
+  "requestId": "1a97fe0a-d228-449c-a5ca-c86454dc286a",
+  "statusCode": 200,
+  "responseTime": "6611ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
+2025-11-12 03:33:42 [[32MINFO[39M]: Request received {
+  "requestId": "d4e52f20-52b5-440d-90c1-8faf39693491",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 03:33:48 [[32MINFO[39M]: Response sent {
+  "requestId": "d4e52f20-52b5-440d-90c1-8faf39693491",
+  "statusCode": 200,
+  "responseTime": "6088ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 10438.82
+    }
+  }
+}
