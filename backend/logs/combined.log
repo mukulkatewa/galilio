@@ -15148,3 +15148,22 @@
     }
   }
 }
+2025-11-12 01:13:42 [[32MINFO[39M]: Request received {
+  "requestId": "a52460b2-5f64-4db3-b638-bccbf8a3edee",
+  "method": "GET",
+  "url": "/api/user/balance",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+  "body": "{}"
+}
+2025-11-12 01:13:44 [[32MINFO[39M]: Response sent {
+  "requestId": "a52460b2-5f64-4db3-b638-bccbf8a3edee",
+  "statusCode": 200,
+  "responseTime": "1550ms",
+  "body": {
+    "success": true,
+    "data": {
+      "balance": 140397
+    }
+  }
+}
