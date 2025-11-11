@@ -1,38 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../../components/Layout';
 import api from '../../services/api';
 import toast from 'react-hot-toast';
 
 const DragonTower = () => {
+  // State management
+  const [mode, setMode] = useState('manual');
   const [betAmount, setBetAmount] = useState(10);
-  const [difficulty, setDifficulty] = useState('easy');
+  const [displayBet, setDisplayBet] = useState('10.00');
+  const [difficulty, setDifficulty] = useState('medium');
   const [gameState, setGameState] = useState('idle'); // idle, playing, finished
   const [gameId, setGameId] = useState(null);
   const [currentLevel, setCurrentLevel] = useState(0);
-  const [currentMultiplier, setCurrentMultiplier] = useState(0);
+  const [currentMultiplier, setCurrentMultiplier] = useState(1.00);
   const [tower, setTower] = useState([]);
   const [revealedTiles, setRevealedTiles] = useState({});
-  const [config, setConfig] = useState({ eggs: 2, tiles: 3, levels: 8 });
-  const [payoutTable, setPayoutTable] = useState([]);
+  const [config, setConfig] = useState({ eggs: 2, tiles: 3, levels: 10 });
   const [loading, setLoading] = useState(false);
+  const [totalProfit, setTotalProfit] = useState(0);
 
-  const difficultyOptions = {
-    easy: { eggs: 3, tiles: 4, levels: 8 },
-    medium: { eggs: 2, tiles: 3, levels: 9 },
-    hard: { eggs: 1, tiles: 2, levels: 10 },
+  // Difficulty configurations
+  const difficultyConfigs = {
+    easy: { eggs: 3, tiles: 4, levels: 8, label: 'Easy' },
+    medium: { eggs: 2, tiles: 3, levels: 10, label: 'Medium' },
+    hard: { eggs: 1, tiles: 3, levels: 12, label: 'Hard' },
+    expert: { eggs: 1, tiles: 2, levels: 15, label: 'Expert' },
+    master: { eggs: 1, tiles: 4, levels: 20, label: 'Master' }
   };
 
-  const calculatePayoutTable = (eggs, tiles, levels) => {
-    const table = [];
-    let multiplier = 1;
-    for (let i = 0; i < levels; i++) {
-      multiplier *= (tiles / eggs);
-      table.push({ level: i + 1, multiplier: multiplier * 0.99 });
+  // Update total profit when multiplier changes
+  useEffect(() => {
+    if (gameState === 'playing') {
+      setTotalProfit((betAmount * currentMultiplier) - betAmount);
     }
-    return table;
+  }, [currentMultiplier, betAmount, gameState]);
+
+  // Handle bet amount change
+  const handleBetChange = (value) => {
+    const numValue = parseFloat(value) || 0;
+    setBetAmount(numValue);
+    setDisplayBet(numValue.toFixed(2));
   };
 
-  const handleStart = async () => {
+  // Quick bet multipliers
+  const handleHalfBet = () => {
+    const newBet = betAmount / 2;
+    handleBetChange(newBet);
+  };
+
+  const handleDoubleBet = () => {
+    const newBet = betAmount * 2;
+    handleBetChange(newBet);
+  };
+
+  // Start game
+  const handleBet = async () => {
     if (betAmount <= 0) {
       toast.error('Bet amount must be greater than 0');
       return;
@@ -47,13 +69,14 @@ const DragonTower = () => {
       });
 
       if (response.data.success) {
-        const { gameId, config } = response.data;
+        const { gameId, config } = response.data.data;
         setGameId(gameId);
         setConfig(config);
         setGameState('playing');
         setCurrentLevel(0);
-        setCurrentMultiplier(0);
+        setCurrentMultiplier(1.00);
         setRevealedTiles({});
+        setTotalProfit(0);
         
         // Initialize tower structure
         const newTower = Array(config.levels).fill(null).map(() => 
@@ -61,11 +84,7 @@ const DragonTower = () => {
         );
         setTower(newTower);
         
-        // Calculate payout table
-        const table = calculatePayoutTable(config.eggs, config.tiles, config.levels);
-        setPayoutTable(table);
-        
-        toast.success('Game started!');
+        toast.success('Game started! Pick your first tile');
       } else {
         toast.error(response.data.error || 'Failed to start game');
       }
@@ -76,6 +95,7 @@ const DragonTower = () => {
     }
   };
 
+  // Handle tile click
   const handleTileClick = async (level, tileIndex) => {
     if (gameState !== 'playing' || level !== currentLevel || loading) return;
     if (revealedTiles[`${level}-${tileIndex}`]) return;
@@ -104,17 +124,18 @@ const DragonTower = () => {
           // Egg found - move to next level
           setCurrentLevel(result.currentLevel);
           setCurrentMultiplier(result.multiplier);
-          toast.success('Egg found! Continue or cash out?');
           
           // Check if game is complete
           if (result.currentLevel >= config.levels) {
             setGameState('finished');
-            toast.success(`Won ${result.payout.toFixed(2)}!`);
+            toast.success(`🎉 Tower Complete! Won $${result.payout.toFixed(2)}!`);
+          } else {
+            toast.success(`✅ Egg found! Level ${result.currentLevel + 1}`);
           }
         } else {
           // Bomb hit - game over
           setGameState('finished');
-          toast.error('Bomb! Game over');
+          toast.error('💥 Bomb! Game Over');
         }
       } else {
         toast.error(response.data.error || 'Move failed');
@@ -126,6 +147,7 @@ const DragonTower = () => {
     }
   };
 
+  // Cash out
   const handleCashOut = async () => {
     if (gameState !== 'playing' || currentLevel === 0 || loading) return;
 
@@ -140,7 +162,7 @@ const DragonTower = () => {
       if (response.data.success) {
         const result = response.data.result;
         setGameState('finished');
-        toast.success(`Cashed out ${result.payout.toFixed(2)}!`);
+        toast.success(`💰 Cashed out $${result.payout.toFixed(2)}!`);
       } else {
         toast.error(response.data.error || 'Cash out failed');
       }
@@ -151,281 +173,383 @@ const DragonTower = () => {
     }
   };
 
+  // Random pick
+  const handleRandomPick = () => {
+    if (gameState !== 'playing' || loading) return;
+    
+    const availableTiles = [];
+    for (let i = 0; i < config.tiles; i++) {
+      const tileKey = `${currentLevel}-${i}`;
+      if (!revealedTiles[tileKey]) {
+        availableTiles.push(i);
+      }
+    }
+    
+    if (availableTiles.length > 0) {
+      const randomIndex = availableTiles[Math.floor(Math.random() * availableTiles.length)];
+      handleTileClick(currentLevel, randomIndex);
+    }
+  };
+
+  // Get tile content (egg or bomb icon)
   const getTileContent = (level, tileIndex) => {
     const tileKey = `${level}-${tileIndex}`;
     const state = revealedTiles[tileKey];
 
     if (state === 'egg') {
       return (
-        <svg className="w-8 h-8" fill="none" stroke="#48bb78" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-        </svg>
+        <div className="text-3xl">✓</div>
       );
     }
     
     if (state === 'bomb') {
       return (
-        <svg className="w-8 h-8" fill="none" stroke="#f56565" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-        </svg>
+        <div className="text-3xl">✕</div>
       );
     }
 
     return null;
   };
 
+  // Get tile styling
   const getTileStyle = (level, tileIndex) => {
     const tileKey = `${level}-${tileIndex}`;
     const state = revealedTiles[tileKey];
     const isCurrentLevel = level === currentLevel && gameState === 'playing';
+    const isPastLevel = level < currentLevel;
 
     if (state === 'egg') {
-      return { backgroundColor: 'rgba(72, 187, 120, 0.2)', borderColor: '#48bb78' };
+      return { 
+        backgroundColor: '#00ff41', 
+        borderColor: '#00ff41',
+        color: '#1a1f2e',
+        cursor: 'default'
+      };
     }
     
     if (state === 'bomb') {
-      return { backgroundColor: 'rgba(245, 101, 101, 0.2)', borderColor: '#f56565' };
+      return { 
+        backgroundColor: '#ff4136', 
+        borderColor: '#ff4136',
+        color: '#ffffff',
+        cursor: 'default'
+      };
     }
 
     if (isCurrentLevel && !loading) {
-      return { backgroundColor: '#2d3748', borderColor: '#4299e1', cursor: 'pointer' };
+      return { 
+        backgroundColor: '#2d4a4f', 
+        borderColor: '#3d5a5f', 
+        cursor: 'pointer',
+        backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.03) 10px, rgba(255,255,255,.03) 20px)'
+      };
     }
 
-    return { backgroundColor: '#2d3748', borderColor: '#2d3748' };
+    if (isPastLevel) {
+      return { 
+        backgroundColor: '#1a2528', 
+        borderColor: '#2a3538',
+        opacity: 0.5,
+        cursor: 'default'
+      };
+    }
+
+    return { 
+      backgroundColor: '#2d4a4f', 
+      borderColor: '#2d4a4f',
+      opacity: 0.3,
+      cursor: 'default'
+    };
   };
 
   return (
     <Layout>
-      <div>
-        <h1 className="text-3xl font-semibold mb-6" style={{ color: '#e2e8f0' }}>
-          🐉 Dragon Tower
-        </h1>
+      <div className="min-h-screen" style={{ backgroundColor: '#1a1f2e' }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
+            {/* LEFT PANEL - 30% */}
+            <div className="lg:col-span-3">
+              <div 
+                className="rounded-xl border p-6"
+                style={{ backgroundColor: '#1e2433', borderColor: '#2d3748' }}
+              >
+                {/* Mode Toggle */}
+                <div className="flex gap-2 mb-6">
+                  <button
+                    onClick={() => setMode('manual')}
+                    disabled={gameState === 'playing'}
+                    className="flex-1 py-2 px-4 rounded-lg font-medium transition-all"
+                    style={{
+                      backgroundColor: mode === 'manual' ? '#00ff41' : 'transparent',
+                      color: mode === 'manual' ? '#1a1f2e' : '#a0aec0',
+                      border: `1px solid ${mode === 'manual' ? '#00ff41' : '#2d3748'}`
+                    }}
+                  >
+                    Manual
+                  </button>
+                  <button
+                    onClick={() => setMode('auto')}
+                    disabled={gameState === 'playing'}
+                    className="flex-1 py-2 px-4 rounded-lg font-medium transition-all"
+                    style={{
+                      backgroundColor: mode === 'auto' ? '#00ff41' : 'transparent',
+                      color: mode === 'auto' ? '#1a1f2e' : '#a0aec0',
+                      border: `1px solid ${mode === 'auto' ? '#00ff41' : '#2d3748'}`
+                    }}
+                  >
+                    Auto
+                  </button>
+                </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* LEFT COLUMN - 25% (3 cols) */}
-          <div className="lg:col-span-3">
-            <div 
-              className="rounded-xl border p-6 sticky top-20"
-              style={{ backgroundColor: '#1e2433', borderColor: '#2d3748' }}
-            >
-              <h3 className="text-lg font-semibold mb-4" style={{ color: '#e2e8f0' }}>
-                Controls
-              </h3>
-
-              {gameState === 'idle' && (
-                <>
-                  {/* Bet Amount */}
-                  <div className="mb-4">
-                    <label className="block text-sm font-normal mb-2" style={{ color: '#a0aec0' }}>
-                      Bet Amount
-                    </label>
+                {/* Bet Amount Section */}
+                <div className="mb-6">
+                  <label className="block text-sm font-medium mb-2" style={{ color: '#a0aec0' }}>
+                    Bet Amount
+                  </label>
+                  <div 
+                    className="rounded-lg p-3 mb-2"
+                    style={{ backgroundColor: '#1a1f2e' }}
+                  >
+                    <div className="text-2xl font-bold font-mono" style={{ color: '#e2e8f0' }}>
+                      ${displayBet}
+                    </div>
+                  </div>
+                  <div className="flex gap-2 mb-2">
                     <input
                       type="number"
                       value={betAmount}
-                      onChange={(e) => setBetAmount(e.target.value)}
-                      className="w-full rounded-lg border px-4 py-2 focus:outline-none"
+                      onChange={(e) => handleBetChange(e.target.value)}
+                      disabled={gameState === 'playing'}
+                      className="flex-1 rounded-lg border px-3 py-2 focus:outline-none focus:border-blue-500"
                       style={{ 
                         backgroundColor: '#2d3748', 
                         borderColor: '#2d3748',
                         color: '#e2e8f0'
                       }}
-                      onFocus={(e) => e.target.style.borderColor = '#4299e1'}
-                      onBlur={(e) => e.target.style.borderColor = '#2d3748'}
                       min="0"
                       step="0.01"
                     />
                   </div>
-
-                  {/* Difficulty */}
-                  <div className="mb-4">
-                    <label className="block text-sm font-normal mb-2" style={{ color: '#a0aec0' }}>
-                      Difficulty
-                    </label>
-                    <select
-                      value={difficulty}
-                      onChange={(e) => setDifficulty(e.target.value)}
-                      className="w-full rounded-lg border px-4 py-2 focus:outline-none"
+                  <div className="flex gap-2">
+                    <button
+                      onClick={handleHalfBet}
+                      disabled={gameState === 'playing'}
+                      className="flex-1 py-2 px-3 rounded-lg font-medium transition-colors"
                       style={{ 
-                        backgroundColor: '#2d3748', 
-                        borderColor: '#2d3748',
-                        color: '#e2e8f0'
+                        backgroundColor: '#2d3748',
+                        color: '#e2e8f0',
+                        border: '1px solid #2d3748'
                       }}
                     >
-                      <option value="easy">Easy (3 eggs, 4 tiles)</option>
-                      <option value="medium">Medium (2 eggs, 3 tiles)</option>
-                      <option value="hard">Hard (1 egg, 2 tiles)</option>
-                    </select>
+                      ½
+                    </button>
+                    <button
+                      onClick={handleDoubleBet}
+                      disabled={gameState === 'playing'}
+                      className="flex-1 py-2 px-3 rounded-lg font-medium transition-colors"
+                      style={{ 
+                        backgroundColor: '#2d3748',
+                        color: '#e2e8f0',
+                        border: '1px solid #2d3748'
+                      }}
+                    >
+                      2×
+                    </button>
                   </div>
+                </div>
 
-                  {/* Start Button */}
-                  <button
-                    onClick={handleStart}
-                    disabled={loading}
-                    className="w-full rounded-lg px-6 py-3 font-medium transition-colors"
+                {/* Difficulty Dropdown */}
+                <div className="mb-6">
+                  <label className="block text-sm font-medium mb-2" style={{ color: '#a0aec0' }}>
+                    Difficulty
+                  </label>
+                  <select
+                    value={difficulty}
+                    onChange={(e) => setDifficulty(e.target.value)}
+                    disabled={gameState === 'playing'}
+                    className="w-full rounded-lg border px-3 py-2 focus:outline-none focus:border-blue-500"
                     style={{ 
-                      backgroundColor: loading ? '#2d3748' : '#4299e1',
-                      color: '#ffffff',
+                      backgroundColor: '#2d3748', 
+                      borderColor: '#2d3748',
+                      color: '#e2e8f0'
+                    }}
+                  >
+                    {Object.entries(difficultyConfigs).map(([key, config]) => (
+                      <option key={key} value={key}>
+                        {config.label} ({config.eggs} eggs, {config.tiles} tiles, {config.levels} levels)
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Bet / Cash Out Button */}
+                {gameState === 'idle' && (
+                  <button
+                    onClick={handleBet}
+                    disabled={loading || betAmount <= 0}
+                    className="w-full rounded-lg px-6 py-4 font-bold text-lg transition-all mb-3"
+                    style={{ 
+                      backgroundColor: loading || betAmount <= 0 ? '#2d3748' : '#00ff41',
+                      color: '#1a1f2e',
+                      cursor: loading || betAmount <= 0 ? 'not-allowed' : 'pointer'
+                    }}
+                  >
+                    {loading ? 'Starting...' : 'Bet'}
+                  </button>
+                )}
+
+                {gameState === 'playing' && currentLevel > 0 && (
+                  <button
+                    onClick={handleCashOut}
+                    disabled={loading}
+                    className="w-full rounded-lg px-6 py-4 font-bold text-lg transition-all mb-3"
+                    style={{ 
+                      backgroundColor: loading ? '#2d3748' : '#00ff41',
+                      color: '#1a1f2e',
                       cursor: loading ? 'not-allowed' : 'pointer'
                     }}
-                    onMouseEnter={(e) => !loading && (e.target.style.backgroundColor = '#3182ce')}
-                    onMouseLeave={(e) => !loading && (e.target.style.backgroundColor = '#4299e1')}
                   >
-                    {loading ? 'Starting...' : '🐉 START'}
+                    {loading ? 'Cashing Out...' : `Cash Out $${(betAmount * currentMultiplier).toFixed(2)}`}
                   </button>
-                </>
-              )}
+                )}
 
-              {gameState === 'playing' && (
-                <>
-                  {/* Current Level */}
-                  <div 
-                    className="mb-4 p-3 rounded-lg"
-                    style={{ backgroundColor: '#2d3748' }}
+                {gameState === 'finished' && (
+                  <button
+                    onClick={() => {
+                      setGameState('idle');
+                      setCurrentLevel(0);
+                      setCurrentMultiplier(1.00);
+                      setRevealedTiles({});
+                      setTower([]);
+                      setTotalProfit(0);
+                    }}
+                    className="w-full rounded-lg px-6 py-4 font-bold text-lg transition-all mb-3"
+                    style={{ 
+                      backgroundColor: '#00ff41',
+                      color: '#1a1f2e'
+                    }}
                   >
-                    <div className="text-xs font-normal" style={{ color: '#a0aec0' }}>
-                      Current Level
+                    New Game
+                  </button>
+                )}
+
+                {/* Random Pick Button */}
+                {gameState === 'playing' && (
+                  <button
+                    onClick={handleRandomPick}
+                    disabled={loading}
+                    className="w-full rounded-lg px-6 py-3 font-medium transition-all"
+                    style={{ 
+                      backgroundColor: '#2d3748',
+                      color: '#e2e8f0',
+                      border: '1px solid #3d4748'
+                    }}
+                  >
+                    Random Pick
+                  </button>
+                )}
+
+                {/* Total Profit Display */}
+                <div className="mt-6">
+                  <div 
+                    className="rounded-lg p-4"
+                    style={{ backgroundColor: '#1a1f2e' }}
+                  >
+                    <div className="text-xs font-medium mb-1" style={{ color: '#a0aec0' }}>
+                      Total Profit ({currentMultiplier.toFixed(2)}x)
                     </div>
-                    <div className="text-2xl font-mono font-semibold" style={{ color: '#e2e8f0' }}>
-                      {currentLevel}/{config.levels}
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl">💰</span>
+                      <span className="text-2xl font-bold font-mono" style={{ 
+                        color: totalProfit >= 0 ? '#00ff41' : '#ff4136' 
+                      }}>
+                        ${totalProfit.toFixed(2)}
+                      </span>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
 
-                  {/* Current Multiplier */}
-                  <div 
-                    className="mb-4 p-3 rounded-lg"
-                    style={{ backgroundColor: '#2d3748' }}
-                  >
-                    <div className="text-xs font-normal" style={{ color: '#a0aec0' }}>
-                      Current Multiplier
-                    </div>
-                    <div className="text-2xl font-mono font-semibold" style={{ color: '#48bb78' }}>
-                      {currentMultiplier.toFixed(2)}×
+            {/* RIGHT PANEL - 70% (Game Area) */}
+            <div className="lg:col-span-7">
+              <div 
+                className="rounded-xl border p-8"
+                style={{ backgroundColor: '#1e2433', borderColor: '#2d3748', minHeight: '600px' }}
+              >
+                {/* Dragon Visual */}
+                {gameState !== 'idle' && (
+                  <div className="text-center mb-6">
+                    <div className="text-8xl mb-2">🐉</div>
+                    <div className="text-sm" style={{ color: '#7a8e9e' }}>
+                      {gameState === 'playing' ? 'Choose wisely...' : gameState === 'finished' ? 'Game Over' : ''}
                     </div>
                   </div>
+                )}
 
-                  {/* Cash Out Button */}
-                  {currentLevel > 0 && (
-                    <button
-                      onClick={handleCashOut}
-                      disabled={loading}
-                      className="w-full rounded-lg px-6 py-3 font-medium transition-colors"
-                      style={{ 
-                        backgroundColor: loading ? '#2d3748' : '#48bb78',
-                        color: '#ffffff',
-                        cursor: loading ? 'not-allowed' : 'pointer'
-                      }}
-                      onMouseEnter={(e) => !loading && (e.target.style.backgroundColor = '#38a169')}
-                      onMouseLeave={(e) => !loading && (e.target.style.backgroundColor = '#48bb78')}
-                    >
-                      💰 CASH OUT (${(betAmount * currentMultiplier).toFixed(2)})
-                    </button>
-                  )}
-                </>
-              )}
+                {/* Tower Grid */}
+                {gameState === 'idle' ? (
+                  <div className="flex items-center justify-center h-96">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">🐉</div>
+                      <h3 className="text-2xl font-bold mb-2" style={{ color: '#e2e8f0' }}>
+                        Dragon Tower
+                      </h3>
+                      <p className="text-lg" style={{ color: '#a0aec0' }}>
+                        Place your bet to start climbing
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    {/* Render tower from top to bottom */}
+                    {tower.slice().reverse().map((level, idx) => {
+                      const actualLevel = tower.length - 1 - idx;
+                      return (
+                        <div key={actualLevel} className="flex justify-center gap-3">
+                          {level.map((_, tileIndex) => (
+                            <button
+                              key={tileIndex}
+                              onClick={() => handleTileClick(actualLevel, tileIndex)}
+                              disabled={actualLevel !== currentLevel || gameState !== 'playing' || loading}
+                              className="flex items-center justify-center border-2 rounded-lg transition-all duration-200 font-bold text-2xl"
+                              style={{
+                                width: '100px',
+                                height: '80px',
+                                ...getTileStyle(actualLevel, tileIndex)
+                              }}
+                              onMouseEnter={(e) => {
+                                if (actualLevel === currentLevel && gameState === 'playing' && !loading) {
+                                  e.target.style.transform = 'scale(1.05)';
+                                  e.target.style.boxShadow = '0 0 20px rgba(0, 255, 65, 0.3)';
+                                }
+                              }}
+                              onMouseLeave={(e) => {
+                                e.target.style.transform = 'scale(1)';
+                                e.target.style.boxShadow = 'none';
+                              }}
+                            >
+                              {getTileContent(actualLevel, tileIndex)}
+                            </button>
+                          ))}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
 
-              {gameState === 'finished' && (
-                <button
-                  onClick={() => setGameState('idle')}
-                  className="w-full rounded-lg px-6 py-3 font-medium transition-colors"
-                  style={{ 
-                    backgroundColor: '#4299e1',
-                    color: '#ffffff'
-                  }}
-                  onMouseEnter={(e) => e.target.style.backgroundColor = '#3182ce'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = '#4299e1'}
-                >
-                  🔄 NEW GAME
-                </button>
-              )}
-            </div>
-          </div>
-
-          {/* CENTER COLUMN - 50% (6 cols) */}
-          <div className="lg:col-span-6">
-            <div 
-              className="rounded-xl border p-6"
-              style={{ backgroundColor: '#1e2433', borderColor: '#2d3748' }}
-            >
-              <h3 className="text-lg font-semibold mb-6 text-center" style={{ color: '#e2e8f0' }}>
-                {gameState === 'idle' ? 'Start a game to play' : 'Dragon Tower'}
-              </h3>
-
-              {gameState !== 'idle' && (
-                <div className="space-y-3">
-                  {/* Render tower from top to bottom */}
-                  {tower.slice().reverse().map((level, idx) => {
-                    const actualLevel = tower.length - 1 - idx;
-                    return (
-                      <div key={actualLevel} className="flex justify-center gap-3">
-                        {level.map((_, tileIndex) => (
-                          <button
-                            key={tileIndex}
-                            onClick={() => handleTileClick(actualLevel, tileIndex)}
-                            disabled={actualLevel !== currentLevel || gameState !== 'playing' || loading}
-                            className="flex items-center justify-center border-2 rounded-lg transition-all hover:scale-105"
-                            style={{
-                              width: '80px',
-                              height: '80px',
-                              ...getTileStyle(actualLevel, tileIndex)
-                            }}
-                          >
-                            {getTileContent(actualLevel, tileIndex)}
-                          </button>
-                        ))}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* RIGHT COLUMN - 25% (3 cols) */}
-          <div className="lg:col-span-3">
-            <div 
-              className="rounded-xl border p-6 sticky top-20"
-              style={{ backgroundColor: '#1e2433', borderColor: '#2d3748' }}
-            >
-              <h3 className="text-lg font-semibold mb-4" style={{ color: '#e2e8f0' }}>
-                Payout Ladder
-              </h3>
-
-              {payoutTable.length > 0 ? (
-                <div className="space-y-2 max-h-96 overflow-y-auto">
-                  {payoutTable.slice().reverse().map((item, idx) => {
-                    const isCurrentLevel = item.level === currentLevel && gameState === 'playing';
-                    const isPassed = item.level < currentLevel;
-                    
-                    return (
-                      <div 
-                        key={item.level}
-                        className="flex items-center justify-between py-2 px-3 rounded border"
-                        style={{ 
-                          backgroundColor: isCurrentLevel ? '#4299e1' : (isPassed ? 'rgba(72, 187, 120, 0.1)' : 'transparent'),
-                          borderColor: isCurrentLevel ? '#4299e1' : '#2d3748'
-                        }}
-                      >
-                        <span 
-                          className="text-sm font-normal"
-                          style={{ color: isCurrentLevel ? '#ffffff' : '#a0aec0' }}
-                        >
-                          Level {item.level}
-                        </span>
-                        <span 
-                          className="text-sm font-mono font-semibold"
-                          style={{ color: isCurrentLevel ? '#ffffff' : (isPassed ? '#48bb78' : '#e2e8f0') }}
-                        >
-                          {item.multiplier.toFixed(2)}×
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
-                <p className="text-sm text-center py-4" style={{ color: '#a0aec0' }}>
-                  Start a game to see payouts
-                </p>
-              )}
+                {/* Level Indicator */}
+                {gameState === 'playing' && (
+                  <div className="mt-6 text-center">
+                    <div className="inline-block px-6 py-2 rounded-lg" style={{ backgroundColor: '#1a1f2e' }}>
+                      <span style={{ color: '#a0aec0' }}>Level: </span>
+                      <span className="font-bold text-xl" style={{ color: '#00ff41' }}>
+                        {currentLevel + 1} / {config.levels}
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

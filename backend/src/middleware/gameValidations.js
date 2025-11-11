@@ -43,7 +43,10 @@ const crashValidation = [
 const dragonTowerInitValidation = [
   body('betAmount')
     .isFloat({ min: 0.01, max: 10000 })
-    .withMessage('Bet amount must be between 0.01 and 10,000')
+    .withMessage('Bet amount must be between 0.01 and 10,000'),
+  body('difficulty')
+    .isIn(['easy', 'medium', 'hard', 'expert', 'master'])
+    .withMessage('Difficulty must be one of: easy, medium, hard, expert, master')
 ];
 
 const limboValidation = [
@@ -61,9 +64,18 @@ const dragonTowerPlayValidation = [
     .withMessage('Game ID is required')
     .matches(/^dt_\d+$/)
     .withMessage('Invalid game ID format'),
-  body('tile')
-    .isInt({ min: 1, max: 4 })
-    .withMessage('Tile must be a number between 1 and 4')
+  body('action')
+    .optional()
+    .isIn(['continue', 'collect'])
+    .withMessage('Action must be either "continue" or "collect"'),
+  body('level')
+    .if(body('action').equals('continue'))
+    .isInt({ min: 0 })
+    .withMessage('Level must be a non-negative integer'),
+  body('tileIndex')
+    .if(body('action').equals('continue'))
+    .isInt({ min: 0 })
+    .withMessage('Tile index must be a non-negative integer')
 ];
 
 module.exports = {

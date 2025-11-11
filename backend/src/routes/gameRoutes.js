@@ -27,7 +27,10 @@ router.use(authMiddleware);
 router.post('/keno', kenoValidation, validate, KenoController.playKeno);
 router.post('/limbo', limboValidation, validate, LimboController.playLimbo);
 
-router.post('/crash', crashValidation, validate, CrashController.playCrash);
+// Crash game routes (multiplayer)
+router.get('/crash/current', CrashController.getCurrentGame);
+router.post('/crash/bet', crashValidation, validate, CrashController.placeBet);
+router.post('/crash/cashout', CrashController.cashOut);
 router.post('/dragon-tower/init', dragonTowerInitValidation, validate, dragonTowerController.initGame);
 router.post('/dragon-tower', dragonTowerPlayValidation, validate, dragonTowerController.playDragonTower);
 router.post('/dice', diceValidation, validate, DiceController.playDice);

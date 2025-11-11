@@ -12,11 +12,11 @@ class DragonTowerController {
 
   getDifficultyConfig(difficulty) {
     const configs = {
-      easy: { eggs: 3, tiles: 4, levels: 8 },
-      medium: { eggs: 2, tiles: 4, levels: 10 },
-      hard: { eggs: 1, tiles: 4, levels: 12 },
-      expert: { eggs: 1, tiles: 3, levels: 15 },
-      master: { eggs: 1, tiles: 5, levels: 20 }
+      easy: { eggs: 3, tiles: 4, levels: 5 },
+      medium: { eggs: 2, tiles: 3, levels: 6 },
+      hard: { eggs: 1, tiles: 3, levels: 7 },
+      expert: { eggs: 1, tiles: 2, levels: 8 },
+      master: { eggs: 1, tiles: 4, levels: 8 }
     };
     return configs[difficulty] || configs.medium;
   }
@@ -50,10 +50,10 @@ class DragonTowerController {
   
   async playDragonTower(req, res) {
     try {
-      const { gameId, tile, betAmount, clientSeed } = req.body;
+      const { gameId, level, tileIndex, action } = req.body;
       const userId = req.user.id;
       
-      console.log('DragonTower play request:', { userId, gameId, tile, betAmount });
+      console.log('DragonTower play request:', { userId, gameId, level, tileIndex, action });
       
       // Validation
       if (!gameId) {
@@ -62,108 +62,183 @@ class DragonTowerController {
           error: 'Game ID is required' 
         });
       }
-      
-      if (tile === undefined || tile === null || tile < 1 || tile > 4) {
-        return res.status(400).json({ 
-          success: false, 
-          error: 'Invalid tile selection (must be 1-4)' 
+
+      // Handle cash out action
+      if (action === 'collect') {
+        // In a real implementation, retrieve game state from database
+        // For now, we'll simulate a successful cash out
+        // You would need to store game state in initGame and retrieve it here
+        
+        return res.json({
+          success: true,
+          result: {
+            action: 'cashout',
+            payout: 0, // This should be calculated from stored game state
+            newBalance: parseFloat(req.user.balance)
+          }
         });
       }
       
-      if (!betAmount || betAmount <= 0) {
+      // Validate tile selection for continue action
+      if (tileIndex === undefined || tileIndex === null) {
         return res.status(400).json({ 
           success: false, 
-          error: 'Bet amount is required and must be greater than 0' 
+          error: 'Tile index is required' 
+        });
+      }
+
+      if (level === undefined || level === null) {
+        return res.status(400).json({ 
+          success: false, 
+          error: 'Level is required' 
         });
       }
       
-      // In a real implementation, you would retrieve the game state from a database
-      // For now, we'll use a default config
+      // In a real implementation, retrieve game config from stored game state
+      // For now, we'll use medium difficulty as default
       const config = this.getDifficultyConfig('medium');
       
-      // Check balance
-      if (parseFloat(req.user.balance) < betAmount) {
+      // Validate tile index is within range
+      if (tileIndex < 0 || tileIndex >= config.tiles) {
         return res.status(400).json({ 
           success: false, 
-          error: 'Insufficient balance' 
+          error: `Invalid tile index (must be 0-${config.tiles - 1})` 
         });
       }
       
-      // Generate server seed and client seed
+      // Generate server seed and client seed for this level
       const serverSeed = ProvablyFairRNG.generateServerSeed();
-      const usedClientSeed = clientSeed || ProvablyFairRNG.generateClientSeed();
-      const nonce = Date.now();
+      const clientSeed = ProvablyFairRNG.generateClientSeed();
+      const nonce = Date.now() + level;
       
       // Generate egg positions for this level
       const eggPositions = new Set();
+      let attempts = 0;
       
-      for (let i = 0; i < config.eggs; i++) {
+      while (eggPositions.size < config.eggs && attempts < 100) {
         const position = ProvablyFairRNG.generateNumber(
           serverSeed, 
-          usedClientSeed, 
-          nonce + i, 
+          clientSeed, 
+          nonce + attempts, 
           config.tiles
-        ) - 1; // Convert to 0-based index
+        ) % config.tiles; // Ensure 0-based index
         eggPositions.add(position);
+        attempts++;
       }
       
-      // Check if player's tile has an egg (0-based index)
-      const playerTileIndex = tile - 1; // Convert to 0-based index
-      const hasEgg = eggPositions.has(playerTileIndex);
+      // Check if player's tile has an egg
+      const isEgg = eggPositions.has(tileIndex);
       
-      // Calculate multiplier (simplified for single level)
+      // Calculate multiplier for this level
       const winChance = config.eggs / config.tiles;
-      const multiplier = parseFloat(((1 / winChance) * 0.98).toFixed(2)); // 2% house edge
+      const levelMultiplier = (1 / winChance) * 0.99; // 1% house edge
       
-      // Calculate payout
-      const payout = hasEgg ? betAmount * multiplier : 0;
-      const profit = payout - betAmount;
+      // Calculate cumulative multiplier (increases with each level)
+      let currentMultiplier = 1.0;
+      for (let i = 0; i <= level; i++) {
+        currentMultiplier *= levelMultiplier;
+      }
       
-      // Game data to store
-      const gameData = {
-        level: 1,
-        totalLevels: config.levels,
-        eggs: Array.from(eggPositions).map(p => p + 1), // Convert back to 1-based for display
-        playerTile: tile,
-        hasEgg,
-        multiplier,
-        won: hasEgg,
-        payout: parseFloat(payout.toFixed(2)),
-        profit: parseFloat(profit.toFixed(2))
-      };
-      
-      // Record the game result
-      const result = await GameService.recordGame(
-        userId,
-        'dragon-tower',
-        betAmount,
-        payout,
-        profit,
-        gameData,
-        serverSeed,
-        usedClientSeed,
-        nonce
-      );
-      
-      // Return the game result
-      res.json({
-        success: true,
-        game: 'dragon-tower',
-        result: {
-          betAmount,
-          tile,
-          hasEgg,
-          multiplier,
-          payout: parseFloat(payout.toFixed(2)),
-          profit: parseFloat(profit.toFixed(2)),
-          newBalance: parseFloat(result.newBalance)
-        },
-        provablyFair: {
-          serverSeed,
-          clientSeed: usedClientSeed,
-          nonce
+      // If egg found, player continues
+      if (isEgg) {
+        const nextLevel = level + 1;
+        const isComplete = nextLevel >= config.levels;
+        
+        // If tower is complete, record the win
+        if (isComplete) {
+          // In real implementation, get betAmount from stored game state
+          const betAmount = 10; // Placeholder
+          const payout = betAmount * currentMultiplier;
+          const profit = payout - betAmount;
+          
+          const gameData = {
+            level: nextLevel,
+            totalLevels: config.levels,
+            isEgg,
+            multiplier: currentMultiplier,
+            won: true,
+            completed: true,
+            payout: parseFloat(payout.toFixed(2)),
+            profit: parseFloat(profit.toFixed(2))
+          };
+          
+          const result = await GameService.recordGame(
+            userId,
+            'dragon-tower',
+            betAmount,
+            payout,
+            profit,
+            gameData,
+            serverSeed,
+            clientSeed,
+            nonce
+          );
+          
+          return res.json({
+            success: true,
+            result: {
+              isEgg: true,
+              currentLevel: nextLevel,
+              multiplier: parseFloat(currentMultiplier.toFixed(2)),
+              payout: parseFloat(payout.toFixed(2)),
+              newBalance: parseFloat(result.newBalance),
+              completed: true
+            }
+          });
         }
-      });
+        
+        // Continue to next level
+        return res.json({
+          success: true,
+          result: {
+            isEgg: true,
+            currentLevel: nextLevel,
+            multiplier: parseFloat(currentMultiplier.toFixed(2)),
+            completed: false
+          }
+        });
+      } else {
+        // Bomb hit - game over, player loses
+        // In real implementation, get betAmount from stored game state
+        const betAmount = 10; // Placeholder
+        const payout = 0;
+        const profit = -betAmount;
+        
+        const gameData = {
+          level: level,
+          totalLevels: config.levels,
+          isEgg: false,
+          multiplier: currentMultiplier,
+          won: false,
+          completed: false,
+          payout: 0,
+          profit: parseFloat(profit.toFixed(2))
+        };
+        
+        const result = await GameService.recordGame(
+          userId,
+          'dragon-tower',
+          betAmount,
+          payout,
+          profit,
+          gameData,
+          serverSeed,
+          clientSeed,
+          nonce
+        );
+        
+        return res.json({
+          success: true,
+          result: {
+            isEgg: false,
+            currentLevel: level,
+            multiplier: 0,
+            payout: 0,
+            newBalance: parseFloat(result.newBalance),
+            gameOver: true
+          }
+        });
+      }
     } catch (error) {
       console.error('Dragon Tower error:', error);
       

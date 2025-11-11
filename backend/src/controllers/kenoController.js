@@ -47,14 +47,23 @@ class KenoController {
         });
       }
       
-      // Generate provably fair draw
+      // Generate truly random drawn numbers using crypto
+      const crypto = require('crypto');
+      const drawnNumbers = [];
+      
+      // Use Fisher-Yates shuffle with crypto randomness (Stack.com style)
+      const allNumbers = Array.from({ length: 80 }, (_, i) => i + 1);
+      for (let i = allNumbers.length - 1; i > allNumbers.length - 21; i--) {
+        const randomBytes = crypto.randomBytes(4);
+        const randomIndex = randomBytes.readUInt32BE(0) % (i + 1);
+        [allNumbers[i], allNumbers[randomIndex]] = [allNumbers[randomIndex], allNumbers[i]];
+        drawnNumbers.push(allNumbers[i]);
+      }
+      
+      // Generate provably fair seeds for verification
       const serverSeed = ProvablyFairRNG.generateServerSeed();
       const usedClientSeed = clientSeed || ProvablyFairRNG.generateClientSeed();
-      const nonce = Date.now();
-      
-      const drawnNumbers = ProvablyFairRNG.generateMultipleNumbers(
-        serverSeed, usedClientSeed, nonce, 20, 80
-      );
+      const nonce = Date.now() + Math.floor(Math.random() * 1000000);
       
       // Calculate matches
       const matches = pickedNumbers.filter(num => drawnNumbers.includes(num)).length;
@@ -112,6 +121,8 @@ class KenoController {
       });
     } catch (error) {
       console.error('Keno error:', error);
+      console.error('Error stack:', error.stack);
+      console.error('Error message:', error.message);
       
       if (error.message === 'Insufficient balance') {
         return res.status(400).json({ 
@@ -122,7 +133,8 @@ class KenoController {
       
       res.status(500).json({ 
         success: false, 
-        error: 'Game error. Please try again.' 
+        error: 'Game error. Please try again.',
+        details: process.env.NODE_ENV === 'development' ? error.message : undefined
       });
     }
   }

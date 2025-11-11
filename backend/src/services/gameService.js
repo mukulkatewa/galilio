@@ -5,7 +5,7 @@ class GameService {
   // Record game result and update balance
   static async recordGame(userId, gameType, betAmount, payout, profit, gameData, serverSeed, clientSeed, nonce) {
     try {
-      // Use transaction to ensure data consistency
+      // Use transaction to ensure data consistency with increased timeout
       const result = await prisma.$transaction(async (tx) => {
         // Get current user balance
         const user = await tx.user.findUnique({
@@ -101,6 +101,9 @@ class GameService {
           game,
           newBalance: balanceAfter
         };
+      }, {
+        maxWait: 10000, // Maximum time to wait for transaction to start (10 seconds)
+        timeout: 15000   // Maximum time for transaction to complete (15 seconds)
       });
       
       return result;

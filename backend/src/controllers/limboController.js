@@ -45,9 +45,21 @@ class LimboController {
       const randomFloat = ProvablyFairRNG.generateFloat(serverSeed, usedClientSeed, nonce);
       
       // Exponential distribution with 1% house edge
+      // Using proper exponential formula for crash/limbo games
       const houseEdge = 0.01;
-      const outcomeMultiplier = 1 / (randomFloat * (1 - houseEdge));
-      const finalOutcome = Math.min(outcomeMultiplier, 1000000);
+      const e = Math.E; // 2.71828...
+      
+      // Formula: multiplier = 99 / (randomFloat * 100) with bounds
+      // This ensures better distribution across the full range
+      let outcomeMultiplier;
+      if (randomFloat < 0.0001) {
+        // Prevent division by very small numbers
+        outcomeMultiplier = 1000000;
+      } else {
+        outcomeMultiplier = (99 / (randomFloat * 100));
+      }
+      
+      const finalOutcome = Math.max(1.00, Math.min(outcomeMultiplier, 1000000));
       
       // Determine win/loss
       const won = finalOutcome >= targetMultiplier;

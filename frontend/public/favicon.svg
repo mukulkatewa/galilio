@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4c542;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e8b339;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4a02f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#2d1b69"/>
+  
+  <!-- Outer ring with segments -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="url(#goldGradient)" stroke-width="6" stroke-dasharray="20 8"/>
+  
+  <!-- Middle ring -->
+  <circle cx="50" cy="50" r="32" fill="none" stroke="url(#goldGradient)" stroke-width="5"/>
+  
+  <!-- Inner circle background -->
+  <circle cx="50" cy="50" r="27" fill="#2d1b69"/>
+  
+  <!-- Letter G -->
+  <text x="50" y="68" font-family="Arial, sans-serif" font-size="45" font-weight="bold" fill="url(#goldGradient)" text-anchor="middle">G</text>
+</svg>

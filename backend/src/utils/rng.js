@@ -25,7 +25,12 @@ class ProvablyFairRNG {
       .update(`${serverSeed}:${clientSeed}:${nonce}`)
       .digest('hex');
     
-    return parseInt(hash.substring(0, 8), 16) / 0xFFFFFFFF;
+    // Use more bytes for better distribution (13 hex chars = 52 bits)
+    const hex = hash.substring(0, 13);
+    const num = parseInt(hex, 16);
+    const max = parseInt('1' + '0'.repeat(13), 16); // Max value for 13 hex digits
+    
+    return num / max;
   }
   
   static generateMultipleNumbers(serverSeed, clientSeed, nonce, count, max) {

@@ -7,11 +7,11 @@ const Sidebar = () => {
 
   const navItems = [
     { name: 'Home', path: '/dashboard', icon: '🏠' },
-    { name: 'Keno', path: '/games/keno', icon: '🎱' },
     { name: 'Limbo', path: '/games/limbo', icon: '🎯' },
     { name: 'Crash', path: '/games/crash', icon: '🚀' },
     { name: 'Dragon Tower', path: '/games/dragon-tower', icon: '🐉' },
     { name: 'Dice', path: '/games/dice', icon: '🎲' },
+    { name: 'Keno', path: '/games/keno', icon: '🎱' },
     { name: 'History', path: '/history', icon: '📜' },
   ];
 
