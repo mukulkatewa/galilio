@@ -9,13 +9,48 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Check if user is logged in on mount
-    const token = localStorage.getItem('token');
-    const savedUser = localStorage.getItem('user');
+    const checkAuth = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const savedUser = localStorage.getItem('user');
+        
+        if (token && savedUser) {
+          try {
+            // Validate token by checking user data
+            // Check if savedUser is not "undefined" string
+            if (savedUser === 'undefined' || savedUser === 'null') {
+              localStorage.removeItem('token');
+              localStorage.removeItem('user');
+              setLoading(false);
+              return;
+            }
+            
+            const userData = JSON.parse(savedUser);
+            // Validate userData has required fields
+            if (userData && userData.id && userData.username) {
+              setUser(userData);
+            } else {
+              // Invalid user data structure
+              localStorage.removeItem('token');
+              localStorage.removeItem('user');
+            }
+          } catch (error) {
+            // Invalid user data, clear it
+            console.error('Invalid user data in localStorage:', error);
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+          }
+        }
+      } catch (error) {
+        console.error('Error checking auth:', error);
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+      } finally {
+        setLoading(false);
+      }
+    };
     
-    if (token && savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
-    setLoading(false);
+    checkAuth();
   }, []);
 
   const login = async (username, password) => {

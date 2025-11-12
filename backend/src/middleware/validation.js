@@ -15,8 +15,17 @@ exports.registerValidation = [
 ];
 
 exports.loginValidation = [
-  body('username').notEmpty().withMessage('Username is required'),
-  body('password').notEmpty().withMessage('Password is required')
+  // Accept either email or username for login - make both optional but validate at least one exists
+  body('email').optional({ nullable: true, checkFalsy: true }),
+  body('username').optional({ nullable: true, checkFalsy: true }),
+  body('password').notEmpty().withMessage('Password is required'),
+  // Custom validation to ensure at least one of email or username is provided
+  body().custom((value) => {
+    if (!value.email && !value.username) {
+      throw new Error('Either email or username is required');
+    }
+    return true;
+  })
 ];
 
 // Middleware to check for validation errors

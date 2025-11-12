@@ -87,21 +87,24 @@ class AuthController {
   // Login
   static async login(req, res) {
     try {
-      const { username, password } = req.body;
+      const { email, username, password } = req.body;
       
-      if (!username || !password) {
+      if ((!email && !username) || !password) {
         return res.status(400).json({ 
           success: false, 
-          error: 'Username and password are required' 
+          error: 'Email/username and password are required' 
         });
       }
+      
+      // Use email if provided, otherwise use username
+      const loginIdentifier = email || username;
       
       // Find user (can login with email or username)
       const user = await prisma.user.findFirst({
         where: {
           OR: [
-            { email: username.toLowerCase() },
-            { username: username.toLowerCase() }
+            { email: loginIdentifier.toLowerCase() },
+            { username: loginIdentifier.toLowerCase() }
           ]
         }
       });
@@ -133,22 +136,41 @@ class AuthController {
       res.json({
         success: true,
         message: 'Login successful',
-        data: {
-          user: {
-            id: user.id,
-            email: user.email,
-            username: user.username,
-            balance: user.balance,
-            isAdmin: user.isAdmin
-          },
-          token
-        }
+        user: {
+          id: user.id,
+          email: user.email,
+          username: user.username,
+          balance: user.balance,
+          isAdmin: user.isAdmin
+        },
+        token
       });
     } catch (error) {
       console.error('Login error:', error);
+      console.error('Login error stack:', error.stack);
+      
+      // Check if it's a database connection error
+      if (error.message && error.message.includes("Can't reach database server")) {
+        return res.status(503).json({ 
+          success: false, 
+          error: 'Database connection failed',
+          message: 'Unable to connect to the database. Please check your database configuration.'
+        });
+      }
+      
+      // Check for Prisma errors
+      if (error.code && error.code.startsWith('P')) {
+        return res.status(500).json({ 
+          success: false, 
+          error: 'Database error',
+          message: process.env.NODE_ENV === 'development' ? error.message : 'A database error occurred'
+        });
+      }
+      
       res.status(500).json({ 
         success: false, 
-        error: 'Login failed' 
+        error: 'Login failed',
+        message: process.env.NODE_ENV === 'development' ? error.message : 'Login failed'
       });
     }
   }
