@@ -68,6 +68,95 @@ if (process.env.SENTRY_DSN && process.env.SENTRY_DSN !== 'your_sentry_dsn_here')
 
 const httpServer = createServer(app);
 
+// CORS configuration - allow frontend URLs
+// Pattern matching will automatically allow any galilio*.vercel.app URL
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://127.0.0.1:3000',
+  'https://galilio-frontend.vercel.app',
+  process.env.FRONTEND_URL
+].filter(Boolean);
+
+// Helper function to check if origin matches Vercel deployment pattern
+function isAllowedVercelOrigin(origin) {
+  if (!origin) return false;
+  
+  // Match any galilio*.vercel.app URL (case-insensitive)
+  const vercelPattern = /^https:\/\/galilio[\w-]*\.vercel\.app$/i;
+  return vercelPattern.test(origin);
+}
+
+// Handle OPTIONS requests FIRST - before any other middleware (including Helmet)
+// This is critical for CORS preflight to work
+// This must be the absolute first middleware to handle all OPTIONS requests
+app.use((req, res, next) => {
+  // Handle OPTIONS preflight requests immediately - BEFORE anything else
+  if (req.method === 'OPTIONS') {
+    const origin = req.headers.origin;
+    
+    // Log for debugging
+    console.log(`[CORS] OPTIONS request from origin: ${origin}, path: ${req.path}`);
+    
+    // Validate origin
+    let allowedOrigin = null;
+    
+    if (!origin) {
+      allowedOrigin = '*';
+      console.log(`[CORS] No origin header, allowing all`);
+    } else if (isDevelopment && (origin.includes('localhost') || origin.includes('127.0.0.1'))) {
+      allowedOrigin = origin;
+      console.log(`[CORS] Development origin allowed: ${origin}`);
+    } else {
+      const originClean = origin.replace(/\/$/, '');
+      
+      // Check exact match first
+      const exactMatch = allowedOrigins.some(allowed => {
+        if (!allowed) return false;
+        const allowedClean = allowed.replace(/\/$/, '');
+        return originClean === allowedClean;
+      });
+      
+      if (exactMatch) {
+        allowedOrigin = origin;
+        console.log(`[CORS] Exact match found: ${origin}`);
+      } else if (isAllowedVercelOrigin(originClean)) {
+        // Automatic pattern matching for any galilio*.vercel.app URL
+        allowedOrigin = origin;
+        console.log(`[CORS] ✅ Allowing Vercel origin via pattern match: ${origin}`);
+      } else if (process.env.FRONTEND_URL) {
+        const frontendUrlClean = process.env.FRONTEND_URL.replace(/\/$/, '');
+        if (originClean === frontendUrlClean) {
+          allowedOrigin = origin;
+          console.log(`[CORS] FRONTEND_URL match: ${origin}`);
+        }
+      }
+    }
+    
+    if (allowedOrigin) {
+      res.header('Access-Control-Allow-Origin', allowedOrigin);
+      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+      res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+      res.header('Access-Control-Allow-Credentials', 'true');
+      res.header('Access-Control-Max-Age', '86400'); // 24 hours
+      console.log(`[CORS] ✅ OPTIONS request allowed, returning 200`);
+      return res.sendStatus(200);
+    } else {
+      console.warn(`[CORS] ❌ OPTIONS request blocked for origin: ${origin}`);
+      console.warn(`[CORS] Allowed origins: ${allowedOrigins.join(', ')}`);
+      console.warn(`[CORS] Pattern test result: ${isAllowedVercelOrigin(origin)}`);
+      res.header('Access-Control-Allow-Origin', '*'); // Still set header for debugging
+      return res.status(403).json({ 
+        error: 'CORS policy: Origin not allowed',
+        origin: origin,
+        allowedOrigins: allowedOrigins,
+        patternMatch: isAllowedVercelOrigin(origin)
+      });
+    }
+  }
+  
+  next();
+});
+
 // Security middleware - configure Helmet for development
 if (isDevelopment) {
   app.use(helmet({
@@ -78,34 +167,55 @@ if (isDevelopment) {
   app.use(helmet());
 }
 
-// CORS configuration - allow frontend URLs
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://127.0.0.1:3000',
-  'https://galilio-frontend.vercel.app',
-  process.env.FRONTEND_URL
-].filter(Boolean);
-
 app.use(cors({
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
+    if (!origin) {
+      return callback(null, true);
+    }
     
     // In development, allow all localhost origins
     if (isDevelopment && (origin.includes('localhost') || origin.includes('127.0.0.1'))) {
       return callback(null, true);
     }
     
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      console.warn(`CORS blocked origin: ${origin}`);
-      callback(new Error('Not allowed by CORS'));
+    // Remove trailing slash for comparison
+    const originClean = origin.replace(/\/$/, '');
+    
+    // Check exact match first
+    const exactMatch = allowedOrigins.some(allowed => {
+      if (!allowed) return false;
+      const allowedClean = allowed.replace(/\/$/, '');
+      return originClean === allowedClean;
+    });
+    
+    if (exactMatch) {
+      return callback(null, true);
     }
+    
+    // Check if it matches Vercel deployment pattern (works in both dev and production)
+    if (isAllowedVercelOrigin(originClean)) {
+      console.log(`CORS: Allowing Vercel origin via pattern match: ${origin}`);
+      return callback(null, true);
+    }
+    
+    // Also allow if FRONTEND_URL is set and matches
+    if (process.env.FRONTEND_URL) {
+      const frontendUrlClean = process.env.FRONTEND_URL.replace(/\/$/, '');
+      if (originClean === frontendUrlClean) {
+        return callback(null, true);
+      }
+    }
+    
+    console.warn(`CORS blocked origin: ${origin}`);
+    console.warn(`Allowed origins: ${allowedOrigins.join(', ')}`);
+    callback(new Error('Not allowed by CORS'));
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  preflightContinue: false,
+  optionsSuccessStatus: 200
 }));
 
 // Request logging
@@ -128,6 +238,33 @@ if (isSentryInitialized) {
   app.use(Sentry.Handlers.requestHandler());
   app.use(Sentry.Handlers.tracingHandler());
   console.log('Sentry request handlers attached');
+}
+
+// Middleware to check for missing environment variables (only in Vercel)
+if (process.env.VERCEL === '1' && !hasRequiredEnvVars) {
+  app.use((req, res, next) => {
+    // Allow health check to work
+    if (req.path === '/api/health' || req.path === '/health') {
+      return res.status(503).json({
+        success: false,
+        error: 'Service Unavailable',
+        message: 'Backend is not properly configured',
+        missingVariables: missingVars,
+        instructions: 'Please set the following environment variables in Vercel: ' + missingVars.join(', ')
+      });
+    }
+    // For other routes, return error
+    if (req.path !== '/' && req.path !== '/api') {
+      return res.status(500).json({
+        success: false,
+        error: 'Configuration Error',
+        message: 'Backend is missing required environment variables',
+        missingVariables: missingVars,
+        instructions: 'Please configure DATABASE_URL and JWT_SECRET in Vercel project settings'
+      });
+    }
+    next();
+  });
 }
 
 // Health check endpoint
@@ -182,6 +319,58 @@ const authRoutes = require('./routes/authRoutes');
 const gameRoutes = require('./routes/gameRoutes');
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+
+// Root endpoint - redirect to API info
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Galilio Backend API',
+    version: '1.0.0',
+    api: '/api',
+    health: '/api/health',
+    documentation: 'Visit /api for API information'
+  });
+});
+
+// Root API endpoint
+app.get('/api', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Galilio API is running',
+    version: '1.0.0',
+    endpoints: {
+      health: 'GET /api/health',
+      auth: {
+        register: 'POST /api/auth/register',
+        login: 'POST /api/auth/login',
+        me: 'GET /api/auth/me'
+      },
+      games: {
+        dice: 'POST /api/games/dice',
+        keno: 'POST /api/games/keno',
+        limbo: 'POST /api/games/limbo',
+        crash: 'POST /api/games/crash',
+        dragonTower: {
+          init: 'POST /api/games/dragon-tower/init',
+          play: 'POST /api/games/dragon-tower'
+        }
+      },
+      user: {
+        balance: 'GET /api/user/balance',
+        history: 'GET /api/user/history'
+      },
+      admin: {
+        stats: 'GET /api/admin/stats',
+        users: 'GET /api/admin/users'
+      }
+    }
+  });
+});
+
+// Note: We don't need explicit app.options() routes because:
+// 1. The middleware OPTIONS handler (line 92) catches all OPTIONS requests
+// 2. The function-level handler in api/index.js also catches OPTIONS requests
+// Express 5 doesn't support wildcard patterns like '/api/*' in route paths
 
 app.use('/api/auth', authRoutes);
 app.use('/api/games', gameRoutes);
