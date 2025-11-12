@@ -11,7 +11,13 @@ async function loginHandler(req, res) {
       return res.status(405).json({ success: false, error: 'Method not allowed' });
     }
 
-    const { email, password } = req.body;
+    // Parse body for serverless
+    let body = req.body;
+    if (typeof body === 'string') {
+      body = JSON.parse(body);
+    }
+    
+    const { email, password } = body;
 
     // Validate input
     if (!email || !password) {
