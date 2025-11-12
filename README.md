@@ -2,6 +2,11 @@
 
 A full-stack gaming platform with provably fair games, built with Node.js, Express, PostgreSQL, React, and Vite.
 
+## 🌐 Live Deployment
+
+- **Frontend:** https://galilio-jmxy3axg3-kaksaab2605-8884s-projects.vercel.app
+- **Backend API:** https://galiliobackend-mexd7ddrt-kaksaab2605-8884s-projects.vercel.app/api
+
 ## 🎮 Features
 
 ### Games
