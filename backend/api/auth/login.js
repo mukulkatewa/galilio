@@ -1,4 +1,5 @@
 const { handleCors } = require('../_cors');
+const { parseBody } = require('../_bodyParser');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { PrismaClient } = require('@prisma/client');
@@ -12,11 +13,7 @@ async function loginHandler(req, res) {
     }
 
     // Parse body for serverless
-    let body = req.body;
-    if (typeof body === 'string') {
-      body = JSON.parse(body);
-    }
-    
+    const body = await parseBody(req);
     const { email, password } = body;
 
     // Validate input
